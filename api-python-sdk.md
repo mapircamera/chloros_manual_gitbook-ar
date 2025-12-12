@@ -37,7 +37,7 @@ pip install chloros-sdk
 ```
 
 {% hint style=&quot;info&quot; %}
-**الإعداد لأول مرة**: قبل استخدام SDK، قم بتنشيط ترخيص Chloros+ الخاص بك عن طريق فتح Chloros، Chloros (المتصفح) أو Chloros CLI وتسجيل الدخول باستخدام بيانات اعتمادك. لا يلزم القيام بذلك سوى مرة واحدة.
+**الإعداد الأول**: قبل استخدام SDK، قم بتنشيط ترخيص Chloros+ الخاص بك عن طريق فتح Chloros، Chloros (المتصفح) أو Chloros CLI وتسجيل الدخول باستخدام بيانات اعتمادك. لا يلزم القيام بذلك سوى مرة واحدة.
 {% endhint %}
 
 ### الاستخدام الأساسي
@@ -158,7 +158,7 @@ print(f"Backend running: {status['running']}")
 
 الفئة الرئيسية لمعالجة الصور المحلية Chloros.
 
-#### المُنشئ
+#### المنشئ
 
 ```python
 ChlorosLocal(
@@ -174,9 +174,9 @@ ChlorosLocal(
 
 | المعلمة                 | النوع | الافتراضي                   | الوصف                           |
 | ------------------------- | ---- | ------------------------- | ------------------------------------- |
-| `api_url`                 | str  | `"http://localhost:5000"` | URL للخلفية المحلية Chloros          |
+| `api_url`                 | str  | `"http://localhost:5000"` | URL من الخلفية المحلية Chloros          |
 | `auto_start_backend`      | bool | `True`                    | بدء تشغيل الخلفية تلقائيًا إذا لزم الأمر |
-| `backend_exe`             | str  | `None` (الكشف التلقائي)      | مسار الملف التنفيذي للخلفية            |
+| `backend_exe`             | str  | `None` (الكشف التلقائي-detect)      | مسار إلى ملف backend القابل للتنفيذ            |
 | `timeout`                 | int  | `30`                      | مهلة الطلب بالثواني            |
 | `backend_startup_timeout` | int  | `60`                      | مهلة بدء تشغيل الخلفية (بالثواني) |
 
@@ -271,11 +271,11 @@ chloros.import_images("C:\\DroneImages", recursive=True)
 * `"TIFF (16-bit)"` - موصى به لنظم المعلومات الجغرافية/التصوير المساحي
 * `"TIFF (32-bit, Percent)"` - التحليل العلمي
 * `"PNG (8-bit)"` - الفحص البصري
-* `"JPG (8-bit)"` - الإخراج المضغوط
+* `"JPG (8-bit)"` - إخراج مضغوط
 
 **المؤشرات المتاحة:**
 
-NDVI، NDRE، GNDVI، OSAVI، CIG، EVI، SAVI، MSAVI، MTVI2، وغيرها.
+NDVI، NDRE، GNDVI، OSAVI، CIG، EVI، SAVI، MSAVI، MTVI2، والمزيد.
 
 **مثال:**
 
@@ -311,12 +311,12 @@ chloros.configure(
 | `mode`              | str      | `"parallel"` | وضع المعالجة: &quot;parallel&quot; أو &quot;serial&quot;   |
 | `wait`              | bool     | `True`       | انتظر حتى الانتهاء                       |
 | `progress_callback` | callable | `None`       | وظيفة استدعاء التقدم (التقدم، الرسالة) |
-| `poll_interval`     | float    | `2.0`        | فاصل الاستقصاء للتقدم (بالثواني)   |
+| `poll_interval`     | float    | `2.0`        | فاصل الاستطلاع للتقدم (بالثواني)   |
 
 **النتائج:** `dict` - نتائج المعالجة
 
 {% hint style=&quot;warning&quot; %}
-**الوضع المتوازي**: يتطلب ترخيص Chloros+. يتكيف تلقائيًا مع نوى وحدة المعالجة المركزية (CPU) (حتى 16 عاملًا).
+**الوضع المتوازي**: يتطلب ترخيص Chloros+. يتكيف تلقائيًا مع نوى وحدة المعالجة المركزية (حتى 16 عامل).
 {% endhint %}
 
 **مثال:**
@@ -470,7 +470,7 @@ print(f"Processing complete: {results}")
 
 ***
 
-### المثال 2: سير العمل المخصص
+### مثال 2: سير العمل المخصص
 
 التحكم الكامل في خط أنابيب المعالجة:
 
@@ -512,7 +512,7 @@ print("Processing complete!")
 
 ***
 
-### المثال 3: المعالجة المجمعة لعدة مجلدات
+### المثال 3: معالجة دفعية لعدة مجلدات
 
 معالجة عدة مجموعات بيانات رحلات:
 
@@ -566,7 +566,7 @@ print("All flights processed!")
 
 ### المثال 4: تكامل خط أنابيب البحث
 
-دمج Chloros مع تحليل البيانات:
+تكامل Chloros مع تحليل البيانات:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -712,7 +712,7 @@ else:
 
 ### المثال 7: أداة سطر الأوامر
 
-إنشاء أداة CLI مخصصة باستخدام SDK:
+قم بإنشاء أداة CLI مخصصة باستخدام SDK:
 
 ```python
 #!/usr/bin/env python
@@ -826,9 +826,9 @@ except ChlorosError as e:
 
 ## موضوعات متقدمة
 
-### تكوين الخلفية المخصص
+### تكوين الخلفية المخصصة
 
-استخدم موقع أو تكوين خلفية مخصص:
+استخدم موقع أو تكوين خادم خلفي مخصص:
 
 ```python
 chloros = ChlorosLocal(
@@ -904,8 +904,8 @@ backend_path = r"C:\Program Files\MAPIR\Chloros\resources\backend\chloros-backen
 print(f"Backend exists: {os.path.exists(backend_path)}")
 ```
 
-2. تحقق من أن Windows Firewall لا يقوم بالحظر
-3. جرب مسار الخلفية اليدوي:
+2. تحقق من أن جدار الحماية Windows لا يقوم بحظره
+3. جرب مسار الخلفية يدويًا:
 
 ```python
 chloros = ChlorosLocal(backend_exe="C:\\Path\\To\\chloros-backend.exe")
@@ -984,7 +984,7 @@ chloros = ChlorosLocal(timeout=120)  # 2 minutes
 chloros = ChlorosLocal(api_url="http://localhost:5001")
 ```
 
-أو البحث عن العملية المتعارضة وإغلاقها:
+أو ابحث عن العملية المتعارضة وأغلقها:
 
 ```powershell
 # PowerShell
@@ -993,7 +993,7 @@ Get-NetTCPConnection -LocalPort 5000
 
 ***
 
-## نصائح لتحسين الأداء
+## نصائح حول الأداء
 
 ### تحسين سرعة المعالجة
 
@@ -1132,17 +1132,17 @@ chloros.process(progress_callback=notebook_progress)
 **ج:** نعم! المتطلبات:
 
 * Windows Server 2016 أو أحدث
-* Chloros مثبت (مرة واحدة)
+* Chloros مثبت (لمرة واحدة)
 * ترخيص مفعل على أي جهاز (ترخيص مخزن مؤقتًا منسوخ إلى الخادم)
 
 ***
 
 ### س: ما الفرق بين Desktop و CLI و SDK؟
 
-| الميزة         | واجهة المستخدم الرسومية لسطح المكتب | CLI سطر الأوامر | Python SDK  |
+| الميزة         | واجهة المستخدم الرسومية لـ Desktop | CLI سطر الأوامر | Python SDK  |
 | --------------- | ----------- | ---------------- | ----------- |
 | **الواجهة**   | النقر | الأوامر          | Python API  |
-| **الأفضل لـ**    | العمل المرئي | البرمجة النصية        | التكامل |
+| **الأفضل لـ**    | العمل البصري | البرمجة النصية        | التكامل |
 | **الأتمتة**  | محدودة     | جيدة             | ممتازة   |
 | **المرونة** | أساسية       | جيدة             | قصوى     |
 | **الترخيص**     | Chloros+    | Chloros+         | Chloros+    |
@@ -1171,7 +1171,7 @@ pip install --upgrade chloros-sdk
 
 ### س: أين يتم حفظ الصور المعالجة؟
 
-بشكل افتراضي، في مسار المشروع:
+بشكل افتراضي، في مسار المشروع :
 
 ```
 Project_Path/
@@ -1181,7 +1181,7 @@ Project_Path/
 
 ***
 
-### س: هل يمكنني معالجة الصور من نصوص Python التي تعمل وفقًا للجدول الزمني؟
+### س: هل يمكنني معالجة الصور من نصوص Python التي تعمل وفقًا لجدول زمني؟
 
 **ج:** نعم! استخدم Windows Task Scheduler مع البرامج النصية Python:
 
@@ -1199,7 +1199,7 @@ results = process_folder("C:\\Flights\\Today")
 
 ### س: هل يدعم SDK async/await؟
 
-**ج:** الإصدار الحالي متزامن. للحصول على سلوك غير متزامن، استخدم `wait=False` أو قم بالتشغيل في مؤشر ترابط منفصل:
+**ج:** الإصدار الحالي متزامن. للحصول على سلوك async، استخدم `wait=False` أو قم بالتشغيل في مؤشر ترابط منفصل:
 
 ```python
 import threading

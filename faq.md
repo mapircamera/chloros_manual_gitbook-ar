@@ -35,7 +35,7 @@ metaLinks:
 
 <summary>هل يمكنني ضبط كاميرات MAPIR Survey3 على التعرض التلقائي ومعالجة الصور في Chloros؟</summary>
 
-لا. يجب أن تكون مجموعات بيانات الصور Survey3 ذات تعريض ضوئي ثابت/مغلق، لذلك لا يمكن استخدام سرعة الغالق التلقائية أو ISO التلقائي. يجب أن تكون جميع الصور من نفس طراز الكاميرا ذات سرعة غالق وISO (تعريض ضوئي) متطابقة.
+لا. يجب أن تكون مجموعات بيانات الصور Survey3 ذات تعريض ثابت/مغلق، لذلك لا يمكن استخدام سرعة الغالق التلقائية أو ISO التلقائي. يجب أن تكون جميع الصور من نفس طراز الكاميرا ذات سرعة غالق وISO (تعريض) متطابقة.
 
 </details>
 
@@ -57,9 +57,9 @@ metaLinks:
 
 <details>
 
-<summary>إذا كنت سأقوم بتحميل صوري إلى <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud،</a> فهل يجب عليّ معالجتها في Chloros قبل التحميل؟</summary>
+<summary>إذا كنت سأقوم بتحميل صوري إلى <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud،</a> فهل يجب أن أقوم بمعالجتها في Chloros قبل التحميل؟</summary>
 
-إذا كنت تخطط للتحميل إلى منصة المعالجة عبر الإنترنت [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription)، فلا تقم بتحرير الصور قبل التحميل. ستقوم Cloud بإجراء جميع عمليات المعالجة نفسها وأكثر.
+إذا كنت تخطط للتحميل على منصة المعالجة عبر الإنترنت [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription)، فلا تقم بتحرير الصور قبل التحميل. ستقوم السحابة بإجراء جميع عمليات المعالجة نفسها وأكثر.
 
 </details>
 

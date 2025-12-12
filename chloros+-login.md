@@ -4,7 +4,7 @@
 
 تتيح لك قائمة <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> الشريط الجانبي للمستخدم يمكنك تسجيل الدخول إلى حساب Chloros+ الخاص بك وإلغاء قفل الميزات الإضافية.
 
-عند تسجيل الدخول، سيتم عرض تفاصيل حسابك:
+عند تسجيل الدخول، ستظهر تفاصيل حسابك:
 
 <figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
 
