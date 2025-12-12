@@ -16,7 +16,7 @@
 ## معالجة الصور (واجهة المستخدم الرسومية)
 
 * [ضبط إعدادات المشروع](processing-images-gui/adjusting-project-settings.md)
-* [إضافة الملفات إلى المشروع](processing-images-gui/page-1.md)
+* [إضافة الملفات إلى المشروع](processing-images-gui/adding-files-to-a-project.md)
 * [اختيار الصور المستهدفة](processing-images-gui/choosing-target-images.md)
 * [بدء المعالجة](processing-images-gui/starting-the-processing.md)
 * [مراقبة المعالجة](processing-images-gui/monitoring-the-processing.md)
@@ -24,11 +24,11 @@
 
 ## إعدادات المشروع
 
-* [إعدادات المشروع](project-settings/page-2.md)
+* [إعدادات المشروع](project-settings/project-settings.md)
 * [صيغ الفهرس متعدد الأطياف](project-settings/multispectral-index-formulas.md)
 
 ## عارض الصور (واجهة المستخدم الرسومية)
 
-* [فتح صورة بملء الشاشة](image-viewer-gui/page-3.md)
+* [فتح صورة بملء الشاشة](image-viewer-gui/opening-an-image-full-screen.md)
 * [طبقات الصورة](image-viewer-gui/image-layers.md)
 * [مؤشر/LUT Sandbox](image-viewer-gui/index-lut-sandbox.md)
