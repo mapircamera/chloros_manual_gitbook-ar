@@ -4,7 +4,9 @@ metaLinks: {}
 
 # البدء
 
-<div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>Chloros هو تطبيق برمجي من [MAPIR](https://www.mapir.camera) لمعالجة الصور وبيانات المستشعرات الأخرى.
+<div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>
+
+Chloros هو تطبيق برمجي من [MAPIR](https://www.mapir.camera) لمعالجة الصور وبيانات المستشعرات الأخرى.
 
 ***
 
