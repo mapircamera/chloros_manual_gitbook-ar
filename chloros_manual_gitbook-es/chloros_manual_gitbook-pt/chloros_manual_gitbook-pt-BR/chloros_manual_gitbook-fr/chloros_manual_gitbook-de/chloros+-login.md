@@ -1,43 +1,43 @@
-# Chloros+ Login
+# الكلوروس + تسجيل الدخول
 
-## Chloros and Chloros (Browser) Login
+## دخول الكلوروس والكلوروس (المتصفح).
 
-The user <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> sidebar menu allows you to log into your Chloros+ account and unlock additional features.
+تسمح لك قائمة الشريط الجانبي <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> للمستخدم بتسجيل الدخول إلى حساب Chloros+ الخاص بك وفتح ميزات إضافية.
 
-When logged in your account details will be shown:
+عند تسجيل الدخول ستظهر تفاصيل حسابك:
 
 <figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
 
-## CLI Login
+## تسجيل الدخول CLI
 
-Login with your Chloros+ credentials to enable CLI processing.
+قم بتسجيل الدخول باستخدام بيانات اعتماد Chloros+ الخاصة بك لتمكين معالجة CLI.
 
-**Syntax:**
+**بناء الجملة:**
 
 ```bash
 chloros-cli login <email> <password>
 ```
 
-**Example:**
+**مثال:**
 
 ```powershell
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{% hint style="warning" %}
-**Special Characters**: Use single quotes around passwords containing characters like `$`, `!`, or spaces.
-{% endhint %}
+{% تلميح النمط = "تحذير" %}
+**الأحرف الخاصة**: استخدم علامات الاقتباس المفردة حول كلمات المرور التي تحتوي على أحرف مثل `$`، أو `!`، أو مسافات.
+{% نهاية %}
 
-**Output:**
+**الإخراج:**
 
 <figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
 
-### Plan Expiration
+### انتهاء صلاحية الخطة
 
-The plan expiration in the GUI shows when your license will become invalid. For recurring monthly subscriptions the expiration is at the end of the month. For yearly subscriptions it is a year after you started the subscription. The license check requires a monthly internet connection to verify, with a 30 day grace period.
+توضح انتهاء صلاحية الخطة في واجهة المستخدم الرسومية متى سيصبح ترخيصك غير صالح. بالنسبة للاشتراكات الشهرية المتكررة، تنتهي صلاحية الاشتراك في نهاية الشهر. بالنسبة للاشتراكات السنوية، يكون ذلك بعد عام من بدء الاشتراك. يتطلب فحص الترخيص اتصالاً شهريًا بالإنترنت للتحقق، مع فترة سماح مدتها 30 يومًا.
 
-### Device Limit
+### حد الجهاز
 
-Each Chloros+ plan offers a different number of registered devices. Each device you log into with a Chloros+ account will count towards your number of registered devices. You can rename and remove a device on your MAPIR Cloud account page.
+تقدم كل خطة Chloros+ عددًا مختلفًا من الأجهزة المسجلة. سيتم احتساب كل جهاز تقوم بتسجيل الدخول إليه باستخدام حساب Chloros+ ضمن عدد أجهزتك المسجلة. يمكنك إعادة تسمية وإزالة جهاز على صفحة حساب MAPIR Cloud الخاصة بك.
 
-<table><thead><tr><th width="168.5999755859375" align="right">Chloros+ Plan</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Devices Supported</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
+<table><thead><tr><th width="168.5999755859375" align="right">كلوروس+ الخطة</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">الأجهزة مدعوم</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>

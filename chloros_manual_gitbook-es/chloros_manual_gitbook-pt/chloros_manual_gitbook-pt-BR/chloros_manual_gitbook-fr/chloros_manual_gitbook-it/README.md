@@ -1,41 +1,41 @@
-﻿# Chloros User Manual - Italian
+﻿# دليل مستخدم الكلوروس - إيطالي
 
-This is the Italian translation of the Chloros Professional Multispectral Image Processing Software user manual.
+هذه هي الترجمة الإيطالية لدليل مستخدم برنامج معالجة الصور متعدد الأطياف Chloros Professional.
 
-## About Chloros
+## حول الكلوروس
 
-Chloros is professional multispectral image processing software that transforms imagery into actionable insights with powerful desktop software, command-line tools, and Python API.
+Chloros هو برنامج احترافي لمعالجة الصور متعدد الأطياف يحول الصور إلى رؤى قابلة للتنفيذ باستخدام برامج سطح المكتب القوية وأدوات سطر الأوامر وPython API.
 
-### Features
-- Desktop and Browser interfaces
-- CLI and Python SDK (Chloros+)
-- Available in 28 languages
-- 24+ vegetation indices
-- Reflectance calibration
-- Ambient light sensor support
+### سمات
+- واجهات سطح المكتب والمتصفح
+- CLI وPython SDK (كلوروس+)
+- متوفر بـ 28 لغة
+- 24+ مؤشرات الغطاء النباتي
+- معايرة الانعكاس
+- دعم مستشعر الإضاءة المحيطة
 
-## Documentation
+## التوثيق
 
-This manual is synchronized with GitBook. The documentation covers:
-- Installation and setup
-- Image processing workflows
-- Calibration procedures
-- Vegetation index calculations
-- CLI and Python SDK usage
-- API reference
+تتم مزامنة هذا الدليل مع GitBook. الوثائق تغطي:
+- التثبيت والإعداد
+- سير عمل معالجة الصور
+- إجراءات المعايرة
+- حسابات مؤشر الغطاء النباتي
+- استخدام CLI وPython SDK
+- مرجع واجهة برمجة التطبيقات
 
-## Links
+## روابط
 
-- [Main Website](https://www.mapir.camera)
-- [Chloros Download](https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link)
-- [Chloros+ Plans](https://cloud.mapir.camera/pricing)
-- [English Documentation](https://mapir.gitbook.io/chloros)
-- [Support](https://www.mapir.camera/community/contact)
+- [الموقع الرئيسي](https://www.mapir.camera)
+- [تحميل الكلوروس](https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link)
+- [خطط الكلوروس +](https://cloud.mapir.camera/pricing)
+- [توثيق اللغة الإنجليزية](https://mapir.gitbook.io/chloros)
+- [يدعم](https://www.mapir.camera/community/contact)
 
-## Translation Status
+## حالة الترجمة
 
-Translation in progress - This manual will be translated to Italian soon.
+الترجمة قيد التقدم - ستتم ترجمة هذا الدليل إلى اللغة الإيطالية قريبًا.
 
-## License
+## رخصة
 
-Copyright MAPIR Camera. All rights reserved.
+حقوق الطبع والنشر لكاميرا مابير. جميع الحقوق محفوظة.

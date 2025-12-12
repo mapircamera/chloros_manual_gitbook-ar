@@ -1,17 +1,17 @@
-# Projects
+# المشاريع
 
-Chloros allows you to create projects which can be reopened in the future.
+يتيح لك Chloros إنشاء مشاريع يمكن إعادة فتحها في المستقبل.
 
-## New Project
+## مشروع جديد
 
 <figure><img src=".gitbook/assets/project_new.JPG" alt=""><figcaption></figcaption></figure>
 
-Select "New Project" from the main menu and enter a unique name for your project.
+حدد "مشروع جديد" من القائمة الرئيسية وأدخل اسمًا فريدًا لمشروعك.
 
-## Open Project
+## افتح المشروع
 
 <figure><img src=".gitbook/assets/project_open.JPG" alt=""><figcaption></figcaption></figure>
 
-Select "Open Project" to see a list of existing projects in the Project Folder. If no projects exist the secondary side menu will not open. You can see some GUI created projects (t1, t2, t3) listed in the above photo. The DATE\_TIME projects were created by the CLI using the default project naming scheme. Clicking any project name will open it.
+حدد "فتح المشروع" لرؤية قائمة المشاريع الموجودة في مجلد المشروع. في حالة عدم وجود مشاريع، لن يتم فتح القائمة الجانبية الثانوية. يمكنك رؤية بعض المشاريع التي تم إنشاؤها بواسطة واجهة المستخدم الرسومية (t1، t2، t3) المدرجة في الصورة أعلاه. تم إنشاء مشاريع DATE\_TIME بواسطة واجهة سطر الأوامر (CLI) باستخدام نظام تسمية المشروع الافتراضي. سيؤدي النقر فوق أي اسم مشروع إلى فتحه.
 
-Clicking the "Open Project Folder" button opens your computer's file explorer at the project path. You can adjust the project path in the [Project Settings](project-settings/page-2.md).
+يؤدي النقر فوق الزر "فتح مجلد المشروع" إلى فتح مستكشف الملفات بجهاز الكمبيوتر الخاص بك في مسار المشروع. يمكنك ضبط مسار المشروع في [إعدادات المشروع](project-settings/page-2.md).

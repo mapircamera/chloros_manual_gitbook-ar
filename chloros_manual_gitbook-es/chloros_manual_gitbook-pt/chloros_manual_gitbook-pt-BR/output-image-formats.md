@@ -4,21 +4,21 @@ metaLinks:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/output-image-formats
 ---
 
-# Output Image Formats
+# تنسيقات صور الإخراج
 
-### TIFF (16-bit)
+### تيف (16 بت)
 
-16-bit (pixel digital number 0 - 65535) TIFF (.tif) format output.
+إخراج تنسيق TIFF (.tif) 16 بت (رقم رقمي للبكسل 0 - 65535).
 
-### TIFF (32-bit, Percent %)
+### TIFF (32 بت، النسبة المئوية %)
 
-32-bit (pixel float 0.0 - 1.0) TIFF (.tif) format output. Pixel values represent reflectance percentages where 0.0 = 0% and 1.0 = 100%.
+إخراج تنسيق 32 بت (تعويم البكسل 0.0 - 1.0) TIFF (.tif). تمثل قيم البكسل نسب الانعكاس حيث 0.0 = 0% و1.0 = 100%.
 
-### **JPG (8-bit)**
+### **JPG (8 بت)**
 
-8-bit (pixel digital number 0 -255) JPG (.jpg) format output.
+إخراج تنسيق 8 بت (رقم البكسل الرقمي 0 -255) JPG (.jpg).
 
-### **PNG (8-bit)**
+### ** PNG (8 بت) **
 
-8-bit (pixel digital number 0 - 255) PNG (.png) format output. Lossless compression suitable for web viewing and visualization.
+إخراج بتنسيق PNG (.png) 8 بت (رقم رقمي للبكسل 0 - 255). ضغط بدون فقدان مناسب لعرض الويب والتصور.
 
