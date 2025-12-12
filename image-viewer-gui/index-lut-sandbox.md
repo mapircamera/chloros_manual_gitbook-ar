@@ -1,86 +1,86 @@
-# Index/LUT Sandbox
+# صندوق الرمل للمؤشر/LUT
 
-The Index/LUT Sandbox is an interactive workspace within the Chloros Image Viewer that allows you to experiment with multispectral index calculations and color visualizations in real-time. This powerful tool helps you test different indices, refine value ranges, and create publication-ready visualizations without reprocessing your entire dataset.
+صندوق الرمل للمؤشر/LUT هو مساحة عمل تفاعلية داخل عارض الصور Chloros تتيح لك تجربة حسابات المؤشر متعدد الأطياف وتصور الألوان في الوقت الفعلي. تساعدك هذه الأداة القوية على اختبار مؤشرات مختلفة، وتحسين نطاقات القيم، وإنشاء تصورات جاهزة للنشر دون إعادة معالجة مجموعة البيانات بالكامل.
 
-## What is the Index/LUT Sandbox?
+## ما هو صندوق الرمل للمؤشر/LUT؟
 
-### Purpose
+### الغرض
 
-The Sandbox provides:
+يوفر صندوق الرمل ما يلي:
 
-* **Real-time index calculation** - Apply any vegetation index instantly
-* **Interactive LUT adjustment** - Fine-tune color gradients and ranges
-* **Workflow optimization** - Determine best settings before batch processing
+* **حساب المؤشر في الوقت الفعلي** - تطبيق أي مؤشر نباتي على الفور
+* **تعديل LUT التفاعلي** - ضبط تدرجات الألوان ونطاقاتها بدقة
+* **تحسين سير العمل** - تحديد أفضل الإعدادات قبل المعالجة المجمعة
 
-### Sandbox vs. Project Processing
+### Sandbox مقابل معالجة المشروع
 
-**Index/LUT Sandbox (Interactive):**
+**Index/LUT Sandbox (تفاعلي):**
 
-* Single image at a time
-* Instant feedback
-* Experimental and iterative
-* No permanent changes to files
-* Perfect for exploring and testing
+* صورة واحدة في كل مرة
+* ردود فعل فورية
+* تجريبي وتكراري
+* لا توجد تغييرات دائمة على الملفات
+* مثالي للاستكشاف والاختبار
 
-**Project Processing (Batch):**
+**معالجة المشروع (دفعة):**
 
-* Entire dataset at once
-* Pre-configured settings
-* Permanent output files
-* Time-intensive
-* Best when settings are finalized
+* مجموعة البيانات بأكملها في وقت واحد
+* إعدادات مسبقة التكوين
+* ملفات إخراج دائمة
+* تستغرق وقتًا طويلاً
+* الأفضل عند الانتهاء من الإعدادات
 
-{% hint style="success" %}
-**Best Workflow**: Use the Sandbox to experiment and find optimal index and LUT settings, then apply those settings during Project Processing for your entire dataset.
+{% hint style=&quot;success&quot; %}
+**أفضل سير عمل**: استخدم Sandbox للتجربة والعثور على الإعدادات المثلى للمؤشر و LUT، ثم قم بتطبيق هذه الإعدادات أثناء معالجة المشروع لمجموعة البيانات بأكملها.
 {% endhint %}
 
 ***
 
-## Working with the Index/LUT Sandbox
+## العمل مع Sandbox للمؤشر/LUT
 
-### Understanding Pre-Calculated Indices
+### فهم الفهارس المحسوبة مسبقًا
 
-In Chloros, indices can be applied during project processing. To determine which index and LUT settings you want to apply to exports it is easiest to use the image viewer sandbox.
+في Chloros، يمكن تطبيق الفهارس أثناء معالجة المشروع. لتحديد إعدادات الفهرس و LUT التي تريد تطبيقها على الصادرات، من الأسهل استخدام صندوق الحماية لعارض الصور.
 
-The sandbox allows you to:
+يتيح لك صندوق الحماية ما يلي:
 
-* **Apply new index and color gradients (LUTs)** to visualize the data
-* **Adjust visualization settings** interactively
-* **View** already-calculated index images
-* **Inspect** pixel values at all zoom levels
+* **تطبيق مؤشرات وتدرجات ألوان جديدة (LUT)** لتصور البيانات
+* **ضبط إعدادات التصور** بشكل تفاعلي
+* **عرض** صور المؤشرات المحسوبة مسبقًا
+* **فحص** قيم البكسل في جميع مستويات التكبير
 
-### Opening the Sandbox
+### فتح صندوق الحماية
 
-The Index/LUT Sandbox is accessed in the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sidebar tab:
+يمكن الوصول إلى صندوق الحماية للمؤشر/LUT من خلال علامة التبويب **عارض الصور** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> :
 
-1. Click an image in the file browser image grid, it opens in the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab
-2. Click **the Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab to open the left pop-out sidebar if it's not already open
+1. انقر فوق صورة في شبكة الصور في مستعرض الملفات، وستفتح في علامة تبويب **عارض الصور** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> .
+2. انقر فوق علامة التبويب **عارض الصور** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> لفتح الشريط الجانبي المنبثق الأيسر إذا لم يكن مفتوحًا بالفعل
 
-### Selecting an Image to Apply an Index/LUT to
+### تحديد صورة لتطبيق مؤشر/LUT عليها
 
-To work with an index in the Image Viewer <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sandbox:
+للعمل مع مؤشر في شريط <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> :
 
-1. **Open an image** from the main image grid by clicking on it
-2. The **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab will then open
-3. Click the **Layer dropdown** (top-right of viewer)
-4. Select the layer from the dropdown:
-   * RAW (Reflectance)
+1. **افتح صورة** من شبكة الصور الرئيسية بالنقر عليها
+2. ستفتح علامة التبويب **عارض الصور** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> **
+3. انقر فوق **القائمة المنسدلة للطبقة** (أعلى يمين العارض)
+4. حدد الطبقة من القائمة المنسدلة:
+   * RAW (الانعكاس)
 
-### Applying an Index to an Image
+### تطبيق فهرس على صورة
 
-Once the image is fullscreen and the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab sidebar is open:
+بمجرد أن تصبح الصورة في وضع ملء الشاشة ويتم فتح الشريط الجانبي **عارض الصور** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> :
 
-1. Check the Index box at the top of the sidebar
-2. Choose your camera's filter from the left dropdown
-3. Choose the desired index formula from the right dropdown
-4. Drag the filter channel color circles to the locations in the index formula below
-5. Once the formula is valid the image will update and show the index values
-6. Move your mouse cursor around to see the values at the cursor's location
-7. Zoom in to see individual pixels and their associated values
+1. حدد مربع المؤشر في الجزء العلوي من الشريط الجانبي
+2. اختر مرشح الكاميرا من القائمة المنسدلة اليسرى
+3. اختر صيغة المؤشر المطلوبة من القائمة المنسدلة اليمنى
+4. اسحب دوائر ألوان قناة المرشح إلى المواقع في صيغة المؤشر أدناه
+5. بمجرد أن تصبح الصيغة صالحة، سيتم تحديث الصورة وعرض قيم المؤشر
+6. حرك مؤشر الماوس لترى القيم في موقع المؤشر
+7. قم بالتكبير لرؤية وحدات البكسل الفردية والقيم المرتبطة بها
 
-Each index has a specific value range and meaning:
+لكل مؤشر نطاق قيم ومعنى محددان:
 
-#### NDVI Example
+#### NDVI مثال
 
 ```
 Formula: (NIR - Red) / (NIR + Red)
@@ -96,293 +96,293 @@ Bare soil: 0.0 to 0.2
 Water: -0.1 to 0.1
 ```
 
-For complete index formula documentation, see [Multispectral Index Formulas](../project-settings/multispectral-index-formulas.md).
+للحصول على وثائق كاملة عن صيغة المؤشر، راجع [صيغ المؤشر متعدد الأطياف](../project-settings/multispectral-index-formulas.md).
 
 ***
 
-## Working with LUTs (Look-Up Tables)
+## العمل مع LUTs (جداول البحث)
 
-### What is a LUT?
+### ما هو LUT؟
 
-A **Look-Up Table (LUT)** maps numerical index values to colors for visualization:
+**جدول البحث (LUT)** يربط قيم المؤشر الرقمية بالألوان من أجل التصور:
 
-* **Input**: Index pixel value (e.g., NDVI 0.65)
-* **Output**: RGB color (e.g., bright green)
-* **Purpose**: Make patterns easier to see and interpret
+* **الإدخال**: قيمة بكسل المؤشر (على سبيل المثال، NDVI 0.65)
+* **الإخراج**: لون RGB (على سبيل المثال، أخضر فاتح)
+* **الغرض**: تسهيل رؤية الأنماط وتفسيرها
 
-**Grayscale vs. Color LUT:**
+**جدول البحث الرمادي مقابل جدول البحث الملون:**
 
-* Grayscale: Scientific and neutral, shows raw data
-* Color LUT: Intuitive and impactful, highlights patterns and differences
+* الرمادي: علمي ومحايد، يعرض البيانات الأولية
+* جدول البحث الملون: بديهي ومؤثر، يبرز الأنماط والاختلافات
 
-{% hint style="success" %}
-**Visualization Power**: Applying a color LUT to a grayscale index image makes it dramatically easier to identify patterns, anomalies, and areas of interest at a glance.
+{% hint style=&quot;success&quot; %}
+**قوة التصور**: يؤدي تطبيق LUT ملون على صورة مؤشر تدرج رمادي إلى تسهيل التعرف على الأنماط والانحرافات والمناطق المهمة بنظرة واحدة.
 {% endhint %}
 
-### Applying a LUT to an Index Image
+### تطبيق LUT على صورة مؤشر
 
-Once you have an index image showing
+بمجرد الحصول على صورة مؤشر تظهر
 
-1. Click the <img src="../.gitbook/assets/image.png" alt="" data-size="line"> "+Add LUT" button
-2. Select the color gradient
-3. Adjust the clipping min/max end points
-4. Adjust the Clipping Mode
-5. Check the Index box in the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab sidebar to apply the LUT
+1. انقر فوق <img src="../.gitbook/assets/image.png" alt="" data-size="line"> زر &quot;+Add LUT&quot;
+2. حدد التدرج اللوني
+3. اضبط نقاط نهاية القص الصغرى/الكبرى
+4. اضبط وضع القص
+5. حدد مربع الفهرس في شريط الجانب **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> الشريط الجانبي لتطبيق LUT
 
-### Choosing a Color Gradient
+### اختيار تدرج لوني
 
-**Selecting a gradient:**
+**تحديد تدرج:**
 
-1. In the LUT panel, locate the **colored gradient bar**
-2. Hover your mouse over it to view available gradient presets
-3. Select desired gradient
-4. The image **updates immediately** with new colors when the Index box is checked
+1. في لوحة LUT، حدد **شريط التدرج اللوني**
+2. حرك الماوس فوقه لعرض الإعدادات المسبقة المتاحة للتدرج
+3. حدد التدرج المطلوب
+4. **تتحديث الصورة على الفور** بألوان جديدة عند تحديد مربع الفهرس
 
-{% hint style="success" %}
-**Best Practice**: For vegetation indices like NDVI, the Red-Yellow-Green gradient is most intuitive because it aligns with natural color associations (green=healthy, yellow=moderate, red=stressed).
+{% hint style=&quot;success&quot; %}
+**أفضل الممارسات**: بالنسبة لمؤشرات الغطاء النباتي مثل NDVI، فإن التدرج Red-Yellow-Green هو الأكثر بديهية لأنه يتوافق مع الارتباطات اللونية الطبيعية (الأخضر = صحي، الأصفر = معتدل، الأحمر = متوتر).
 {% endhint %}
 
-### Adjusting Color Classes
+### ضبط فئات الألوان
 
-The **Classes control** determines how many discrete color steps appear in your gradient:
+يحدد **عنصر التحكم في الفئات** عدد خطوات الألوان المنفصلة التي تظهر في التدرج اللوني:
 
-**Class count options:**
+**خيارات عدد الفئات:**
 
-* **2-5 classes**: Very broad categories, distinct zones
-* **6-10 classes**: Balanced, good for classification
-* **11-20 classes**: Smooth gradients, continuous appearance
-* **20+ classes**: Near-continuous, maximum smoothness
+* **2-5 فئات**: فئات واسعة جدًا، مناطق متميزة
+* **6-10 فئات**: متوازنة، جيدة للتصنيف
+* **11-20 فئة**: تدرجات سلسة، مظهر متواصل
+* **20+ فئة**: شبه متواصل، أقصى درجة من السلاسة
 
-**How to adjust:**
+**كيفية الضبط:**
 
-1. In the LUT panel, locate the **color swatch squares below the gradient bar**
-2. Adjust the number of classes by adding with the + button
-3. Remove the number of classes by double clicking on a color swatch
-4. The gradient updates **in real-time** on the image
+1. في لوحة LUT، حدد **مربعات عينات الألوان أسفل شريط التدرج**
+2. اضبط عدد الفئات عن طريق الإضافة باستخدام الزر +
+3. أزل عدد الفئات عن طريق النقر المزدوج على عينة لون
+4. يتم تحديث التدرج **في الوقت الفعلي** على الصورة
 
-**Effect on visualization:**
+**التأثير على التصور:**
 
-* **Fewer classes** (3-5): Creates distinct zones, simplified classification, easier to distinguish categories
-* **Medium classes** (6-10): Balanced approach, good for most applications
-* **More classes** (15-20): Smooth transitions, detailed variation, photographic appearance
+* **فئات أقل** (3-5): إنشاء مناطق متميزة، وتصنيف مبسط، وفئات أسهل في التمييز
+* **فئات متوسطة** (6-10): نهج متوازن، جيد لمعظم التطبيقات
+* **فئات أكثر** (15-20): انتقالات سلسة، تباين تفصيلي، مظهر فوتوغرافي
 
-**When to use:**
+**متى تستخدم:**
 
-* **Few classes (3-5)**: Presentation slides, classification maps, simple reports
-* **Medium classes (6-10)**: General analysis, balanced detail, standard reports
-* **Many classes (15-20)**: Scientific analysis, detailed inspection, publication-quality outputs
+* **فئات قليلة (3-5)**: شرائح العرض التقديمي، خرائط التصنيف، التقارير البسيطة
+* **فئات متوسطة (6-10)**: التحليل العام، التفاصيل المتوازنة، التقارير القياسية
+* **فئات كثيرة (15-20)**: التحليل العلمي، الفحص التفصيلي، المخرجات ذات الجودة العالية للنشر
 
-### Fine-Tuning Value Ranges
+### ضبط نطاقات القيم
 
-The **value range controls** determine which index values map to which colors in your gradient:
+تحدد **عناصر التحكم في نطاق القيمة** أي قيم مؤشر يتم تعيينها لأي ألوان في التدرج اللوني:
 
-**Range controls in LUT panel:**
+**عناصر التحكم في النطاق في لوحة LUT:**
 
-* **Minimum value**: Lower bound of the color scale
-* **Maximum value**: Upper bound of the color scale
-* **Intermediate values**: Automatically distributed between min and max (based on class count)
+* **القيمة الدنيا**: الحد الأدنى لمقياس الألوان
+* **القيمة القصوى**: الحد الأعلى لمقياس الألوان
+* **القيم المتوسطة**: يتم توزيعها تلقائيًا بين الحد الأدنى والحد الأقصى (بناءً على عدد الفئات)
 
-#### Adjusting Min/Max Values
+#### ضبط القيم الدنيا/القصوى
 
-**To adjust value ranges:**
+**لضبط نطاقات القيم:**
 
-1. In the LUT panel, locate the **Min Value** and **Max Value** input fields
-2. Click the **Min Value** field
-3. Type the desired minimum value (e.g., `0.2`)
-4. Press **Enter** or click outside the field
-5. Repeat for **Max Value** field (e.g., `0.9`)
-6. The visualization **updates immediately**
+1. في لوحة LUT، حدد حقول الإدخال **القيمة الدنيا** و**القيمة القصوى**
+2. انقر فوق حقل **القيمة الدنيا**
+3. اكتب القيمة الدنيا المطلوبة (على سبيل المثال، `0.2`)
+4. اضغط على **Enter** أو انقر خارج الحقل
+5. كرر العملية مع حقل **القيمة القصوى** (على سبيل المثال، `0.9`)
+6. **يتم تحديث** التصور على الفور
 
-{% hint style="info" %}
-**Auto-Scaling**: When you first apply a LUT, Chloros automatically sets the min/max to the actual data range in the image. You can then narrow this range to focus on specific value ranges of interest.
+{% hint style=&quot;info&quot; %}
+**التحجيم التلقائي**: عند تطبيق LUT لأول مرة، يقوم Chloros تلقائيًا بتعيين الحد الأدنى/الحد الأقصى لنطاق البيانات الفعلي في الصورة. يمكنك بعد ذلك تضييق هذا النطاق للتركيز على نطاقات قيم محددة تهمك.
 {% endhint %}
 
-**Example NDVI range adjustments:**
+**مثال على تعديلات نطاق NDVI:**
 
-* **Full range**: `-1.0` to `1.0` (show all possible values)
-* **Vegetation-focused**: `0.2` to `0.9` (exclude bare soil and water)
-* **Healthy vegetation only**: `0.5` to `0.9` (highlight only vigorous plants)
-* **Stress detection**: `0.2` to `0.5` (emphasize problem areas)
-* **Custom range**: Adjust based on your observed pixel values
+* **النطاق الكامل**: `-1.0` إلى `1.0` (عرض جميع القيم الممكنة)
+* **التركيز على الغطاء النباتي**: `0.2` إلى `0.9` (باستثناء التربة الجرداء والمياه)
+* **الغطاء النباتي الصحي فقط**: `0.5` إلى `0.9` (تسليط الضوء على النباتات القوية فقط)
+* **كشف الإجهاد**: `0.2` إلى `0.5` (التركيز على المناطق التي بها مشاكل)
+* **نطاق مخصص**: اضبطه بناءً على قيم البكسل التي لاحظتها
 
-**Why adjust ranges?**
+**لماذا يتم ضبط النطاقات؟**
 
-* **Increase contrast** in your area of interest
-* **Exclude irrelevant values** (e.g., water bodies, bare soil)
-* **Standardize visualization** across multiple images or dates
-* **Emphasize subtle differences** within a narrow value range
+* **زيادة التباين** في المنطقة التي تهمك
+* **استبعاد القيم غير ذات الصلة** (مثل المسطحات المائية والتربة الجرداء)
+* **توحيد العرض** عبر صور أو تواريخ متعددة
+* **التركيز على الاختلافات الطفيفة** ضمن نطاق قيم ضيق
 
-### Clipping Out-of-Range Values
+### قص القيم خارج النطاق
 
-When pixel values fall outside your defined min/max range, you can control how they're displayed using **clipping modes**.
+عندما تقع قيم البكسل خارج النطاق الأدنى/الأقصى المحدد، يمكنك التحكم في كيفية عرضها باستخدام **أوضاع القص**.
 
-#### **Available clipping mode options:**
+#### **خيارات أوضاع القص المتاحة:**
 
-#### 1. Minimum and Maximum
+#### 1. الحد الأدنى والحد الأقصى
 
-* Pixels **below minimum** → display using the **first color** in gradient (e.g., red)
-* Pixels **above maximum** → display using the **last color** in gradient (e.g., green)
-* **Use case**: Emphasize extremes, show full data range with saturated colors at limits
-* **Example**: NDVI values below 0.2 all appear red, values above 0.9 all appear green
+* البكسل **أقل من الحد الأدنى** → العرض باستخدام **اللون الأول** في التدرج (على سبيل المثال، الأحمر)
+* البكسلات **فوق الحد الأقصى** → عرض باستخدام **اللون الأخير** في التدرج (على سبيل المثال، الأخضر)
+* **حالة الاستخدام**: التأكيد على القيم المتطرفة، وعرض نطاق البيانات الكامل بألوان مشبعة عند الحدود
+* **مثال**: تظهر جميع قيم NDVI الأقل من 0.2 باللون الأحمر، وتظهر جميع القيم الأعلى من 0.9 باللون الأخضر
 
-#### 2. Transparent Background
+#### 2. خلفية شفافة
 
-* Pixels **outside the range** become **fully transparent**
-* Only pixels **within range** show color gradient
-* **Use case**: GIS overlay, isolating specific value ranges, highlighting only areas of interest
-* **Example**: Show only NDVI 0.4-0.7 in color, everything else transparent
+* تصبح البكسلات **خارج النطاق** **شفافة تمامًا**
+* لا تظهر التدرجات اللونية إلا للبكسلات **داخل النطاق**
+* **حالة الاستخدام**: تراكب GIS، عزل نطاقات قيم محددة، إبراز المناطق ذات الأهمية فقط
+* **مثال**: عرض NDVI 0.4-0.7 بالألوان فقط، وجميع القيم الأخرى شفافة
 
-{% hint style="warning" %}
-**Transparency Limitation**: Transparent pixels will appear as the background color in the viewer. When exported during processing, transparency is preserved in PNG format but not in JPG.
+{% hint style=&quot;warning&quot; %}
+**قيود الشفافية**: ستظهر البكسلات الشفافة بلون الخلفية في العارض. عند التصدير أثناء المعالجة، يتم الحفاظ على الشفافية في تنسيق PNG ولكن ليس في تنسيق JPG.
 {% endhint %}
 
-#### 3. Index Background
+#### 3. خلفية الفهرس
 
-* Pixels **outside range** display in **grayscale** (showing raw index values)
-* Pixels **within range** show **color gradient**
-* **Use case**: Subtle highlighting, maintain context while emphasizing areas of interest
-* **Example**: Color-highlight stressed vegetation (NDVI 0.3-0.5) while showing healthy areas in gray
+* تظهر البكسلات **خارج النطاق** باللون **الرمادي** (تظهر قيم الفهرس الأولية)
+* تظهر البكسلات **داخل النطاق** **تدرجًا لونيًا**
+* **حالة الاستخدام**: تمييز خفيف، الحفاظ على السياق مع التركيز على المناطق المهمة
+* **مثال**: تمييز النباتات المجهدة باللون (NDVI 0.3-0.5) مع إظهار المناطق السليمة باللون الرمادي
 
-#### 4. Original Background
+#### 4. الخلفية الأصلية
 
-* Pixels **outside range** display the **original multispectral image**
-* Pixels **within range** show **color gradient**
-* **Use case**: Most intuitive - combines natural image context with analytical color overlay
-* **Example**: See the actual field/crop appearance with color-coded stress areas overlaid
+* البكسلات **خارج النطاق** تعرض **الصورة متعددة الأطياف الأصلية**
+* البكسلات **داخل النطاق** تظهر **تدرج اللون**
+* **حالة الاستخدام**: الأكثر بديهية - تجمع بين سياق الصورة الطبيعية وتراكب الألوان التحليلي
+* **مثال**: شاهد المظهر الفعلي للحقل/المحصول مع تراكب المناطق المجهدة المرمزة بالألوان
 
-### Choosing the Right Clipping Mode
+### اختيار وضع القص المناسب
 
-| Clipping Mode              | Best For                                   | Visualization Style          |
+| وضع القص              | الأفضل لـ                                   | نمط التصور          |
 | -------------------------- | ------------------------------------------ | ---------------------------- |
-| **Minimum and Maximum**    | Full data display, scientific analysis     | All pixels colored           |
-| **Transparent Background** | GIS overlays, isolating specific ranges    | Color on range, blank beyond |
-| **Index Background**       | Subtle emphasis, maintaining data context  | Color on range, gray beyond  |
-| **Original Background**    | Reports, presentations, intuitive analysis | Color on range, photo beyond |
+| **الحد الأدنى والحد الأقصى**    | عرض البيانات الكامل، التحليل العلمي     | جميع البكسلات ملونة           |
+| **خلفية شفافة** | تراكبات GIS، عزل نطاقات محددة    | لون على النطاق، فارغ خارج النطاق |
+| **خلفية الفهرس**       | تأكيد خفيف، الحفاظ على سياق البيانات  | لون على النطاق، رمادي خارج النطاق  |
+| **الخلفية الأصلية**    | التقارير، العروض التقديمية، التحليل البديهي | لون على النطاق، صورة خارج النطاق |
 
-### Creating Custom LUT Colors
+### إنشاء ألوان LUT مخصصة
 
-For full control over your visualization, you can create **custom color gradients** by editing individual color stops.
+للتحكم الكامل في التصور، يمكنك إنشاء **تدرجات ألوان مخصصة** عن طريق تحرير نقاط توقف الألوان الفردية.
 
-**To create a custom gradient:**
+**لإنشاء تدرج مخصص:**
 
-1. In the LUT panel, locate the **gradient preview bar**
-2. Look for **color swatch squares** below the gradient
-3. **Click a color stop** to select it
-4. A **color picker** opens
-5. Choose a new color using:
-   * **Color wheel**: Visual color selection
-   * **RGB/HSV sliders**: Precise color control
-   * **Hex code entry**: Exact color specification (e.g., `#FF0000` for red)
-6. Click off the color picker **to apply the new color**
-7. The gradient **updates immediately** on the image
+1. في لوحة LUT، حدد موقع **شريط معاينة التدرج**
+2. ابحث عن **مربعات عينات الألوان** أسفل التدرج
+3. **انقر فوق نقطة توقف لون** لتحديدها
+4. يفتح **محدد الألوان**
+5. اختر لونًا جديدًا باستخدام:
+   * **عجلة الألوان**: اختيار الألوان بصريًا
+   * **مزلاجات RGB/HSV**: تحكم دقيق في الألوان
+   * **إدخال رمز سداسي عشري**: مواصفات دقيقة للون (على سبيل المثال، `#FF0000` للأحمر)
+6. انقر خارج منتقي الألوان **لتطبيق اللون الجديد**
+7. **يتم تحديث** التدرج على الفور على الصورة
 
-**Adding or removing color stops:**
+**إضافة أو إزالة نقاط توقف الألوان:**
 
-* **Add a stop**: Click the + icon to add a new swatch at the end
-* **Remove a stop**: Double click the color square to remove the swatch
+* **إضافة نقطة توقف**: انقر على أيقونة + لإضافة عينة جديدة في النهاية
+* **إزالة نقطة توقف**: انقر نقرًا مزدوجًا على مربع اللون لإزالة العينة
 
-**Customization strategies:**
+**استراتيجيات التخصيص:**
 
-* **Invert gradient**: Flip color order to reverse the meaning (e.g., green=low, red=high)
-* **Brand colors**: Match your organization's color palette for reports
-* **Colorblind-friendly**: Use orange-blue or purple-yellow combinations
-* **Print optimization**: Choose colors that work in both color and grayscale printing
-* **Multi-threshold**: Use distinct colors at specific value thresholds for classification
+* **عكس التدرج**: اقلب ترتيب الألوان لعكس المعنى (على سبيل المثال، الأخضر = منخفض، الأحمر = مرتفع)
+* **ألوان العلامة التجارية**: طابق لوحة ألوان مؤسستك للتقارير
+* **مناسب لذوي عمى الألوان**: استخدم تركيبات البرتقالي والأزرق أو الأرجواني والأصفر
+* **تحسين الطباعة**: اختر ألوانًا تناسب الطباعة بالألوان والطباعة بتدرج الرمادي
+* **عتبة متعددة**: استخدم ألوانًا مميزة عند عتبات قيم محددة للتصنيف
 
-{% hint style="info" %}
-**Saving Custom Gradients**: Custom gradients can be saved and reused. Click the save icon in the LUT panel to preserve your custom color schemes for future use.
+{% hint style=&quot;info&quot; %}
+**حفظ التدرجات المخصصة**: يمكن حفظ التدرجات المخصصة وإعادة استخدامها. انقر فوق رمز الحفظ في لوحة LUT للحفاظ على أنظمة الألوان المخصصة لاستخدامها في المستقبل.
 {% endhint %}
 
 ***
 
-## Interactive Workflow
+## سير العمل التفاعلي
 
-### Real-Time Updates
+### تحديثات في الوقت الفعلي
 
-All LUT adjustments in the sandbox update the image **instantly and interactively**:
+تقوم جميع تعديلات LUT في صندوق الحماية بتحديث الصورة **بشكل فوري وتفاعلي**:
 
-* **Switch layer** → Image changes immediately
-* **Select gradient** → Colors update instantly
-* **Adjust value range** → Contrast changes in real-time
-* **Change classes** → Gradient smoothness updates immediately
-* **Modify clipping** → Background display changes instantly
-* **Edit colors** → Custom gradient applies immediately
+* **تبديل الطبقة** → تتغير الصورة على الفور
+* **تحديد التدرج** → يتم تحديث الألوان على الفور
+* **ضبط نطاق القيمة** → يتغير التباين في الوقت الفعلي
+* **تغيير الفئات** → يتم تحديث سلاسة التدرج على الفور
+* **تعديل القص** → يتغير عرض الخلفية على الفور
+* **تحرير الألوان** → يتم تطبيق التدرج المخصص على الفور
 
-**No "Apply" button needed** - all changes are live and interactive!
+**لا حاجة إلى زر &quot;تطبيق&quot;** - جميع التغييرات مباشرة وتفاعلية!
 
-{% hint style="success" %}
-**Live Feedback**: The instant visual feedback allows you to rapidly experiment with different settings until you find the optimal visualization for your analysis needs.
+{% hint style=&quot;success&quot; %}
+**التعليقات المباشرة**: تتيح لك التعليقات المرئية الفورية تجربة الإعدادات المختلفة بسرعة حتى تجد التصور الأمثل لاحتياجات التحليل الخاصة بك.
 {% endhint %}
 
-### Iterative Refinement Workflow
+### سير عمل التحسين التكراري
 
-**Typical LUT optimization workflow:**
+**سير عمل تحسين LUT النموذجي:**
 
-1. **Select index layer** (e.g., RAW (Reflectance))
-2. **Apply index** - Choose camera filter and index formula, drag colored circles to appropriate location in the index formula
-3. **Apply LUT gradient** - Start with Red-Yellow-Green preset
-4. **Inspect pixel values** - Move cursor around, note value ranges
-5. **Adjust min/max** - Narrow to focus on vegetation (e.g., 0.2 to 0.9)
-6. **Choose clipping** - Try "Original Background" for context
-7. **Refine colors** - Customize gradient if needed for specific emphasis
-8. **Finalize settings** - Document settings and copy to Project Settings for export processing
+1. **حدد طبقة الفهرس** (على سبيل المثال، RAW (الانعكاس))
+2. **قم بتطبيق الفهرس** - اختر مرشح الكاميرا وصيغة الفهرس، واسحب الدوائر الملونة إلى الموقع المناسب في صيغة الفهرس
+3. **قم بتطبيق تدرج LUT** - ابدأ بإعداد Red-Yellow-Green المسبق
+4. **افحص قيم البكسل** - حرك المؤشر، ولاحظ نطاقات القيم
+5. **اضبط الحد الأدنى/الأقصى** - ضيق النطاق للتركيز على النباتات (على سبيل المثال، 0.2 إلى 0.9)
+6. **اختر القص** - جرب &quot;الخلفية الأصلية&quot; للسياق
+7. **صقل الألوان** - قم بتخصيص التدرج إذا لزم الأمر للتأكيد على شيء معين
+8. **إنهاء الإعدادات** - قم بتوثيق الإعدادات ونسخها إلى إعدادات المشروع لمعالجة التصدير
 
-### Pixel Value Inspection
+### فحص قيمة البكسل
 
-Understanding actual pixel values is crucial for setting effective LUT ranges:
+فهم قيم البكسل الفعلية أمر بالغ الأهمية لضبط نطاقات LUT الفعالة:
 
-**How to inspect values:**
+**كيفية فحص القيم:**
 
-1. Pixel values show when the image has either the Index, or both the Index and LUT **boxes checked**.
-2. **Move your cursor** over different areas of the image
-3. **Observe pixel values** displayed in the legend as you hover
-4. Zoom in to see individual pixels highlighted with a floating value
-5. **Take notes** of value ranges for different features:
-   * **Healthy vegetation**: e.g., NDVI 0.55-0.85
-   * **Stressed vegetation**: e.g., NDVI 0.30-0.50
-   * **Bare soil**: e.g., NDVI 0.05-0.25
-   * **Water** (if present): e.g., NDVI -0.05 to 0.10
+1. تظهر قيم البكسل عندما يكون **مربع المؤشر** أو **مربع المؤشر و LUT** محددين في الصورة.
+2. **حرك المؤشر** فوق مناطق مختلفة من الصورة
+3. **راقب قيم البكسل** المعروضة في التسمية التوضيحية أثناء تحريك المؤشر
+4. قم بالتكبير لرؤية البكسلات الفردية المميزة بقيمة عائمة
+5. **دوّن** نطاقات القيم لمختلف الميزات:
+   * **نباتات سليمة**: على سبيل المثال، NDVI 0.55-0.85
+   * **نباتات متضررة**: على سبيل المثال، NDVI 0.30-0.50
+   * **تربة جرداء**: على سبيل المثال، NDVI 0.05-0.25
+   * **ماء** (إن وجد): على سبيل المثال، NDVI -0.05 إلى 0.10
 
-**Using pixel values to set LUT ranges:**
+**استخدام قيم البكسل لتعيين نطاقات LUT:**
 
-After inspecting pixel values, adjust your LUT min/max accordingly:
+بعد فحص قيم البكسل، اضبط الحد الأدنى/الأقصى لـ LUT وفقًا لذلك:
 
-**Example scenario:**
+**مثال على السيناريو:**
 
-* **Observation**: Soil values = 0.05-0.25, Stressed = 0.25-0.50, Healthy = 0.50-0.85
-* **Goal**: Visualize only plant health (exclude soil)
-* **LUT settings**: Min = `0.25`, Max = `0.85`
-* **Clipping**: "Original Background" to see soil in natural color
-* **Result**: Color gradient only applies to vegetation, soil shows as original image
+* **الملاحظة**: قيم التربة = 0.05-0.25، متوترة = 0.25-0.50، صحية = 0.50-0.85
+* **الهدف**: تصور صحة النباتات فقط (باستثناء التربة)
+* **إعدادات LUT**: الحد الأدنى = `0.25`، الحد الأقصى = `0.85`
+* **القص**: &quot;الخلفية الأصلية&quot; لرؤية التربة باللون الطبيعي
+* **النتيجة**: ينطبق التدرج اللوني على النباتات فقط، وتظهر التربة بالصورة الأصلية
 
-{% hint style="info" %}
-**Dynamic Range**: Different crops, seasons, and growth stages will have different value ranges. Always inspect pixel values in your specific dataset before setting LUT ranges.
+{% hint style=&quot;info&quot; %}
+**النطاق الديناميكي**: ستكون للمحاصيل والمواسم ومراحل النمو المختلفة نطاقات قيم مختلفة. افحص دائمًا قيم البكسل في مجموعة البيانات المحددة الخاصة بك قبل تعيين نطاقات LUT.
 {% endhint %}
 
 ***
 
-## Custom Indices (Chloros+)
+## مؤشرات مخصصة (Chloros+)
 
-### Creating Custom Index Formulas
+### إنشاء صيغ مؤشرات مخصصة
 
-{% hint style="info" %}
-**Where to Create**: Custom indices can be configured in **Project Settings** before processing, as well as in the Image Viewer sandbox sidebar.
+{% hint style=&quot;info&quot; %}
+**مكان الإنشاء**: يمكن تكوين المؤشرات المخصصة في **إعدادات المشروع** قبل المعالجة، وكذلك في الشريط الجانبي لبرنامج Image Viewer sandbox.
 {% endhint %}
 
-**To create a custom index:**
+**لإنشاء فهرس مخصص:**
 
-1. **Open Project Settings** (before processing) or Image Viewer sandbox sidebar
-2. Navigate to the **Index formula dropdown**
-3. Look for **"Custom"** option (must be logged in with Chloros+ license)
-4. **Define your formula** using band variables:
-   * Band names: `NIR`, `Red`, `Green`, `Blue`, `RedEdge`, etc.
-   * Operators: `+`, `-`, `*`, `/`, `^` (exponent)
-   * Functions: `sqrt()`, `abs()`, etc. (if supported)
-   * Parentheses: `()` for order of operations
-5. **Name your index** (e.g., "MyIndex" or "CustomNDVI")
-6. **Save the configuration**
+1. **افتح إعدادات المشروع** (قبل المعالجة) أو الشريط الجانبي لبرنامج Image Viewer sandbox
+2. انتقل إلى **القائمة المنسدلة لصيغة الفهرس**
+3. ابحث عن خيار **&quot;مخصص&quot;** (يجب تسجيل الدخول باستخدام ترخيص Chloros+)
+4. **حدد الصيغة** باستخدام متغيرات النطاق:
+   * أسماء النطاقات: `NIR`، `Red`، `Green`، `Blue`، `RedEdge`، إلخ.
+   * العوامل: `+`، `-`، `*`، `/`، `^` (أس)
+   * الدوال: `sqrt()`، `abs()`، إلخ. (إذا كان مدعومًا)
+   * الأقواس: `()` لترتيب العمليات
+5. **قم بتسمية الفهرس** (على سبيل المثال، &quot;MyIndex&quot; أو &quot;CustomNDVI&quot;)
+6. **احفظ التكوين**
 
-**Example custom formulas:**
+**أمثلة على الصيغ المخصصة:**
 
 ```
 Modified NDVI with offset:
@@ -398,22 +398,22 @@ Exponential index:
 (NIR / Red) ^ 2
 ```
 
-{% hint style="warning" %}
-**Formula Validation**: Ensure your formula uses bands available in your camera. For example, RedEdge is only available on cameras with a RedEdge filter.
+{% hint style=&quot;warning&quot; %}
+**التحقق من صحة الصيغة**: تأكد من أن الصيغة تستخدم النطاقات المتاحة في الكاميرا. على سبيل المثال، RedEdge متاح فقط في الكاميرات المزودة بفلتر RedEdge.
 {% endhint %}
 
 ***
 
-## Next Steps
+## الخطوات التالية
 
-Now that you understand the Index/LUT Sandbox:
+الآن بعد أن فهمت Sandbox المؤشر/LUT:
 
-* **Apply to processing**: Use discovered settings in [Project Settings](../project-settings/page-2.md)
-* **Batch process**: Apply optimized indices to full datasets
-* **Learn more**: Read [Multispectral Index Formulas](../project-settings/multispectral-index-formulas.md)
+* **تطبيق على المعالجة**: استخدم الإعدادات المكتشفة في [إعدادات المشروع](../project-settings/project-settings.md)
+* **معالجة دفعية**: تطبيق الفهارس المحسّنة على مجموعات البيانات الكاملة
+* **مزيد من المعلومات**: اقرأ [صيغ الفهرس متعدد الأطياف](../project-settings/multispectral-index-formulas.md)
 
-Related documentation:
+الوثائق ذات الصلة:
 
-* [**Image Layers**](image-layers.md) - Layer management and visualization
-* [**Opening an Image Full Screen**](page-3.md) - Image Viewer basics
-* [**Processing Images (GUI)**](../processing-images-gui/page-1.md) - Full processing workflow
+* [**طبقات الصور**](image-layers.md) - إدارة الطبقات وتصورها
+* [**فتح صورة بملء الشاشة**](opening-an-image-full-screen.md) - أساسيات عارض الصور
+* [**معالجة الصور (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - سير العمل الكامل للمعالجة

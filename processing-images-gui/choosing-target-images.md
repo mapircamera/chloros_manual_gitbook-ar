@@ -1,221 +1,221 @@
-# Choosing Target Images
+# اختيار الصور المستهدفة
 
-Marking which images contain calibration targets is a crucial step that significantly speeds up the Chloros processing pipeline. By pre-selecting target images, you eliminate the need for Chloros to scan every image in your dataset for calibration targets.
+يعد تحديد الصور التي تحتوي على أهداف المعايرة خطوة حاسمة تسرع بشكل كبير من عملية معالجة Chloros. من خلال التحديد المسبق للصور المستهدفة، لن تحتاج إلى Chloros لمسح كل صورة في مجموعة البيانات الخاصة بك بحثًا عن أهداف المعايرة.
 
-## Why Mark Target Images?
+## لماذا يتم تحديد الصور المستهدفة؟
 
-### Processing Speed
+### سرعة المعالجة
 
-Without marking target images, Chloros must:
+بدون تحديد الصور المستهدفة، يجب على Chloros القيام بما يلي:
 
-* Scan every single image in your project
-* Run target detection algorithms on each image
-* Check hundreds or thousands of images unnecessarily
+* مسح كل صورة في مشروعك
+* تشغيل خوارزميات الكشف عن الأهداف على كل صورة
+* فحص مئات أو آلاف الصور دون داعٍ
 
-**Result**: Processing can take significantly longer, especially for large datasets.
+**النتيجة**: قد تستغرق المعالجة وقتًا أطول بكثير، خاصةً بالنسبة لمجموعات البيانات الكبيرة.
 
-### With Marked Target Images
+### مع الصور المستهدفة المحددة
 
-When you check the Target column for specific images:
+عند التحقق من عمود الهدف لصور معينة:
 
-* Chloros only scans the checked images for targets
-* Target detection completes much faster
-* Overall processing time is greatly reduced
+* يقوم Chloros بمسح الصور المحددة فقط بحثًا عن الأهداف
+* يتم اكتشاف الأهداف بشكل أسرع
+* يتم تقليل وقت المعالجة الإجمالي بشكل كبير
 
-{% hint style="success" %}
-**Speed Improvement**: Marking 2-3 target images in a 500-image dataset can reduce target detection time from 30+ minutes to under 1 minute.
+{% hint style=&quot;success&quot; %}
+**تحسين السرعة**: يمكن أن يؤدي تحديد 2-3 صور مستهدفة في مجموعة بيانات مكونة من 500 صورة إلى تقليل وقت الكشف عن الأهداف من أكثر من 30 دقيقة إلى أقل من دقيقة واحدة.
 {% endhint %}
 
 ***
 
-## How to Mark Target Images
+## كيفية تحديد الصور المستهدفة
 
-### Step 1: Identify Your Target Images
+### الخطوة 1: تحديد الصور المستهدفة
 
-Look through your imported images in the File Browser and identify which images contain calibration targets.
+تصفح الصور المستوردة في مستعرض الملفات وحدد الصور التي تحتوي على أهداف المعايرة.
 
-**Common scenarios:**
+**السيناريوهات الشائعة:**
 
-* **Pre-capture target**: Captured before starting the session
-* **Post-capture target**: Captured after completing the session
-* **In-field targets**: Targets placed within the capture area
-* **Multiple targets**: 2-3 target images per session (recommended)
+* **الهدف قبل الالتقاط**: يتم التقاطه قبل بدء الجلسة
+* **الهدف بعد الالتقاط**: يتم التقاطه بعد الانتهاء من الجلسة
+* **الأهداف الميدانية**: الأهداف الموضوعة داخل منطقة الالتقاط
+* **أهداف متعددة**: 2-3 صور هدف لكل جلسة (موصى به)
 
-### Step 2: Check the Target Column
+### الخطوة 2: تحقق من عمود الهدف
 
-For each image containing a calibration target:
+لكل صورة تحتوي على هدف معايرة:
 
-1. Locate the image in the File Browser table
-2. Find the **Target** column (rightmost column)
-3. Click the checkbox in the Target column for that image
-4. Repeat for all images containing targets
+1. حدد موقع الصورة في جدول مستعرض الملفات
+2. ابحث عن عمود **الهدف** (العمود الأيمن)
+3. انقر فوق مربع الاختيار في عمود الهدف لتلك الصورة
+4. كرر ذلك لجميع الصور التي تحتوي على أهداف
 
-### Step 3: Verify Your Selection
+### الخطوة 3: تحقق من اختيارك
 
-Before processing, double-check:
+قبل المعالجة، تحقق جيدًا من:
 
-* [ ] All images with calibration targets are checked
-* [ ] No non-target images are accidentally checked
-* [ ] Targets are clearly visible in checked images
-
-***
-
-## Best Practices for Target Images
-
-### Target Capture Guidelines
-
-**Timing:**
-
-* Capture target images immediately before and throughout your capture session
-* Within the same lighting conditions as your DAQ light sensor
-* Ideally capture target images as often as possible for the best results. Otherwise, the light sensor data will be used to adjust the calibration over time.
-
-**Camera Position:**
-
-* Hold camera above target such that is is centered and fills around 40-60% of the image center.
-* Keep camera parallel/nadir to target surface
-
-**Lighting:**
-
-* Same ambient lighting as your DAQ light sensor
-* Avoid shadows on the target surfaces
-* Don't block your light source with your body, vehicle or vegetation
-* Overcast conditions provide most consistent results
-
-**Target Condition:**
-
-* Keep target panels clean and dry
-* All 4 panels should be clearly visible and unobstructed
-* Targets perpendicular/nadir to the light source if possible
-
-### How Many Target Images?
-
-**Minimum:** 1 target image per session. **Recommended:** 3-5 target images per session.
-
-**Best practice schedule:**
-
-* 3-5 images captured shortly after the light sensor is recording
-* Rotate the camera between captures for the best results
-* Optional: periodically mid-session if lighting conditions change constantly
+* [ ] تم تحديد جميع الصور التي تحتوي على أهداف معايرة
+* [ ] لم يتم تحديد أي صور غير مستهدفة عن طريق الخطأ
+* [ ] الأهداف واضحة للعيان في الصور المحددة
 
 ***
 
-## Working with Multiple Cameras
+## أفضل الممارسات للصور المستهدفة
 
-### Dual-Camera Setups
+### إرشادات التقاط الأهداف
 
-If using two MAPIR cameras simultaneously (e.g., Survey3W RGN + Survey3N OCN):
+**التوقيت:**
 
-1. Capture target images with **both cameras** at the same time
-2. Use the **same physical target** for both cameras
-3. Mark target images for **both camera types** in the File Browser
-4. Chloros will use appropriate targets for each camera's calibration
+* التقط الصور المستهدفة مباشرة قبل جلسة الالتقاط وطوالها
+* في نفس ظروف الإضاءة التي يعمل فيها مستشعر الضوء DAQ
+* من الأفضل التقاط صور الأهداف قدر الإمكان للحصول على أفضل النتائج. خلاف ذلك، سيتم استخدام بيانات مستشعر الضوء لضبط المعايرة بمرور الوقت.
 
-### Camera Model Column
+**موضع الكاميرا:**
 
-The **Camera Model** column helps identify which images came from which camera:
+* امسك الكاميرا فوق الهدف بحيث تكون في المنتصف وتملأ حوالي 40-60٪ من مركز الصورة.
+* حافظ على الكاميرا موازية/في أدنى نقطة بالنسبة لسطح الهدف
+
+**الإضاءة:**
+
+* نفس الإضاءة المحيطة بمستشعر الضوء DAQ الخاص بك
+* تجنب الظلال على أسطح الهدف
+* لا تحجب مصدر الضوء بجسمك أو مركبتك أو النباتات
+* توفر الظروف الملبدة بالغيوم نتائج أكثر اتساقًا
+
+**حالة الهدف:**
+
+* حافظ على نظافة وجفاف لوحات الهدف
+* يجب أن تكون اللوحات الأربعة واضحة للعيان وخالية من العوائق
+* يجب أن يكون الهدف عموديًا/نادريًا على مصدر الضوء إن أمكن
+
+### كم عدد صور الهدف؟
+
+**الحد الأدنى:** صورة هدف واحدة لكل جلسة. **الموصى به:** 3-5 صور هدف لكل جلسة.
+
+**جدول أفضل الممارسات:**
+
+* التقط 3-5 صور بعد وقت قصير من بدء التسجيل بواسطة مستشعر الضوء
+* قم بتدوير الكاميرا بين اللقطات للحصول على أفضل النتائج
+* اختياري: بشكل دوري في منتصف الجلسة إذا كانت ظروف الإضاءة تتغير باستمرار
+
+***
+
+## العمل مع كاميرات متعددة
+
+### إعدادات الكاميرا المزدوجة
+
+في حالة استخدام كاميرتين MAPIR في وقت واحد (على سبيل المثال، Survey3W RGN + Survey3N OCN):
+
+1. التقط الصور المستهدفة **بكلا الكاميرتين** في نفس الوقت
+2. استخدم **نفس الهدف المادي** لكلا الكاميرتين
+3. ضع علامة على الصور المستهدفة **لكلا النوعين من الكاميرات** في متصفح الملفات
+4. ستستخدم Chloros الأهداف المناسبة لمعايرة كل كاميرا
+
+### عمود طراز الكاميرا
+
+يساعد عمود **طراز الكاميرا** في تحديد الصور التي تم التقاطها من كل كاميرا:
 
 * Survey3W\_RGN
 * Survey3N\_OCN
 * Survey3W\_RGB
-* etc.
+* إلخ.
 
-Use this column to verify you've marked targets for each camera type in your project.
-
-***
-
-## Target Detection Settings
-
-### Adjusting Detection Sensitivity
-
-If Chloros isn't detecting your targets correctly, adjust these settings in [Project Settings](adjusting-project-settings.md):
-
-**Minimum calibration sample area:**
-
-* **Default**: 25 pixels
-* **Increase** if getting false detections on small artifacts
-* **Decrease** if targets aren't being detected
-
-**Minimum target clustering:**
-
-* **Default**: 60
-* **Increase** if targets are being split into multiple detections
-* **Decrease** if targets with color variation aren't fully detected
+استخدم هذا العمود للتحقق من أنك قمت بتمييز الأهداف لكل نوع كاميرا في مشروعك.
 
 ***
 
-## Common Target Image Issues
+## إعدادات الكشف عن الأهداف
 
-### Problem: No Targets Detected
+### ضبط حساسية الكشف
 
-**Possible causes:**
+إذا كان Chloros لا يكتشف أهدافك بشكل صحيح، فاضبط هذه الإعدادات في [إعدادات المشروع](adjusting-project-settings.md):
 
-* Target images not marked in File Browser
-* Target too small in frame (< 30% of image)
-* Poor lighting (shadows, glare)
-* Target detection settings too strict
+**الحد الأدنى لمساحة عينة المعايرة:**
 
-**Solutions:**
+* **الافتراضي**: 25 بكسل
+* **زيادة** إذا حصلت على اكتشافات خاطئة على القطع الصغيرة
+* **تقليل** إذا لم يتم اكتشاف الأهداف
 
-1. Verify Target column is checked for correct images
-2. Review target image quality in preview
-3. Recapture targets if quality is poor
-4. Adjust target detection settings if needed
+**الحد الأدنى لتجميع الأهداف:**
 
-### Problem: False Target Detections
-
-**Possible causes:**
-
-* White buildings, vehicles, or ground cover mistaken for targets
-* Bright patches in vegetation
-* Detection sensitivity too low
-
-**Solutions:**
-
-1. Mark only actual target images to limit detection scope
-2. Increase minimum calibration sample area
-3. Increase minimum target clustering value
-4. Ensure target images show only the target (minimal background clutter)
+* **الافتراضي**: 60
+* **زيادة** إذا تم تقسيم الأهداف إلى عدة اكتشافات
+* **تقليل** إذا لم يتم اكتشاف الأهداف ذات الاختلافات اللونية بالكامل
 
 ***
 
-## Verification Checklist
+## مشكلات شائعة في صور الأهداف
 
-Before starting processing, verify your target image selection:
+### المشكلة: لم يتم اكتشاف أي أهداف
 
-* [ ] At least 1 target image marked per session
-* [ ] Target column checkboxes are checked for all target images
-* [ ] Target images captured within same timeframe as survey
-* [ ] Targets clearly visible in preview when clicked
-* [ ] All 4 calibration panels visible in each target image
-* [ ] No shadows or obstructions on targets
-* [ ] For dual-camera: Targets marked for both camera types
+**الأسباب المحتملة:**
+
+* صور الأهداف غير محددة في مستعرض الملفات
+* الهدف صغير جدًا في الإطار (&lt; 30% من الصورة)
+* إضاءة سيئة (ظلال، وهج)
+* إعدادات الكشف عن الأهداف صارمة للغاية
+
+**الحلول:**
+
+1. تحقق من تحديد عمود الهدف للصور الصحيحة
+2. راجع جودة صورة الهدف في المعاينة
+3. أعد التقاط الأهداف إذا كانت الجودة رديئة
+4. اضبط إعدادات الكشف عن الأهداف إذا لزم الأمر
+
+### المشكلة: اكتشاف أهداف خاطئة
+
+**الأسباب المحتملة:**
+
+* المباني البيضاء أو المركبات أو الغطاء الأرضي التي تم الخلط بينها وبين الأهداف
+* البقع الساطعة في النباتات
+* حساسية الكشف منخفضة للغاية
+
+**الحلول:**
+
+1. ضع علامة على الصور المستهدفة الفعلية فقط للحد من نطاق الكشف
+2. قم بزيادة الحد الأدنى لمساحة عينة المعايرة
+3. قم بزيادة الحد الأدنى لقيمة تجميع الأهداف
+4. تأكد من أن الصور المستهدفة تعرض الهدف فقط (أقل قدر ممكن من الفوضى في الخلفية)
 
 ***
 
-## Target-Free Processing
+## قائمة التحقق
 
-### Processing Without Calibration Targets
+قبل بدء المعالجة، تحقق من اختيارك لصور الأهداف:
 
-While not recommended for scientific work, you can process without targets:
+* [ ] تم وضع علامة على صورة هدف واحدة على الأقل لكل جلسة
+* [ ] تم تحديد مربعات اختيار عمود الأهداف لجميع صور الأهداف
+* [ ] تم التقاط صور الأهداف في نفس الإطار الزمني للمسح
+* [ ] الأهداف واضحة للعيان في المعاينة عند النقر عليها
+* [ ] جميع لوحات المعايرة الأربعة واضحة للعيان في كل صورة هدف
+* [ ] لا توجد ظلال أو عوائق على الأهداف
+* [ ] بالنسبة للكاميرا المزدوجة: تم تحديد الأهداف لكلا نوعي الكاميرا
 
-1. Leave all Target column checkboxes unchecked
-2. **Disable** "Reflectance calibration" in Project Settings
-3. Vignette correction will still be applied
-4. Output will not be calibrated for absolute reflectance
+***
 
-{% hint style="warning" %}
-**Not Recommended**: Without reflectance calibration, pixel values represent relative brightness only, not scientific reflectance measurements. Use calibration targets for accurate, repeatable results.
+## المعالجة بدون أهداف
+
+### المعالجة بدون أهداف المعايرة
+
+على الرغم من أن ذلك غير موصى به للأعمال العلمية، يمكنك المعالجة بدون أهداف:
+
+1. اترك جميع مربعات اختيار عمود الهدف غير محددة
+2. **قم بتعطيل** &quot;معايرة الانعكاس&quot; في إعدادات المشروع
+3. سيظل تصحيح التظليل مطبقًا
+4. لن يتم معايرة المخرجات للانعكاسية المطلقة
+
+{% hint style=&quot;warning&quot; %}
+**غير موصى به**: بدون معايرة الانعكاسية، تمثل قيم البكسل السطوع النسبي فقط، وليس قياسات الانعكاسية العلمية. استخدم أهداف المعايرة للحصول على نتائج دقيقة وقابلة للتكرار.
 {% endhint %}
 
 ***
 
-## Next Steps
+## الخطوات التالية
 
-Once you've marked your target images:
+بمجرد تحديد الصور المستهدفة:
 
-1. **Review your settings** - See [Adjusting Project Settings](adjusting-project-settings.md)
-2. **Start processing** - See [Starting the Processing](starting-the-processing.md)
-3. **Monitor progress** - See [Monitoring the Processing](monitoring-the-processing.md)
+1. **راجع إعداداتك** - انظر [ضبط إعدادات المشروع](adjusting-project-settings.md)
+2. **ابدأ المعالجة** - انظر [بدء المعالجة](starting-the-processing.md)
+3. **مراقبة التقدم** - انظر [مراقبة المعالجة](monitoring-the-processing.md)
 
-For more information about calibration targets themselves, see [Calibration Targets](../calibration-targets.md).
+لمزيد من المعلومات حول أهداف المعايرة نفسها، انظر [أهداف المعايرة](../calibration-targets.md).

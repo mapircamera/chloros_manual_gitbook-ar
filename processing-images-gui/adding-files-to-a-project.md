@@ -1,204 +1,204 @@
-# Adding Files to a Project
+# إضافة ملفات إلى مشروع
 
-Once you've created or opened a project in Chloros, the next step is to add your multispectral images to begin processing. The File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> tab makes it easy to import images and manage your dataset.
+بمجرد إنشاء أو فتح مشروع في Chloros، فإن الخطوة التالية هي إضافة صورك متعددة الأطياف لبدء المعالجة. يسهل علامة التبويب &quot;متصفح الملفات&quot;<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> يسهل استيراد الصور وإدارة مجموعة البيانات الخاصة بك.
 
-## Accessing the File Browser
+## الوصول إلى مستعرض الملفات
 
-1. Open or create a project in Chloros
-2. Click the **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> icon in the left sidebar
-3. The File Browser panel will display your project's file list
+1. افتح أو أنشئ مشروعًا في Chloros
+2. انقر فوق **مستعرض الملفات** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> في الشريط الجانبي الأيسر
+3. ستعرض لوحة متصفح الملفات قائمة ملفات مشروعك
 
-{% hint style="info" %}
-**Supported File Types**: Chloros supports RAW+JPG and JPG image files from MAPIR Survey3W and Survey3N cameras. Only RAW+JPG are recommended.
+{% hint style=&quot;info&quot; %}
+**أنواع الملفات المدعومة**: يدعم Chloros ملفات الصور RAW+JPG و JPG من كاميرات MAPIR Survey3W و Survey3N. يوصى باستخدام RAW+JPG فقط.
 {% endhint %}
 
 ***
 
-## Adding Images to Your Project
+## إضافة صور إلى مشروعك
 
-There are two primary ways to add images to your project:
+هناك طريقتان أساسيتان لإضافة صور إلى مشروعك:
 
-### Method 1: Add Files
+### الطريقة 1: إضافة ملفات
 
-Use this option to import individual image files or a small selection of files.
+استخدم هذا الخيار لاستيراد ملفات صور فردية أو مجموعة صغيرة من الملفات.
 
-1. Click the **"Add Files"** button at the top of the File Browser panel
-2. Navigate to the folder containing your images
-3. Select one or more image files (hold **Ctrl** to select multiple files)
-4. Click **"Open"** to import the selected files
+1. انقر فوق الزر **&quot;إضافة ملفات&quot;** في الجزء العلوي من لوحة مستعرض الملفات.
+2. انتقل إلى المجلد الذي يحتوي على صورك.
+3. حدد ملف صورة واحد أو أكثر (اضغط مع الاستمرار على **Ctrl** لتحديد عدة ملفات).
+4. انقر فوق **&quot;فتح&quot;** لاستيراد الملفات المحددة.
 
-### Method 2: Add Folder
+### الطريقة 2: إضافة مجلد
 
-Use this option to import all images from a folder at once.
+استخدم هذا الخيار لاستيراد جميع الصور من مجلد واحد في وقت واحد.
 
-1. Click the **"Add Folder"** button at the top of the File Browser panel
-2. Navigate to and select the folder containing your capture session images
-3. Click **"Select Folder"** to import all supported images from that folder
-
-***
-
-## Understanding the File Browser Table
-
-Once images are imported, they appear in a table with the following columns:
-
-### Thumbnail
-
-* Small preview of each image
-* Click thumbnail to view full image in the main preview area
-
-### File Name
-
-* Original filename from the camera
-* Maintains camera naming convention (e.g., IMG\_0001.RAW)
-
-### Timestamp
-
-* Date and time the image was captured
-* Extracted from image EXIF metadata
-* Used for PPK synchronization and calibration target detection
-
-### Camera Model
-
-* Automatically detected camera and filter configuration
-* Examples: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
-* Used to apply correct processing profiles
-
-### Target Column (Checkbox)
-
-* Check this box for images that contain calibration targets
-* Greatly speeds up target detection during processing
-* See [Choosing Target Images](choosing-target-images.md) for details
+1. انقر فوق الزر **&quot;إضافة مجلد&quot;** في الجزء العلوي من لوحة مستعرض الملفات.
+2. انتقل إلى المجلد الذي يحتوي على صور جلسة الالتقاط وحدده.
+3. انقر فوق **&quot;تحديد مجلد&quot;** لاستيراد جميع الصور المدعومة من هذا المجلد.
 
 ***
 
-## Managing Files in Your Project
+## فهم جدول مستعرض الملفات
 
-### Removing Files
+بمجرد استيراد الصور، تظهر في جدول يحتوي على الأعمدة التالية:
 
-To remove unwanted images from your project:
+### الصورة المصغرة
 
-1. Select one or more images in the File Browser table
-2. Click the **"Remove Selected"** button
-3. Confirm removal (files are not deleted from disk, only removed from the project)
+* معاينة صغيرة لكل صورة
+* انقر فوق الصورة المصغرة لعرض الصورة كاملة في منطقة المعاينة الرئيسية
 
-### Sorting and Filtering
+### اسم الملف
 
-* **Sort by column**: Click any column header to sort images
-* **Timestamp sort**: Useful for organizing chronological capture sequences
-* **Camera model filter**: Group images by camera type if using multiple cameras
+* اسم الملف الأصلي من الكاميرا
+* يحافظ على قواعد تسمية الكاميرا (على سبيل المثال، IMG\_0001.RAW)
 
-***
+### الطابع الزمني
 
-## Image Preview
+* تاريخ ووقت التقاط الصورة
+* مستخرج من بيانات EXIF للصورة
+* تُستخدم لمزامنة PPK واكتشاف هدف المعايرة
 
-### Viewing Full Image
+### طراز الكاميرا
 
-Click any image thumbnail in the File Browser to display it in the main preview area:
+* الكاميرا المكتشفة تلقائيًا وتكوين المرشح
+* أمثلة: Survey3W\_RGN، Survey3N\_OCN، Survey3W\_RGB
+* تُستخدم لتطبيق ملفات تعريف المعالجة الصحيحة
 
-1. Image appears in the center preview panel
-2. Use zoom controls to inspect image details
-3. Navigate between images using arrow keys
+### عمود الهدف (مربع الاختيار)
 
-### Quick Navigation
-
-* **Previous Image**: Click left arrow or press ← key
-* **Next Image**: Click right arrow or press → key
-* **Zoom In/Out**: Use mouse wheel or zoom buttons
-* **Pan**: Click and drag on image when zoomed in
+* حدد هذا المربع للصور التي تحتوي على أهداف معايرة
+* يسرع بشكل كبير من اكتشاف الهدف أثناء المعالجة
+* انظر [اختيار صور الهدف](choosing-target-images.md) للحصول على التفاصيل
 
 ***
 
-## Duplicate File Handling
+## إدارة الملفات في مشروعك
 
-Chloros automatically detects and ignores duplicate files:
+### إزالة الملفات
 
-* Files with identical filenames are skipped
-* Prevents accidental double-processing
-* Warning message displayed when duplicates are detected
+لإزالة الصور غير المرغوب فيها من مشروعك:
 
-{% hint style="warning" %}
-**Important**: Do not rename or modify your original image files before importing. Chloros relies on original filenames and metadata for proper processing.
+1. حدد صورة واحدة أو أكثر في جدول مستعرض الملفات
+2. انقر فوق الزر **&quot;إزالة المحدد&quot;**
+3. قم بتأكيد الإزالة (لا يتم حذف الملفات من القرص، بل يتم إزالتها من المشروع فقط)
+
+### الفرز والتصفية
+
+* **الفرز حسب العمود**: انقر فوق أي عنوان عمود لفرز الصور
+* **فرز حسب الطابع الزمني**: مفيد لتنظيم تسلسلات الالتقاط الزمنية
+* **مرشح طراز الكاميرا**: قم بتجميع الصور حسب نوع الكاميرا إذا كنت تستخدم عدة كاميرات
+
+***
+
+## معاينة الصورة
+
+### عرض الصورة كاملة
+
+انقر فوق أي صورة مصغرة في مستعرض الملفات لعرضها في منطقة المعاينة الرئيسية:
+
+1. تظهر الصورة في لوحة المعاينة المركزية
+2. استخدم عناصر التحكم في التكبير/التصغير لفحص تفاصيل الصورة
+3. تنقل بين الصور باستخدام مفاتيح الأسهم
+
+### التنقل السريع
+
+* **الصورة السابقة**: انقر فوق السهم الأيسر أو اضغط على مفتاح ←
+* **الصورة التالية**: انقر فوق السهم الأيمن أو اضغط على مفتاح →
+* **التكبير/التصغير**: استخدم عجلة الماوس أو أزرار التكبير
+* **التحريك**: انقر واسحب على الصورة عند التكبير
+
+***
+
+## معالجة الملفات المكررة
+
+يكتشف Chloros الملفات المكررة تلقائيًا ويتجاهلها:
+
+* يتم تخطي الملفات التي تحمل أسماء ملفات متطابقة
+* يمنع المعالجة المزدوجة العرضية
+* يتم عرض رسالة تحذير عند اكتشاف ملفات مكررة
+
+{% hint style=&quot;warning&quot; %}
+**هام**: لا تقم بإعادة تسمية أو تعديل ملفات الصور الأصلية قبل الاستيراد. Chloros يعتمد على أسماء الملفات الأصلية والبيانات الوصفية للمعالجة الصحيحة.
 {% endhint %}
 
 ***
 
-## Mixed Camera Datasets
+## مجموعات بيانات الكاميرات المختلطة
 
-If your project contains images from multiple MAPIR cameras:
+إذا كان مشروعك يحتوي على صور من عدة كاميرات MAPIR:
 
-1. Chloros automatically detects each camera model
-2. Each camera type is processed with its appropriate calibration profile
-3. File Browser displays camera model in the Camera Model column
-4. Processing applies correct settings for each camera type
+1. يكتشف Chloros تلقائيًا كل طراز كاميرا
+2. تتم معالجة كل نوع كاميرا باستخدام ملف تعريف المعايرة المناسب له
+3. يعرض متصفح الملفات طراز الكاميرا في عمود طراز الكاميرا
+4. تطبق المعالجة الإعدادات الصحيحة لكل نوع كاميرا
 
-**Example scenario**: Survey3W RGN + Survey3N OCN dual-camera setup
-
-***
-
-## Best Practices
-
-### Organize Before Import
-
-* Keep calibration target images in the same folder as survey images
-* Maintain original folder structure from your camera/SD card
-* Don't mix datasets from different sessions in one project
-
-### File Naming
-
-* Preserve original camera filenames (IMG\_0001.RAW, etc.)
-* Don't rename files before import
-* Original names contain important metadata
-
-### Calibration Target Images
-
-* Always include 1-2 calibration target images per session
-* Capture targets before and after the capture session
-* Place targets in the same lighting conditions as capture area
-* Mark target images using the Target checkbox to speed up processing
+**مثال على السيناريو**: إعداد كاميرا مزدوجة Survey3W RGN + Survey3N OCN
 
 ***
 
-## Common Issues and Solutions
+## أفضل الممارسات
 
-### Images Not Appearing After Import
+### التنظيم قبل الاستيراد
 
-**Possible causes:**
+* احتفظ بصور هدف المعايرة في نفس المجلد الذي يحتوي على صور المسح
+* حافظ على بنية المجلد الأصلية من الكاميرا/بطاقة SD
+* لا تخلط مجموعات البيانات من جلسات مختلفة في مشروع واحد
 
-* File format not supported (only RAW+JPG and JPG from MAPIR cameras)
-* Images are from non-MAPIR cameras (see [Supported Cameras](../supported-cameras.md))
-* File corruption or incomplete transfer from SD card
+### تسمية الملفات
 
-**Solution**: Verify file format and camera model compatibility
+* احتفظ بأسماء ملفات الكاميرا الأصلية (IMG\_0001.RAW، إلخ)
+* لا تقم بإعادة تسمية الملفات قبل الاستيراد
+* تحتوي الأسماء الأصلية على بيانات وصفية مهمة
 
-### Camera Model Not Detected
+### صور هدف المعايرة
 
-**Possible causes:**
-
-* Modified EXIF metadata
-* Images edited in external software
-* Incomplete file transfer
-
-**Solution**: Re-import original, unmodified files from camera/SD card
-
-### Missing Timestamps
-
-**Possible causes:**
-
-* Camera clock not set correctly
-* EXIF data stripped by external software
-
-**Solution**: Verify camera time settings were correct during capture
+* قم دائمًا بتضمين 1-2 صورة هدف معايرة لكل جلسة
+* التقط الأهداف قبل جلسة الالتقاط وبعدها
+* ضع الأهداف في نفس ظروف الإضاءة مثل منطقة الالتقاط
+* قم بتمييز صور الأهداف باستخدام مربع الاختيار &quot;الهدف&quot; لتسريع المعالجة
 
 ***
 
-## Next Steps
+## المشكلات الشائعة والحلول
 
-Once your files are imported:
+### الصور لا تظهر بعد الاستيراد
 
-1. **Review the file list** - Ensure all images loaded correctly
-2. **Check camera models** - Verify correct camera detection
-3. **Mark target images** - See [Choosing Target Images](choosing-target-images.md)
-4. **Adjust settings** - Configure processing options in [Project Settings](adjusting-project-settings.md)
-5. **Start processing** - See [Starting the Processing](starting-the-processing.md)
+**الأسباب المحتملة:**
 
-For detailed information about project configuration, see [Adjusting Project Settings](adjusting-project-settings.md).
+* تنسيق الملف غير مدعوم (فقط RAW+JPG و JPG من كاميرات MAPIR)
+* الصور من كاميرات غير MAPIR (انظر [الكاميرات المدعومة](../supported-cameras.md))
+* تلف الملف أو نقل غير كامل من بطاقة SD
+
+**الحل**: تحقق من تنسيق الملف وتوافق طراز الكاميرا
+
+### لم يتم اكتشاف طراز الكاميرا
+
+**الأسباب المحتملة:**
+
+* بيانات EXIF المعدلة
+* الصور التي تم تحريرها في برنامج خارجي
+* نقل الملف غير مكتمل
+
+**الحل**: أعد استيراد الملفات الأصلية غير المعدلة من الكاميرا/بطاقة SD
+
+### الطوابع الزمنية مفقودة
+
+**الأسباب المحتملة:**
+
+* عدم ضبط ساعة الكاميرا بشكل صحيح
+* إزالة بيانات EXIF بواسطة برنامج خارجي
+
+**الحل**: تحقق من صحة إعدادات وقت الكاميرا أثناء الالتقاط
+
+***
+
+## الخطوات التالية
+
+بمجرد استيراد ملفاتك:
+
+1. **راجع قائمة الملفات** - تأكد من تحميل جميع الصور بشكل صحيح
+2. **تحقق من طرازات الكاميرات** - تحقق من صحة اكتشاف الكاميرا
+3. **حدد الصور المستهدفة** - راجع [اختيار الصور المستهدفة](choosing-target-images.md)
+4. **اضبط الإعدادات** - قم بتكوين خيارات المعالجة في [إعدادات المشروع](adjusting-project-settings.md)
+5. **بدء المعالجة** - راجع [بدء المعالجة](starting-the-processing.md)
+
+للحصول على معلومات تفصيلية حول تكوين المشروع، راجع [ضبط إعدادات المشروع](adjusting-project-settings.md).

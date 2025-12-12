@@ -1,306 +1,306 @@
-# Finishing the Processing
+# إنهاء المعالجة
 
-Once Chloros completes processing, it's time to review your results, verify output quality, and prepare your processed images for use in your workflow. This page guides you through the final steps and next actions.
+بمجرد انتهاء Chloros من المعالجة، يحين وقت مراجعة النتائج والتحقق من جودة المخرجات وإعداد الصور المعالجة للاستخدام في سير العمل. ترشدك هذه الصفحة خلال الخطوات النهائية والإجراءات التالية.
 
-## Processing Complete Indication
+## إشارة اكتمال المعالجة
 
-When processing finishes successfully, you'll see several indicators:
+عند اكتمال المعالجة بنجاح، سترى عدة مؤشرات:
 
-* ✅ **Progress bar**: Reaches 100% completion
-* ✅ **Debug Log**: Shows "Processing Complete" message
-* ✅ **Start button**: Becomes enabled again (ready for next processing run)
-* ✅ **Output files**: All processed images saved to camera model subfolder
-
-***
-
-## Locating Your Processed Images
-
-### Opening the Output Folder
-
-1. Click the **Main Menu** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> icon (top left)
-2. Select **"Open Project Folder"**
-3. Your file explorer opens to the project directory
-4. Locate your project by name
+* ✅ **شريط التقدم**: يصل إلى 100٪ من الاكتمال
+* ✅ **سجل التصحيح**: يعرض رسالة &quot;اكتملت المعالجة&quot;
+* ✅ **زر البدء**: يصبح ممكّنًا مرة أخرى (جاهز لتشغيل المعالجة التالية)
+* ✅ **ملفات الإخراج**: يتم حفظ جميع الصور المعالجة في المجلد الفرعي لنموذج الكاميرا
 
 ***
 
-## Reviewing Processed Images
+## تحديد موقع الصور المعالجة
 
-### Quick Preview in File Explorer
+### فتح مجلد الإخراج
 
-**Windows built-in preview:**
-
-1. Navigate to camera model subfolder
-2. Select an image file
-3. Preview appears in Windows Explorer preview pane
-4. Use arrow keys to browse through images
-
-### Preview in External Image Viewers
-
-**Recommended viewers:**
-
-* **QGIS** - Free GIS software (best for georeferenced multispectral analysis)
-* **IrfanView** - Fast, lightweight image viewer (supports TIFF)
-* **Adobe Photoshop** - Professional editing (TIFF support)
-* **GIMP** - Free alternative to Photoshop
-* **Windows Photos** - Basic viewing (may not support 16-bit TIFF)
-
-### Preview in Chloros Image Viewer
-
-Use Chloros's built-in Image Viewer for advanced visualization:
-
-1. Click an image thumbnail in the File Browser
-2. Image opens in the main preview area
-3. Click **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab in left sidebar
-4. Use [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) for interactive analysis
-
-See [Image Viewer](../image-viewer-gui/page-3.md) for detailed instructions.
+1. انقر فوق رمز **القائمة الرئيسية** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (أعلى اليسار)
+2. حدد **&quot;فتح مجلد المشروع&quot;**
+3. يفتح مستكشف الملفات الخاص بك إلى دليل المشروع
+4. حدد موقع مشروعك بالاسم
 
 ***
 
-## Reviewing the Debug Log
+## مراجعة الصور المعالجة
 
-### Check for Warnings or Errors
+### معاينة سريعة في مستكشف الملفات
 
-1. Open **Debug Log** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> tab
-2. Scroll through messages
-3. Look for yellow warnings or red errors
-4. Review any issues noted
-5. Contact MAPIR support for assistance
+**Windows معاينة مدمجة:**
 
-### Saving the Log
+1. انتقل إلى المجلد الفرعي لنموذج الكاميرا
+2. حدد ملف صورة
+3. تظهر المعاينة في جزء المعاينة في Windows Explorer
+4. استخدم مفاتيح الأسهم لتصفح الصور
 
-To keep a record of processing or to send to MAPIR Support:
+### المعاينة في عارضات الصور الخارجية
 
-1. Click **"Copy"** or **"Download"** button
-2. Save as text file in project folder
-3. Include with project documentation
-4. Send to MAPIR support if issues encountered
+**العارضات الموصى بها:**
 
-***
+* **QGIS** - برنامج GIS مجاني (الأفضل للتحليل متعدد الأطياف المرجعي جغرافيًا)
+* **IrfanView** - عارض صور سريع وخفيف الوزن (يدعم TIFF)
+* **Adobe Photoshop** - تحرير احترافي (يدعم TIFF)
+* **GIMP** - بديل مجاني لبرنامج Photoshop
+* **Windows Photos** - عرض أساسي (قد لا يدعم 16 بت TIFF)
 
-## Common Output Issues and Solutions
+### معاينة في عارض الصور Chloros
 
-### Issue: Missing Output Files
+استخدم عارض الصور المدمج في Chloros للحصول على تصور متقدم:
 
-**Possible causes:**
+1. انقر فوق صورة مصغرة في مستعرض الملفات
+2. تفتح الصورة في منطقة المعاينة الرئيسية
+3. انقر فوق علامة التبويب **عارض الصور** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> في الشريط الجانبي الأيسر
+4. استخدم [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) للتحليل التفاعلي
 
-* Files didn't meet processing criteria
-* Target-only images (excluded from export)
-* Disk space ran out during export
-* File corruption during processing
-
-**Solutions:**
-
-1. Check Debug Log for skip/error messages
-2. Verify disk space was sufficient
-3. Count files: Should match (original count - target count) × (indices + 1)
-4. Re-import and reprocess any missing files
-
-### Issue: Dark or Bright Edges (Vignetting Still Visible)
-
-**Possible causes:**
-
-* Vignette correction disabled
-* Camera/lens not in Chloros profile database
-* Extreme vignetting beyond correction capability
-
-**Solutions:**
-
-1. Verify vignette correction was enabled in Project Settings
-2. Check camera model correctly detected
-3. Contact MAPIR support if vignetting persists
-
-### Issue: Incorrect Colors or Values
-
-**Possible causes:**
-
-* No calibration targets detected
-* Wrong calibration target model selected
-* Reflectance calibration disabled
-* Poor quality target images
-
-**Solutions:**
-
-1. Verify reflectance calibration was enabled
-2. Check "Target found" messages in Debug Log
-3. Review target image quality
-4. Reprocess with proper targets marked
-
-### Issue: NDVI Values Seem Wrong
-
-**Expected NDVI ranges:**
-
-* **Water, rocks, soil**: -0.1 to 0.2
-* **Sparse/unhealthy vegetation**: 0.2 to 0.4
-* **Moderate vegetation**: 0.4 to 0.6
-* **Healthy, dense vegetation**: 0.6 to 0.9
-
-**If values are outside these ranges:**
-
-1. Verify reflectance calibration was applied
-2. Verify light sensor log was included
-3. Check calibration targets were detected
-4. Ensure correct camera model was detected
-5. Review target image capture timing and conditions
+انظر [Image Viewer](../image-viewer-gui/opening-an-image-full-screen.md) للحصول على إرشادات مفصلة.
 
 ***
 
-## Using Your Processed Images
+## مراجعة سجل التصحيح
 
-### For Photogrammetry / Orthomosaic Creation
+### التحقق من وجود تحذيرات أو أخطاء
 
-**Recommended workflow:**
+1. افتح علامة التبويب **سجل التصحيح** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> .
+2. قم بالتمرير عبر الرسائل.
+3. ابحث عن التحذيرات الصفراء أو الأخطاء الحمراء.
+4. راجع أي مشكلات ملحوظة.
+5. اتصل بدعم MAPIR للحصول على المساعدة.
 
-1. **Import calibrated reflectance images** into photogrammetry software:
+### حفظ السجل
+
+للاحتفاظ بسجل للمعالجة أو لإرساله إلى دعم MAPIR:
+
+1. انقر فوق الزر **&quot;نسخ&quot;** أو **&quot;تنزيل&quot;**
+2. احفظه كملف نصي في مجلد المشروع
+3. أرفقه بوثائق المشروع
+4. أرسله إلى دعم MAPIR في حالة مواجهة مشكلات
+
+***
+
+## المشكلات الشائعة في الإخراج وحلولها
+
+### المشكلة: ملفات الإخراج مفقودة
+
+**الأسباب المحتملة:**
+
+* الملفات لا تفي بمعايير المعالجة
+* الصور المستهدفة فقط (مستبعدة من التصدير)
+* نفاد مساحة القرص أثناء التصدير
+* تلف الملفات أثناء المعالجة
+
+**الحلول:**
+
+1. تحقق من سجل التصحيح بحثًا عن رسائل التخطي/الأخطاء
+2. تحقق من كفاية مساحة القرص
+3. عد الملفات: يجب أن تتطابق (العد الأصلي - العد المستهدف) × (المؤشرات + 1)
+4. أعد استيراد وإعادة معالجة أي ملفات مفقودة
+
+### المشكلة: حواف داكنة أو فاتحة (لا يزال التظليل مرئيًا)
+
+**الأسباب المحتملة:**
+
+* تعطيل تصحيح التظليل
+* الكاميرا/العدسة غير موجودة في قاعدة بيانات ملف تعريف Chloros
+* تظليل شديد يتجاوز قدرة التصحيح
+
+**الحلول:**
+
+1. تحقق من تمكين تصحيح التظليل في إعدادات المشروع
+2. تحقق من اكتشاف طراز الكاميرا بشكل صحيح
+3. اتصل بدعم MAPIR إذا استمر التظليل
+
+### المشكلة: ألوان أو قيم غير صحيحة
+
+**الأسباب المحتملة:**
+
+* لم يتم اكتشاف أهداف المعايرة
+* تم تحديد طراز هدف المعايرة الخاطئ
+* تعطيل معايرة الانعكاس
+* صور الأهداف ذات الجودة الرديئة
+
+**الحلول:**
+
+1. تحقق من تمكين معايرة الانعكاس
+2. تحقق من رسائل &quot;تم العثور على الهدف&quot; في سجل التصحيح
+3. راجع جودة صورة الهدف
+4. أعد المعالجة مع تحديد الأهداف المناسبة
+
+### المشكلة: قيم NDVI تبدو خاطئة
+
+**نطاقات NDVI المتوقعة:**
+
+* **الماء والصخور والتربة**: -0.1 إلى 0.2
+* **نباتات متناثرة/غير صحية**: 0.2 إلى 0.4
+* **نباتات معتدلة**: 0.4 إلى 0.6
+* **نباتات صحية وكثيفة**: 0.6 إلى 0.9
+
+**إذا كانت القيم خارج هذه النطاقات:**
+
+1. تحقق من تطبيق معايرة الانعكاس
+2. تحقق من تضمين سجل مستشعر الضوء
+3. تحقق من اكتشاف أهداف المعايرة
+4. تأكد من اكتشاف طراز الكاميرا الصحيح
+5. راجع توقيت التقاط الصورة المستهدفة وظروفها
+
+***
+
+## استخدام الصور المعالجة
+
+### للتصوير المساحي / إنشاء البلاط المكاني
+
+**سير العمل الموصى به:**
+
+1. **استيراد صور الانعكاس المعايرة** إلى برنامج التصوير المساحي:
    * Pix4Dmapper
    * Agisoft Metashape
    * DroneDeploy
    * WebODM
-2. **Keep EXIF metadata**: Ensure GPS data preserved for geotagging
-3. **Calibrated workflows**: Use reflectance images for scientific accuracy
-4. **Process index mosaics**: Create NDVI orthomosaics from individual index images
-5. **Export georeferenced GeoTIFF**: For use in GIS applications
+2. **الاحتفاظ ببيانات EXIF**: تأكد من الحفاظ على بيانات GPS لوضع العلامات الجغرافية
+3. **سير العمل المعاير**: استخدم صور الانعكاس للحصول على دقة علمية
+4. **معالجة الفسيفساء الفهرسية**: إنشاء فسيفساء متوافقة NDVI من الصور الفهرسية الفردية
+5. **تصدير GeoTIFF المرجعية جغرافيًا**: للاستخدام في تطبيقات GIS
 
-### For GIS Analysis
+### للتحليل GIS
 
-**Recommended workflow:**
+**سير العمل الموصى به:**
 
-1. **Load into QGIS, ArcGIS, or similar**
-2. **Use 16-bit TIFF** reflectance images for multi-band analysis
-3. **Use index images** (NDVI, NDRE) as ready-to-use vegetation layers
-4. **Raster calculator**: Combine bands for custom analysis
-5. **Export**: Create classification maps, change detection, vegetation health maps
+1. **تحميل إلى QGIS أو ArcGIS أو ما شابه**
+2. **استخدام صور انعكاسية 16 بت TIFF** للتحليل متعدد النطاقات
+3. **استخدام صور الفهرس** (NDVI، NDRE) كطبقات نباتية جاهزة للاستخدام
+4. **حاسبة نقطية**: دمج النطاقات لتحليل مخصص
+5. **تصدير**: إنشاء خرائط تصنيف، وكشف التغييرات، وخرائط صحة الغطاء النباتي
 
-### For Direct Analysis / Reporting
+### للتحليل المباشر / إعداد التقارير
 
-**Recommended workflow:**
+**سير العمل الموصى به:**
 
-1. **Use index images with LUT colors** for visual reports
-2. **Extract statistics**: Mean NDVI per field/plot
-3. **Time series**: Compare indices across multiple sessions
-4. **Generate reports**: Include maps, statistics, and visualizations
-
-***
-
-## Archiving and Backup
-
-### Recommended Backup Strategy
-
-**What to save:**
-
-* ✅ **Original RAW/JPG images** - Archive on separate drive/cloud
-* ✅ **Processed outputs** - Keep calibrated images and indices
-* ✅ **Project file** - Contains all settings for reprocessing if needed
-* ✅ **Debug Log** - Documents processing details
-* ✅ **Calibration target images** - For verification and reprocessing
-
-**Storage recommendations:**
-
-* **Immediate backup**: External hard drive
-* **Long-term archive**: Cloud storage (Google Drive, Dropbox, etc.)
-* **Critical data**: Keep 2-3 copies in different locations
+1. **استخدام صور المؤشر مع ألوان LUT** لإعداد تقارير مرئية
+2. **استخراج الإحصائيات**: متوسط NDVI لكل حقل/قطعة أرض
+3. **السلسلة الزمنية**: مقارنة المؤشرات عبر جلسات متعددة
+4. **إنشاء التقارير**: تضمين الخرائط والإحصائيات والمرئيات
 
 ***
 
-## Next Processing Runs
+## الأرشفة والنسخ الاحتياطي
 
-### Reusing Project Settings
+### استراتيجية النسخ الاحتياطي الموصى بها
 
-If processing similar datasets in the future:
+**ما يجب حفظه:**
 
-1. **Save Project Template** (if not already done)
-2. **Create new project** using saved template
-3. **Import new images**
-4. **Process** with identical settings for consistency
+* ✅ **الصور الأصلية بتنسيق RAW/JPG** - أرشفة على محرك أقراص/سحابة منفصلة
+* ✅ **المخرجات المعالجة** - الاحتفاظ بالصور والمؤشرات المعايرة
+* ✅ **ملف المشروع** - يحتوي على جميع الإعدادات لإعادة المعالجة إذا لزم الأمر
+* ✅ **سجل التصحيح** - يوثق تفاصيل المعالجة
+* ✅ **صور هدف المعايرة** - للتحقق وإعادة المعالجة
 
-### Batch Processing Multiple Sessions
+**توصيات التخزين:**
 
-For multiple sessions/datasets:
-
-**Option 1: GUI - Multiple Projects**
-
-* Create separate project for each session
-* Use consistent template settings
-* Process one at a time
-
-**Option 2: Chloros CLI (Chloros+ only)**
-
-* Automate batch processing
-* Process multiple folders with scripts
-* See [CLI Documentation](../CLI.md)
-
-**Option 3: Python SDK (Chloros+ only)**
-
-* Programmatic control
-* Integration with analysis pipelines
-* See [API Documentation](../api-python-sdk.md)
+* **النسخ الاحتياطي الفوري**: محرك أقراص صلب خارجي
+* **الأرشيف طويل الأجل**: التخزين السحابي (Google Drive، Dropbox، إلخ)
+* **البيانات الهامة**: احتفظ بـ 2-3 نسخ في مواقع مختلفة
 
 ***
 
-## Troubleshooting Post-Processing
+## عمليات المعالجة التالية
 
-### Re-Processing with Different Settings
+### إعادة استخدام إعدادات المشروع
 
-If results aren't satisfactory:
+في حالة معالجة مجموعات بيانات مماثلة في المستقبل:
 
-1. Keep original images (never delete)
-2. Open same project in Chloros
-3. Adjust settings in Project Settings panel
-4. Process again - outputs will overwrite previous results
+1. **حفظ قالب المشروع** (إذا لم يتم ذلك بالفعل)
+2. **إنشاء مشروع جديد** باستخدام القالب المحفوظ
+3. **استيراد صور جديدة**
+4. **المعالجة** بإعدادات متطابقة لضمان الاتساق
 
-### Processing Subset of Images
+### المعالجة المجمعة لعدة جلسات
 
-To reprocess only specific images:
+لعدة جلسات/مجموعات بيانات:
 
-1. Create new project
-2. Import only the images needing reprocessing
-3. Use same settings template
-4. Process smaller dataset
+**الخيار 1: واجهة المستخدم الرسومية - مشاريع متعددة**
 
-### Getting Help
+* إنشاء مشروع منفصل لكل جلسة
+* استخدام إعدادات قالب متسقة
+* المعالجة واحدة تلو الأخرى
 
-If you encounter issues:
+**الخيار 2: Chloros CLI (Chloros+ فقط)**
 
-* 📧 **Email**: info@mapir.camera (include Debug Log)
-* 🌐 **Support**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* 📚 **FAQ**: [Frequently Asked Questions](../faq.md)
-* 📖 **Documentation**: [Chloros Manual](../)
+* أتمتة المعالجة المجمعة
+* معالجة مجلدات متعددة باستخدام البرامج النصية
+* انظر [وثائق CLI](../CLI.md)
 
-***
+**الخيار 3: Python SDK (Chloros+ فقط)**
 
-## Summary: Complete Workflow
-
-You've now completed the full Chloros processing workflow:
-
-1. ✅ **Created project** - See [Projects](../projects.md)
-2. ✅ **Added files** - See [Adding Files](page-1.md)
-3. ✅ **Adjusted settings** - See [Adjusting Project Settings](adjusting-project-settings.md)
-4. ✅ **Marked targets** - See [Choosing Target Images](choosing-target-images.md)
-5. ✅ **Started processing** - See [Starting the Processing](starting-the-processing.md)
-6. ✅ **Monitored progress** - See [Monitoring the Processing](monitoring-the-processing.md)
-7. ✅ **Reviewed results** - This page
-
-**Your calibrated, reflectance-corrected multispectral images are ready for analysis!**
+* التحكم البرمجي
+* التكامل مع خطوط أنابيب التحليل
+* انظر [API Documentation](../api-python-sdk.md)
 
 ***
 
-## Additional Resources
+## استكشاف الأخطاء وإصلاحها بعد المعالجة
 
-### Advanced Features
+### إعادة المعالجة بإعدادات مختلفة
 
-* [**Image Viewer**](../image-viewer-gui/page-3.md) - Interactive visualization and analysis
-* [**Index/LUT Sandbox**](../image-viewer-gui/index-lut-sandbox.md) - Custom index testing
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Complete index reference
+إذا كانت النتائج غير مرضية:
 
-### Automation & Integration
+1. احتفظ بالصور الأصلية (لا تحذفها أبدًا)
+2. افتح نفس المشروع في Chloros
+3. اضبط الإعدادات في لوحة إعدادات المشروع
+4. قم بالمعالجة مرة أخرى - ستحل النتائج الجديدة محل النتائج السابقة
 
-* [**CLI Documentation**](../CLI.md) - Command-line batch processing
-* [**Python SDK**](../api-python-sdk.md) - Programmatic automation
-* [**Chloros+ Features**](../#chloros) - Advanced processing capabilities
+### معالجة مجموعة فرعية من الصور
 
-### Support & Learning
+لإعادة معالجة صور معينة فقط:
 
-* [**FAQ**](../faq.md) - Common questions answered
-* [**Calibration Targets**](../calibration-targets.md) - Understanding reflectance calibration
-* [**Supported Cameras**](../supported-cameras.md) - Compatible hardware
+1. أنشئ مشروعًا جديدًا
+2. استورد الصور التي تحتاج إلى إعادة معالجة فقط
+3. استخدم نفس قالب الإعدادات
+4. قم بمعالجة مجموعة بيانات أصغر
+
+### الحصول على المساعدة
+
+إذا واجهتك مشكلات:
+
+* 📧 **البريد الإلكتروني**: info@mapir.camera (قم بتضمين سجل التصحيح)
+* 🌐 **الدعم**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* 📚 **الأسئلة الشائعة**: [الأسئلة الشائعة](../faq.md)
+* 📖 **الوثائق**: [دليل Chloros](../)
+
+***
+
+## ملخص: سير العمل الكامل
+
+لقد أكملت الآن سير العمل الكامل لمعالجة Chloros:
+
+1. ✅ **إنشاء مشروع** - انظر [المشاريع](../projects.md)
+2. ✅ **إضافة ملفات** - انظر [إضافة ملفات](adding-files-to-a-project.md)
+3. ✅ **تعديل الإعدادات** - انظر [تعديل إعدادات المشروع](adjusting-project-settings.md)
+4. ✅ **تحديد الأهداف** - انظر [اختيار الصور المستهدفة](choosing-target-images.md)
+5. ✅ **بدء المعالجة** - انظر [بدء المعالجة](starting-the-processing.md)
+6. ✅ **مراقبة التقدم** - انظر [مراقبة المعالجة](monitoring-the-processing.md)
+7. ✅ **مراجعة النتائج** - هذه الصفحة
+
+**صورك متعددة الأطياف المعايرة والمصححة الانعكاسية جاهزة للتحليل!**
+
+***
+
+## موارد إضافية
+
+### ميزات متقدمة
+
+* [**عارض الصور**](../image-viewer-gui/opening-an-image-full-screen.md) - تصور وتحليل تفاعلي
+* [**صندوق الرمل للفهرس/LUT**](../image-viewer-gui/index-lut-sandbox.md) - اختبار الفهرس المخصص
+* [**صيغ الفهرس متعدد الأطياف**](../project-settings/multispectral-index-formulas.md) - مرجع الفهرس الكامل
+
+### الأتمتة والتكامل
+
+* [**CLI Documentation**](../CLI.md) - معالجة دفعية من سطر الأوامر
+* [**Python SDK**](../api-python-sdk.md) - أتمتة برمجية
+* [**ميزات Chloros+**](../#chloros) - قدرات معالجة متقدمة
+
+### الدعم والتعلم
+
+* [**الأسئلة الشائعة**](../faq.md) - إجابات على الأسئلة الشائعة
+* [**أهداف المعايرة**](../calibration-targets.md) - فهم معايرة الانعكاس
+* [**الكاميرات المدعومة**](../supported-cameras.md) - الأجهزة المتوافقة

@@ -4,169 +4,165 @@ metaLinks:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/download
 ---
 
-# Download
+# تنزيل
 
-Download the latest version of Chloros for Windows to get started with multispectral image processing.
+قم بتنزيل أحدث إصدار من Chloros لـ Windows لبدء معالجة الصور متعددة الأطياف.
 
-### System Requirements
+### متطلبات النظام
 
-| Requirement          | Minimum                         | Recommended                     |
+| المتطلبات          | الحد الأدنى                         | الموصى به                     |
 | -------------------- | ------------------------------- | ------------------------------- |
-| **Operating System** | Windows 10 (64-bit)             | Windows 11 (64-bit)             |
-| **Processor**        | Intel Core i5 or equivalent     | Intel Core i7 or better         |
-| **Memory (RAM)**     | 8GB                             | 16GB or more                    |
-| **Graphics Card**    | DirectX 11 compatible           | NVIDIA GPU with 4GB+ VRAM       |
-| **Storage**          | 2GB free space                  | SSD with 10GB+ free space       |
-| **Display**          | 1920x1080                       | 2560x1440 or higher             |
-| **Internet**         | Required for license activation | Required for license activation |
+| **نظام التشغيل** | Windows 10 (64 بت)             | Windows 11 (64 بت)             |
+| **المعالج**        | Intel Core i5 أو ما يعادله     | Intel Core i7 أو أفضل         |
+| **الذاكرة (RAM)**     | 8 جيجابايت                             | 16 جيجابايت أو أكثر                    |
+| **بطاقة الرسومات**    | متوافقة مع DirectX 11           | NVIDIA GPU مع 4 جيجابايت+ VRAM       |
+| **التخزين**          | 2 جيجابايت مساحة خالية                  | SSD مع 10 جيجابايت+ مساحة خالية       |
+| **الشاشة**          | 1920x1080                       | 2560x1440 أو أعلى             |
+| **الإنترنت**         | مطلوب لتفعيل الترخيص | مطلوب لتفعيل الترخيص |
 
-{% hint style="info" %}
-**GPU Acceleration**: Chloros+ users with NVIDIA GPUs (4GB+ VRAM) can use CUDA acceleration for significantly faster processing.
+{% hint style=&quot;info&quot; %}
+**تسريع GPU**: يمكن لمستخدمي Chloros+ الذين لديهم وحدات معالجة رسومات NVIDIA (4GB+ VRAM) استخدام تسريع CUDA لمعالجة أسرع بشكل ملحوظ.
 {% endhint %}
 
 ***
 
-## Download Chloros
+## تنزيل Chloros
 
-### <a href="https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link" class="button primary">Download Chloros Here</a>
+### <a href="https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link" class="button primary">تنزيل Chloros هنا</a>
 
-### Latest Stable Release
+### أحدث إصدار مستقر
 
-**Chloros Installer for Windows**
+**Chloros مثبت لـ Windows**
 
-* **Version**: 1.0.3
-* **Release Date**: December ?, 2025
-* **File Size**: 1.6GB
-* **File Type**: .exe (Windows Installer)
+* **الإصدار**: 1.0.3
+* **تاريخ الإصدار**: ديسمبر ؟، 2025
+* **حجم الملف**: 1.6 جيجابايت
+* **نوع الملف**: .exe (مثبت Windows)
 
-#### **Installation Steps:**
+#### **خطوات التثبيت:**
 
-1. Download the `CHLOROS INSTALLER - CURRENT VERSION.exe` file
-2. Double-click the installer to begin installation
-3. Follow the installation wizard prompts
-4. Choose installation directory (default: `C:\Program Files\Chloros\`)
-5. Complete installation and launch Chloros
-6. Sign in with your MAPIR Cloud Chloros+ account (or continue with free version)
+1. قم بتنزيل ملف `CHLOROS INSTALLER - CURRENT VERSION.exe`
+2. انقر نقرًا مزدوجًا فوق المثبت لبدء التثبيت
+3. اتبع تعليمات معالج التثبيت
+4. اختر دليل التثبيت (الافتراضي: `C:\Program Files\Chloros\`)
+5. أكمل التثبيت وقم بتشغيل Chloros
+6. قم بتسجيل الدخول باستخدام حساب MAPIR Cloud Chloros+ (أو تابع باستخدام الإصدار المجاني)
 
-{% hint style="success" %}
-The installer automatically adds `chloros-cli` to your system PATH for command-line access.
+{% hint style=&quot;success&quot; %}
+يقوم المثبت تلقائيًا بإضافة `chloros-cli` إلى مسار PATH في نظامك للوصول إلى سطر الأوامر.
 {% endhint %}
 
 ***
 
-## Additional Resources
+## موارد إضافية
 
 ### Python SDK
 
-For developers and automation workflows, install the Chloros Python SDK:
+بالنسبة للمطورين وسير عمل الأتمتة، قم بتثبيت Chloros Python SDK:
 
 ```bash
 pip install chloros-sdk
 ```
 
-**Documentation**: [API: Python SDK](api-python-sdk.md)
+**الوثائق**: [API: Python SDK](api-python-sdk.md)
 
-**Requirements**: Chloros Desktop must be installed, Chloros+ license required
-
-***
-
-## What's Included
-
-The Chloros installation includes:
-
-* ✅ **Chloros Desktop GUI** - Full-featured graphical interface
-* ✅ **Chloros (Browser)** - Web-based interface for lower-spec systems
-* ✅ **Chloros CLI** - Command-line interface (requires Chloros+ license)
-* ✅ **Backend Engine** - Image processing pipeline
-* ✅ **Camera Profiles** - Pre-configured MAPIR camera templates
+**المتطلبات**: يجب تثبيت Chloros Desktop، ويلزم الحصول على ترخيص Chloros+
 
 ***
 
-## Upgrade to Chloros+
+## ما هو مضمن
 
-Unlock advanced features with a Chloros+ subscription:
+يتضمن تثبيت Chloros ما يلي:
 
-* 🚀 **Multi-threaded Processing** - Process images in parallel
-* ⚡ **GPU (CUDA) Acceleration** - Leverage NVIDIA GPU power
-* 💻 **CLI Access** - Automate with command-line tools
-* 🐍 **Python SDK** - Programmatic API access
-* 📱 **Multiple Devices** - Use on 2-10+ devices (plan dependent)
-* 🧮 **Custom Formulas** - Create custom multispectral indices
-
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">View Chloros+ Plans &#x26; Pricing</a></p>
+* ✅ **Chloros Desktop GUI** - واجهة رسومية كاملة الميزات
+* ✅ **Chloros (متصفح)** - واجهة قائمة على الويب للأنظمة ذات المواصفات الأقل
+* ✅ **Chloros CLI** - واجهة سطر الأوامر (تتطلب ترخيص Chloros+)
+* ✅ **محرك الخلفية** - خط أنابيب معالجة الصور
+* ✅ **ملفات تعريف الكاميرا** - قوالب كاميرا MAPIR معدة مسبقًا
 
 ***
 
-## Installation Help
+## الترقية إلى Chloros+
 
-### Troubleshooting
+افتح الميزات المتقدمة مع اشتراك Chloros+:
 
-**Installation fails with error message:**
+* 🚀 **معالجة متعددة الخيوط** - معالجة الصور بشكل متوازٍ
+* ⚡ **تسريع GPU (CUDA)** - استفد من قوة GPU من NVIDIA
+* 💻 **CLI Access** - أتمتة باستخدام أدوات سطر الأوامر
+* 🐍 **Python SDK** - الوصول البرمجي إلى API
+* 📱 **أجهزة متعددة** - الاستخدام على 2-10+ أجهزة (حسب الخطة)
+* 🧮 **صيغ مخصصة** - إنشاء مؤشرات متعددة الأطياف مخصصة
 
-* Ensure you have administrator rights
-* Temporarily disable antivirus software
-* Check that you meet minimum system requirements
+<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">عرض Chloros+ الخطط والأسعار</a></p>***
 
-**Application won't start:**
+## مساعدة التثبيت
 
-* Try Chloros (Browser) version
-* Verify Windows 10/11 (64-bit) is installed
-* Update graphics drivers
-* Check Windows Event Viewer for error details
-* Contact support with error logs
+### استكشاف الأخطاء وإصلاحها
 
-**License activation issues:**
+**فشل التثبيت مع ظهور رسالة خطأ:**
 
-* Ensure internet connection is active
-* Verify credentials at [https://cloud.mapir.camera](https://cloud.mapir.camera)
-* Check firewall isn't blocking Chloros
-* See [Chloros+ Login](chloros+-login.md) for detailed instructions
+* تأكد من أن لديك حقوق المسؤول
+* قم بتعطيل برنامج مكافحة الفيروسات مؤقتًا
+* تحقق من استيفاء الحد الأدنى من متطلبات النظام
 
-### Getting Support
+**التطبيق لا يعمل:**
 
-Need help with installation or setup?
+* جرب إصدار Chloros (المتصفح)
+* تحقق من تثبيت Windows 10/11 (64 بت)
+* قم بتحديث برامج تشغيل الرسومات
+* تحقق من Windows عارض الأحداث للحصول على تفاصيل الخطأ
+* اتصل بالدعم الفني مع سجلات الأخطاء
 
-* 📧 **Email**: info@mapir.camera
-* 🌐 **Website**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* 📚 **Documentation**: [Getting Started](./)
-* ❓ **FAQ**: [Frequently Asked Questions](faq.md)
+**مشكلات تنشيط الترخيص:**
+
+* تأكد من أن اتصال الإنترنت نشط
+* تحقق من بيانات الاعتماد في [https://cloud.mapir.camera](https://cloud.mapir.camera)
+* تحقق من أن جدار الحماية لا يحظر Chloros
+* راجع [Chloros+ تسجيل الدخول](chloros+-login.md) للحصول على إرشادات مفصلة
+
+### الحصول على الدعم
+
+هل تحتاج إلى مساعدة في التثبيت أو الإعداد؟
+
+* 📧 **البريد الإلكتروني**: info@mapir.camera
+* 🌐 **موقع الويب**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* 📚 **الوثائق**: [البدء](./)
+* ❓ **الأسئلة الشائعة**: [الأسئلة الشائعة](faq.md)
 
 ***
 
-## Change Log
+## سجل التغييرات
 
 <details>
 
-<summary>Version 1.0.3</summary>
+<summary>الإصدار 1.0.3</summary>
 
-### **Release Date**: December ?, 2025
+### **تاريخ الإصدار**: ديسمبر ؟، 2025
 
-#### New Features
+#### الميزات الجديدة
 
-* Initial Launch
+* الإطلاق الأولي
 
-#### Improvements
+#### التحسينات
 
-* Initial Launch
+* الإطلاق الأولي
 
-#### Bug Fixes
+#### إصلاح الأخطاء
 
-* Initial Launch
+* الإطلاق الأولي
 
-#### Known Issues
+#### المشكلات المعروفة
 
-* Initial Launch
+* الإطلاق الأولي
 
-</details>
+</details>***
 
-***
+## اتفاقية الترخيص
 
-## License Agreement
+**برنامج مملوك** - حقوق الطبع والنشر (c) 2025 MAPIR Inc.
 
-**Proprietary Software** - Copyright (c) 2025 MAPIR Inc.
+يحظر الاستخدام أو التوزيع أو التعديل غير المصرح به.
 
-Unauthorized use, distribution, or modification is prohibited.
+**الإصدار المجاني**: متاح للاستخدام الشخصي والتجاري مع قيود على الميزات
 
-**Free Version**: Available for personal and commercial use with feature limitations
-
-**Chloros+**: Subscription-based license for advanced features and commercial deployments
+**Chloros+**: ترخيص قائم على الاشتراك للحصول على ميزات متقدمة وعمليات نشر تجارية

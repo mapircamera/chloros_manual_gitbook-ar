@@ -1,165 +1,165 @@
-# Monitoring the Processing
+# مراقبة المعالجة
 
-Once processing has started, Chloros provides several ways to monitor progress, check for issues, and understand what's happening with your dataset. This page explains how to track your processing and interpret the information Chloros provides.
+بمجرد بدء المعالجة، يوفر Chloros عدة طرق لمراقبة التقدم والتحقق من المشكلات وفهم ما يحدث مع مجموعة البيانات الخاصة بك. تشرح هذه الصفحة كيفية تتبع المعالجة وتفسير المعلومات التي يوفرها Chloros.
 
-## Progress Bar Overview
+## نظرة عامة على شريط التقدم
 
-The progress bar in the top header shows real-time processing status and completion percentage.
+يعرض شريط التقدم في العنوان العلوي حالة المعالجة في الوقت الفعلي ونسبة الإنجاز.
 
-### Free Mode Progress Bar
+### شريط التقدم في الوضع المجاني
 
-For users without Chloros+ license:
+للمستخدمين الذين لا يمتلكون ترخيص Chloros+:
 
-**2-Stage Progress Display:**
+**عرض التقدم على مرحلتين:**
 
-1. **Target Detect** - Finding calibration targets in images
-2. **Processing** - Applying corrections and exporting
+1. **الكشف عن الهدف** - العثور على أهداف المعايرة في الصور
+2. **المعالجة** - تطبيق التصحيحات والتصدير
 
-**Progress bar shows:**
+**يُظهر شريط التقدم:**
 
-* Overall completion percentage (0-100%)
-* Current stage name
-* Simple horizontal bar visualization
+* النسبة المئوية الإجمالية للإنجاز (0-100٪)
+* اسم المرحلة الحالية
+* تصور بسيط لشريط أفقي
 
-### Chloros+ Progress Bar
+### شريط التقدم Chloros+
 
-For users with Chloros+ license:
+للمستخدمين الذين لديهم ترخيص Chloros+:
 
-**4-Stage Progress Display:**
+**عرض التقدم على 4 مراحل:**
 
-1. **Detecting** - Finding calibration targets
-2. **Analyzing** - Examining images and preparing pipeline
-3. **Calibrating** - Applying vignette and reflectance corrections
-4. **Exporting** - Saving processed files
+1. **الكشف** - العثور على أهداف المعايرة
+2. **التحليل** - فحص الصور وإعداد خط الأنابيب
+3. **المعايرة** - تطبيق تصحيحات التظليل والانعكاس
+4. **التصدير** - حفظ الملفات المعالجة
 
-**Interactive Features:**
+**الميزات التفاعلية:**
 
-* **Hover over** progress bar to see expanded 4-stage panel
-* **Click** progress bar to freeze/pin the expanded panel
-* **Click again** to unfreeze and auto-hide on mouse leave
-* Each stage shows individual progress (0-100%)
-
-***
-
-## Understanding Each Processing Stage
-
-### Stage 1: Detecting (Target Detection)
-
-**What's happening:**
-
-* Chloros scans images marked with Target checkbox
-* Computer vision algorithms identify the 4 calibration panels
-* Reflectance values extracted from each panel
-* Target timestamps recorded for proper calibration scheduling
-
-**Duration:**
-
-* With marked targets: 10-60 seconds
-* Without marked targets: 5-30+ minutes (scans all images)
-
-**Progress indicator:**
-
-* Detecting: 0% → 100%
-* Number of images scanned
-* Targets found count
-
-**What to watch for:**
-
-* Should complete quickly if targets properly marked
-* If taking too long, targets may not be marked
-* Check Debug Log for "Target found" messages
-
-### Stage 2: Analyzing
-
-**What's happening:**
-
-* Reading image EXIF metadata (timestamps, exposure settings)
-* Determining calibration strategy based on target timestamps
-* Organizing image processing queue
-* Preparing parallel processing workers (Chloros+ only)
-
-**Duration:** 5-30 seconds
-
-**Progress indicator:**
-
-* Analyzing: 0% → 100%
-* Fast stage, usually completes quickly
-
-**What to watch for:**
-
-* Should progress steadily without pauses
-* Warnings about missing metadata will appear in Debug Log
-
-### Stage 3: Calibrating
-
-**What's happening:**
-
-* **Debayering**: Converting RAW Bayer pattern to 3 channels
-* **Vignette correction**: Removing lens edge darkening
-* **Reflectance calibration**: Normalizing with target values
-* **Index calculation**: Computing multispectral indices
-* Processing each image through the full pipeline
-
-**Duration:** Majority of total processing time (60-80%)
-
-**Progress indicator:**
-
-* Calibrating: 0% → 100%
-* Current image being processed
-* Images completed / Total images
-
-**Processing behavior:**
-
-* **Free mode**: Processes one image at a time sequentially
-* **Chloros+ mode**: Processes up to 16 images simultaneously
-* **GPU acceleration**: Significantly speeds up this stage
-
-**What to watch for:**
-
-* Steady progress through image count
-* Check Debug Log for per-image completion messages
-* Warnings about image quality or calibration issues
-
-### Stage 4: Exporting
-
-**What's happening:**
-
-* Writing calibrated images to disk in selected format
-* Exporting multispectral index images with LUT colors
-* Creating camera model subfolders
-* Preserving original filenames with appropriate suffixes
-
-**Duration:** 10-20% of total processing time
-
-**Progress indicator:**
-
-* Exporting: 0% → 100%
-* Files being written
-* Export format and destination
-
-**What to watch for:**
-
-* Disk space warnings
-* File write errors
-* Completion of all configured outputs
+* **مرر مؤشر الماوس فوق** شريط التقدم لرؤية لوحة موسعة من 4 مراحل
+* **انقر** على شريط التقدم لتجميد/تثبيت اللوحة الموسعة
+* **انقر مرة أخرى** لإلغاء التجميد والإخفاء التلقائي عند إبعاد الماوس
+* تعرض كل مرحلة التقدم الفردي (0-100٪)
 
 ***
 
-## Debug Log Tab
+## فهم كل مرحلة من مراحل المعالجة
 
-The Debug Log provides detailed information about processing progress and any issues encountered.
+### المرحلة 1: الكشف (الكشف عن الهدف)
 
-### Accessing the Debug Log
+**ما يحدث:**
 
-1. Click the **Debug Log** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> icon in the left sidebar
-2. Log panel opens showing real-time processing messages
-3. Auto-scrolls to show latest messages
+* يقوم Chloros بمسح الصور المحددة بعلامة الاختيار الهدف
+* تحدد خوارزميات الرؤية الحاسوبية لوحات المعايرة الأربعة
+* يتم استخراج قيم الانعكاس من كل لوحة
+* يتم تسجيل الطوابع الزمنية للأهداف من أجل جدولة المعايرة بشكل صحيح
 
-### Understanding Log Messages
+**المدة:**
 
-#### Information Messages (White/Gray)
+* مع الأهداف المحددة: 10-60 ثانية
+* بدون الأهداف المحددة: 5-30+ دقيقة (مسح جميع الصور)
 
-Normal processing updates:
+**مؤشر التقدم:**
+
+* الكشف: 0٪ → 100٪
+* عدد الصور الممسوحة ضوئيًا
+* عدد الأهداف الموجودة
+
+**ما يجب الانتباه إليه:**
+
+* يجب أن يكتمل بسرعة إذا تم تحديد الأهداف بشكل صحيح
+* إذا استغرق الأمر وقتًا طويلاً، فقد لا يتم تحديد الأهداف
+* تحقق من سجل التصحيح بحثًا عن رسائل &quot;تم العثور على الهدف&quot;
+
+### المرحلة 2: التحليل
+
+**ما يحدث:**
+
+* قراءة بيانات EXIF للصور (الطوابع الزمنية وإعدادات التعرض)
+* تحديد استراتيجية المعايرة بناءً على الطوابع الزمنية للأهداف
+* تنظيم قائمة انتظار معالجة الصور
+* إعداد عناصر معالجة متوازية (Chloros+ فقط)
+
+**المدة:** 5-30 ثانية
+
+**مؤشر التقدم:**
+
+* التحليل: 0٪ → 100٪
+* مرحلة سريعة، عادةً ما تكتمل بسرعة
+
+**ما يجب الانتباه إليه:**
+
+* يجب أن يتقدم بشكل ثابت دون توقف
+* ستظهر تحذيرات حول البيانات الوصفية المفقودة في سجل التصحيح
+
+### المرحلة 3: المعايرة
+
+**ما يحدث:**
+
+* **إزالة التباين**: تحويل نمط باير RAW إلى 3 قنوات
+* **تصحيح التظليل**: إزالة تظليل حواف العدسة
+* **معايرة الانعكاس**: التطبيع باستخدام القيم المستهدفة
+* **حساب المؤشر**: حساب المؤشرات متعددة الأطياف
+* معالجة كل صورة من خلال خط الأنابيب الكامل
+
+**المدة:** غالبية إجمالي وقت المعالجة (60-80٪)
+
+**مؤشر التقدم:**
+
+* المعايرة: 0٪ → 100٪
+* الصورة الحالية قيد المعالجة
+* الصور المكتملة / إجمالي الصور
+
+**سلوك المعالجة:**
+
+* **الوضع الحر**: معالجة صورة واحدة في كل مرة بالتسلسل
+* **وضع Chloros+**: معالجة ما يصل إلى 16 صورة في وقت واحد
+* **تسريع GPU**: يسرع هذه المرحلة بشكل كبير
+
+**ما يجب الانتباه إليه:**
+
+* تقدم ثابت من خلال عدد الصور
+* تحقق من سجل التصحيح للحصول على رسائل إكمال كل صورة
+* تحذيرات حول جودة الصورة أو مشكلات المعايرة
+
+### المرحلة 4: التصدير
+
+**ما يحدث:**
+
+* كتابة الصور المعايرة على القرص بالتنسيق المحدد
+* تصدير صور مؤشر متعدد الأطياف بألوان LUT
+* إنشاء مجلدات فرعية لنماذج الكاميرات
+* الحفاظ على أسماء الملفات الأصلية مع اللواحق المناسبة
+
+**المدة:** 10-20% من إجمالي وقت المعالجة
+
+**مؤشر التقدم:**
+
+* التصدير: 0% → 100%
+* الملفات قيد الكتابة
+* تنسيق التصدير والوجهة
+
+**ما يجب الانتباه إليه:**
+
+* تحذيرات مساحة القرص
+* أخطاء كتابة الملفات
+* إكمال جميع المخرجات المكونة
+
+***
+
+## علامة تبويب سجل التصحيح
+
+يوفر سجل التصحيح معلومات مفصلة حول تقدم المعالجة وأي مشكلات تمت مواجهتها.
+
+### الوصول إلى سجل التصحيح
+
+1. انقر فوق **سجل التصحيح** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> في الشريط الجانبي الأيسر
+2. تفتح لوحة السجل لعرض رسائل المعالجة في الوقت الفعلي
+3. يتم التمرير التلقائي لعرض أحدث الرسائل
+
+### فهم رسائل السجل
+
+#### رسائل المعلومات (أبيض/رمادي)
+
+تحديثات المعالجة العادية:
 
 ```
 [INFO] Processing started
@@ -169,9 +169,9 @@ Normal processing updates:
 [INFO] Processing complete
 ```
 
-#### Warning Messages (Yellow)
+#### رسائل التحذير (أصفر)
 
-Non-critical issues that don't stop processing:
+مشكلات غير حرجة لا توقف المعالجة:
 
 ```
 [WARN] No GPS data found in IMG_0145.RAW
@@ -179,11 +179,11 @@ Non-critical issues that don't stop processing:
 [WARN] Low contrast in calibration panel - results may vary
 ```
 
-**Action:** Review warnings after processing, but don't interrupt
+**الإجراء:** راجع التحذيرات بعد المعالجة، ولكن لا تقاطعها
 
-#### Error Messages (Red)
+#### رسائل الخطأ (Red)
 
-Critical issues that may cause processing to fail:
+مشكلات حرجة قد تتسبب في فشل المعالجة:
 
 ```
 [ERROR] Cannot write file - disk full
@@ -191,202 +191,202 @@ Critical issues that may cause processing to fail:
 [ERROR] No targets detected - enable reflectance calibration or mark target images
 ```
 
-**Action:** Stop processing, resolve error, restart
+**الإجراء:** أوقف المعالجة، وحل الخطأ، وأعد التشغيل
 
-### Common Log Messages
+### رسائل السجل الشائعة
 
-| Message                          | Meaning                                | Action Needed                                         |
+| الرسالة                          | المعنى                                | الإجراء المطلوب                                         |
 | -------------------------------- | -------------------------------------- | ----------------------------------------------------- |
-| "Target detected in \[filename]" | Calibration target found successfully  | None - normal                                         |
-| "Processing image X of Y"        | Current progress update                | None - normal                                         |
-| "No targets found"               | No calibration targets detected        | Mark target images or disable reflectance calibration |
-| "Insufficient disk space"        | Not enough storage for output          | Free up disk space                                    |
-| "Skipping corrupted file"        | Image file is damaged                  | Re-copy file from SD card                             |
-| "PPK data applied"               | GPS corrections from .daq file applied | None - normal                                         |
+| &quot;تم الكشف عن الهدف في \[اسم الملف]&quot; | تم العثور على هدف المعايرة بنجاح  | لا شيء - طبيعي                                         |
+| &quot;معالجة الصورة X من Y&quot;        | تحديث التقدم الحالي                | لا شيء - طبيعي                                         |
+| &quot;لم يتم العثور على أهداف&quot;               | لم يتم الكشف عن أهداف المعايرة        | حدد صور الأهداف أو قم بتعطيل معايرة الانعكاس |
+| &quot;مساحة القرص غير كافية&quot;        | مساحة التخزين غير كافية للإخراج          | تحرير مساحة القرص                                    |
+| &quot;تخطي الملف التالف&quot;        | ملف الصورة تالف                  | إعادة نسخ الملف من بطاقة SD                             |
+| &quot;تطبيق بيانات PPK&quot;               | تطبيق تصحيحات GPS من ملف .daq | لا شيء - طبيعي                                         |
 
-### Copying Log Data
+### نسخ بيانات السجل
 
-To copy log for troubleshooting or support:
+لنسخ السجل لأغراض استكشاف الأخطاء وإصلاحها أو الدعم:
 
-1. Open Debug Log panel
-2. Click **"Copy Log"** button (or right-click → Select All)
-3. Paste into text file or email
-4. Send to MAPIR support if needed
-
-***
-
-## System Resource Monitoring
-
-### CPU Usage
-
-**Free Mode:**
-
-* 1 CPU core at \~100%
-* Other cores idle or available
-* System remains responsive
-
-**Chloros+ Parallel Mode:**
-
-* Multiple cores at 80-100% (up to 16 cores)
-* High overall CPU utilization
-* System may feel less responsive
-
-**To monitor:**
-
-* Windows Task Manager (Ctrl+Shift+Esc)
-* Performance tab → CPU section
-* Look for "Chloros" or "chloros-backend" processes
-
-### Memory (RAM) Usage
-
-**Typical usage:**
-
-* Small projects (< 100 images): 2-4 GB
-* Medium projects (100-500 images): 4-8 GB
-* Large projects (500+ images): 8-16 GB
-* Chloros+ parallel mode uses more RAM
-
-**If memory is low:**
-
-* Process smaller batches
-* Close other applications
-* Upgrade RAM if regularly processing large datasets
-
-### GPU Usage (Chloros+ with CUDA)
-
-When GPU acceleration is enabled:
-
-* NVIDIA GPU shows high utilization (60-90%)
-* VRAM usage increases (requires 4GB+ VRAM)
-* Calibrating stage is significantly faster
-
-**To monitor:**
-
-* NVIDIA System Tray icon
-* Task Manager → Performance → GPU
-* GPU-Z or similar monitoring tool
-
-### Disk I/O
-
-**What to expect:**
-
-* High disk read during Analyzing stage
-* High disk write during Exporting stage
-* SSD significantly faster than HDD
-
-**Performance tip:**
-
-* Use SSD for project folder when possible
-* Avoid network drives for large datasets
-* Ensure disk isn't near capacity (affects write speed)
+1. افتح لوحة سجل التصحيح
+2. انقر فوق الزر **&quot;نسخ السجل&quot;** (أو انقر بزر الماوس الأيمن → تحديد الكل)
+3. الصق في ملف نصي أو بريد إلكتروني
+4. أرسل إلى دعم MAPIR إذا لزم الأمر
 
 ***
 
-## Detecting Problems During Processing
+## مراقبة موارد النظام
 
-### Warning Signs
+### استخدام وحدة المعالجة المركزية
 
-**Progress stalls (no change for 5+ minutes):**
+**الوضع الحر:**
 
-* Check Debug Log for errors
-* Verify disk space available
-* Check Task Manager to ensure Chloros is running
+* نواة وحدة معالجة مركزية واحدة بنسبة \~100٪
+* النوى الأخرى خاملة أو متاحة
+* النظام يظل مستجيبًا
 
-**Error messages appear frequently:**
+**Chloros+ الوضع المتوازي:**
 
-* Stop processing and review errors
-* Common causes: disk space, corrupted files, memory issues
-* See Troubleshooting section below
+* نوى متعددة بنسبة 80-100٪ (حتى 16 نواة)
+* استخدام عالٍ لوحدة المعالجة المركزية بشكل عام
+* قد يبدو النظام أقل استجابة
 
-**System becomes unresponsive:**
+**للمراقبة:**
 
-* Chloros+ parallel mode using too many resources
-* Consider reducing concurrent tasks or upgrading hardware
-* Free mode is less resource-intensive
+* Windows مدير المهام (Ctrl+Shift+Esc)
+* علامة التبويب الأداء → قسم وحدة المعالجة المركزية
+* ابحث عن عمليات &quot;Chloros&quot; أو &quot;chloros-backend&quot;
 
-### When to Stop Processing
+### استخدام الذاكرة (RAM)
 
-Stop processing if you see:
+**الاستخدام النموذجي:**
 
-* ❌ "Disk full" or "Cannot write file" errors
-* ❌ Repeated image file corruption errors
-* ❌ System completely frozen (not responding)
-* ❌ Realized wrong settings were configured
-* ❌ Wrong images imported
+* المشاريع الصغيرة (&lt; 100 صورة): 2-4 جيجابايت
+* المشاريع المتوسطة (100-500 صورة): 4-8 جيجابايت
+* المشاريع الكبيرة (500+ صورة): 8-16 جيجابايت
+* يستخدم الوضع المتوازي Chloros+ المزيد من ذاكرة الوصول العشوائي
 
-**How to stop:**
+**إذا كانت الذاكرة منخفضة:**
 
-1. Click **Stop/Cancel button** (replaces Start button)
-2. Processing halts, progress is lost
-3. Fix issues and restart from beginning
+* قم بمعالجة دفعات أصغر
+* أغلق التطبيقات الأخرى
+* قم بترقية ذاكرة الوصول العشوائي (RAM) إذا كنت تقوم بمعالجة مجموعات بيانات كبيرة بانتظام
 
-***
+### استخدام وحدة معالجة الرسومات (GPU) (Chloros+ مع CUDA)
 
-## Troubleshooting During Processing
+عند تمكين تسريع وحدة معالجة الرسومات (GPU):
 
-### Processing is Very Slow
+* تظهر وحدة معالجة الرسومات (GPU) من NVIDIA استخدامًا عاليًا (60-90٪)
+* يزداد استخدام VRAM (يتطلب 4 جيجابايت+ VRAM)
+* تكون مرحلة المعايرة أسرع بشكل ملحوظ
 
-**Possible causes:**
+**للمراقبة:**
 
-* Unmarked target images (scanning all images)
-* HDD instead of SSD storage
-* Insufficient system resources
-* Many indices configured
-* Network drive access
+* رمز NVIDIA في علبة النظام
+* مدير المهام → الأداء → GPU
+* GPU-Z أو أداة مراقبة مماثلة
 
-**Solutions:**
+### إدخال/إخراج القرص
 
-1. If just started and in Detecting stage: Cancel, mark targets, restart
-2. For future: Use SSD, reduce indices, upgrade hardware
-3. Consider CLI for batch processing large datasets
+**ما يمكن توقعه:**
 
-### "Disk Space" Warnings
+* قراءة عالية للقرص أثناء مرحلة التحليل
+* كتابة عالية للقرص أثناء مرحلة التصدير
+* SSD أسرع بكثير من HDD
 
-**Solutions:**
+**نصيحة حول الأداء:**
 
-1. Free up disk space immediately
-2. Move project to drive with more space
-3. Reduce number of indices to export
-4. Use JPG format instead of TIFF (smaller files)
-
-### Frequent "Corrupted File" Messages
-
-**Solutions:**
-
-1. Re-copy images from SD card to ensure integrity
-2. Test SD card for errors
-3. Remove corrupted files from project
-4. Continue processing remaining images
-
-### System Overheating / Throttling
-
-**Solutions:**
-
-1. Ensure adequate ventilation
-2. Clean dust from computer vents
-3. Reduce processing load (use Free mode instead of Chloros+)
-4. Process during cooler times of day
+* استخدم SSD لمجلد المشروع عندما يكون ذلك ممكنًا
+* تجنب محركات الأقراص الشبكية للمجموعات الكبيرة من البيانات
+* تأكد من أن القرص ليس قريبًا من سعته القصوى (يؤثر على سرعة الكتابة)
 
 ***
 
-## Processing Complete Notification
+## اكتشاف المشكلات أثناء المعالجة
 
-When processing finishes:
+### علامات التحذير
 
-* Progress bar reaches 100%
-* **"Processing Complete"** message appears in Debug Log
-* Start button becomes enabled again
-* All output files are in camera model subfolder
+**توقف التقدم (لا يوجد تغيير لمدة 5 دقائق أو أكثر):**
+
+* تحقق من سجل التصحيح بحثًا عن الأخطاء
+* تحقق من مساحة القرص المتاحة
+* تحقق من إدارة المهام للتأكد من تشغيل Chloros
+
+**تظهر رسائل الخطأ بشكل متكرر:**
+
+* أوقف المعالجة وراجع الأخطاء
+* الأسباب الشائعة: مساحة القرص، الملفات التالفة، مشكلات الذاكرة
+* راجع قسم استكشاف الأخطاء وإصلاحها أدناه
+
+**توقف النظام عن الاستجابة:**
+
+* يستخدم Chloros+ الوضع المتوازي موارد كثيرة جدًا
+* فكر في تقليل المهام المتزامنة أو ترقية الأجهزة
+* الوضع الحر أقل استهلاكًا للموارد
+
+### متى تتوقف عن المعالجة
+
+توقف عن المعالجة إذا رأيت:
+
+* ❌ أخطاء &quot;القرص ممتلئ&quot; أو &quot;لا يمكن كتابة الملف&quot;
+* ❌ أخطاء متكررة في تلف ملفات الصور
+* ❌ تجميد النظام تمامًا (لا يستجيب)
+* ❌ اكتشاف تكوين إعدادات خاطئة
+* ❌ استيراد صور خاطئة
+
+**كيفية الإيقاف:**
+
+1. انقر فوق **زر إيقاف/إلغاء** (يحل محل زر بدء)
+2. تتوقف المعالجة، ويضيع التقدم المحرز
+3. قم بإصلاح المشكلات وأعد التشغيل من البداية
 
 ***
 
-## Next Steps
+## استكشاف الأخطاء وإصلاحها أثناء المعالجة
 
-Once processing completes:
+### المعالجة بطيئة جدًا
 
-1. **Review results** - See [Finishing the Processing](finishing-the-processing.md)
-2. **Check output folder** - Verify all files exported correctly
-3. **Review Debug Log** - Check for any warnings or errors
-4. **Preview processed images** - Use Image Viewer or external software
+**الأسباب المحتملة:**
 
-For information about reviewing and using your processed results, see [Finishing the Processing](finishing-the-processing.md).
+* صور مستهدفة غير محددة (مسح جميع الصور)
+* تخزين HDD بدلاً من SSD
+* موارد النظام غير كافية
+* تكوين العديد من الفهارس
+* الوصول إلى محرك أقراص الشبكة
+
+**الحلول:**
+
+1. إذا بدأت للتو وفي مرحلة الكشف: قم بالإلغاء، وقم بتمييز الأهداف، وأعد التشغيل
+2. للمستقبل: استخدم SSD، وقلل الفهارس، وقم بترقية الأجهزة
+3. ضع في اعتبارك CLI للمعالجة المجمعة لمجموعات البيانات الكبيرة
+
+### تحذيرات &quot;مساحة القرص&quot;
+
+**الحلول:**
+
+1. قم بتحرير مساحة القرص على الفور
+2. انقل المشروع إلى محرك أقراص به مساحة أكبر
+3. قلل عدد الفهارس المراد تصديرها
+4. استخدم تنسيق JPG بدلاً من TIFF (ملفات أصغر حجمًا)
+
+### رسائل &quot;ملف تالف&quot; متكررة
+
+**الحلول:**
+
+1. أعد نسخ الصور من بطاقة SD لضمان سلامتها
+2. اختبر بطاقة SD للتأكد من عدم وجود أخطاء
+3. أزل الملفات التالفة من المشروع
+4. تابع معالجة الصور المتبقية
+
+### ارتفاع درجة حرارة النظام / الاختناق
+
+**الحلول:**
+
+1. تأكد من وجود تهوية كافية
+2. نظف الغبار من فتحات تهوية الكمبيوتر
+3. قلل حمل المعالجة (استخدم الوضع الحر بدلاً من Chloros+)
+4. قم بالمعالجة خلال الأوقات الأكثر برودة من اليوم
+
+***
+
+## إشعار اكتمال المعالجة
+
+عند انتهاء المعالجة:
+
+* يصل شريط التقدم إلى 100٪
+* تظهر رسالة **&quot;اكتملت المعالجة&quot;** في سجل التصحيح
+* يتم تمكين زر البدء مرة أخرى
+* توجد جميع الملفات الناتجة في المجلد الفرعي لطراز الكاميرا
+
+***
+
+## الخطوات التالية
+
+بمجرد اكتمال المعالجة:
+
+1. **مراجعة النتائج** - انظر [إنهاء المعالجة](finishing-the-processing.md)
+2. **تحقق من مجلد الإخراج** - تحقق من صحة تصدير جميع الملفات
+3. **راجع سجل التصحيح** - تحقق من وجود أي تحذيرات أو أخطاء
+4. **قم بمعاينة الصور المعالجة** - استخدم عارض الصور أو برنامج خارجي
+
+للحصول على معلومات حول مراجعة النتائج المعالجة واستخدامها، راجع [إنهاء المعالجة](finishing-the-processing.md).

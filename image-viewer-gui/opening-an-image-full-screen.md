@@ -1,247 +1,247 @@
-# Opening an Image Full Screen
+# فتح صورة بملء الشاشة
 
-The Chloros Image Viewer provides a dedicated full-screen interface for viewing, analyzing, and manipulating your multispectral images. Whether viewing original images or processed outputs, the Image Viewer offers powerful tools for inspection and analysis.
+يوفر عارض الصور Chloros واجهة مخصصة بملء الشاشة لعرض الصور متعددة الأطياف وتحليلها ومعالجتها. سواء كنت تعرض الصور الأصلية أو النتائج المعالجة، يوفر عارض الصور أدوات قوية للفحص والتحليل.
 
-## Accessing the Image Viewer
+## الوصول إلى عارض الصور
 
-### From the File Browser
+### من مستعرض الملفات
 
-The most common way to open an image in the Image Viewer:
+الطريقة الأكثر شيوعًا لفتح صورة في عارض الصور:
 
-1. Ensure you're in the **File Browser** tab <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
-2. Click any **image thumbnail** in the image grid
-3. The image opens in the **main preview area** (center of screen)
-4. The image is now loaded and ready for full-screen viewing
+1. تأكد من أنك في علامة التبويب **مستعرض الملفات** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
+2. انقر فوق أي **صورة مصغرة** في شبكة الصور
+3. تفتح الصورة في **منطقة المعاينة الرئيسية** (وسط الشاشة)
+4. يتم الآن تحميل الصورة وتصبح جاهزة للعرض بملء الشاشة
 
-### Opening the Image Viewer Tab
+### فتح علامة تبويب عارض الصور
 
-Once an image is loaded in the preview area:
+بمجرد تحميل الصورة في منطقة المعاينة:
 
-1. Click the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> icon in the left sidebar
-2. The Image Viewer tab opens, displaying the selected image full-screen
-3. Advanced viewing and analysis tools become available in the left sidebar
-
-***
-
-## Image Viewer Interface Overview
-
-### Main Display Area
-
-The largest portion of the screen shows your image:
-
-* **Full resolution**: Images displayed at native resolution
-* **Zoomable**: Use controls or mouse wheel to zoom
-* **Pannable**: Click and drag to move around when zoomed
-* **Aspect ratio maintained**: Images scale proportionally
+1. انقر فوق رمز **عارض الصور** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> في الشريط الجانبي الأيسر
+2. تفتح علامة التبويب عارض الصور، وتعرض الصورة المحددة بملء الشاشة
+3. تصبح أدوات العرض والتحليل المتقدمة متاحة في الشريط الجانبي الأيسر
 
 ***
 
-## Viewing Options
+## نظرة عامة على واجهة عارض الصور
 
-### Basic Image Navigation
+### منطقة العرض الرئيسية
 
-#### Browse Through Images
+يعرض الجزء الأكبر من الشاشة صورتك:
 
-Navigate through your image set using keyboard shortcuts or buttons:
-
-* **Next image**: Click → button or press **→** (Right Arrow) key
-* **Previous image**: Click ← button or press **←** (Left Arrow) key
-* **Jump to specific image**: Return to File Browser and click desired thumbnail
-
-#### Zoom Controls
-
-Adjust magnification to inspect image details:
-
-**Zoom In:**
-
-* Click **+** (Plus) button
-* Press **+** or **=** key
-* Scroll mouse wheel **up**
-
-**Zoom Out:**
-
-* Click **−** (Minus) button
-* Press **−** (Minus) key
-* Scroll mouse wheel **down**
-
-**Fit to Screen:**
-
-* Click **↔** (Fit) button
-* Press **0** (Zero) key
-* Double-click on image
-
-#### Pan When Zoomed
-
-When zoomed in beyond screen size:
-
-1. Move mouse cursor over image
-2. Click and **hold left mouse button**
-3. **Drag** to move image around
-4. Release to stop panning
-
-**Alternative**: Use arrow keys to pan in small increments
+* **الدقة الكاملة**: يتم عرض الصور بالدقة الأصلية
+* **قابلة للتكبير/التصغير**: استخدم عناصر التحكم أو عجلة الماوس للتكبير/التصغير
+* **قابلة للتحريك**: انقر واسحب للتحرك عند التكبير/التصغير
+* **الحفاظ على نسبة العرض إلى الارتفاع**: يتم تغيير حجم الصور بشكل متناسب
 
 ***
 
-## Pixel Value Inspection
+## خيارات العرض
 
-### Viewing Pixel Values at Cursor
+### التنقل الأساسي بين الصور
 
-As you move your mouse cursor over the image, pixel values display in real-time:
+#### تصفح الصور
 
-**Value display location:**
+تنقل بين مجموعة الصور باستخدام اختصارات لوحة المفاتيح أو الأزرار:
 
-* **Floating number and red line in right side index LUT gradient legend**
-* **When zoomed in further, floating value near cursor and highlighted pixel**
-* Shows values for pixel **under cursor or highlighted**
-* Updates as you move mouse
+* **الصورة التالية**: انقر فوق الزر → أو اضغط على المفتاح **→** (السهم الأيمن)
+* **الصورة السابقة**: انقر فوق الزر ← أو اضغط على المفتاح **←** (السهم الأيسر)
+* **الانتقال إلى صورة معينة**: ارجع إلى مستعرض الملفات وانقر فوق الصورة المصغرة المطلوبة
 
-***
+#### عناصر التحكم في التكبير
 
-## Image Types You Can View
+اضبط التكبير لفحص تفاصيل الصورة:
 
-### Original Images (Pre-Processing)
+**التكبير:**
 
-**RAW + JPG images from camera:**
+* انقر فوق الزر **+** (زائد)
+* اضغط على مفتاح **+** أو **=**
+* قم بالتمرير **لأعلى** بعجلة الماوس
 
-* Display RAW data as previewed
-* Show original, uncorrected values
-* Useful for checking image quality before processing
+**التصغير:**
 
-### Calibrated Reflectance Images
+* انقر فوق الزر **−** (ناقص)
+* اضغط على مفتاح **−** (ناقص)
+* قم بالتمرير **لأسفل** بعجلة الماوس
 
-**After processing:**
+**تناسب الشاشة:**
 
-* Vignette corrected
-* Reflectance calibrated
-* Multi-band TIFF (Red, Green, NIR, etc.)
-* Scientific data ready for analysis
+* انقر فوق الزر **↔** (تناسب)
+* اضغط على المفتاح **0** (صفر)
+* انقر نقرًا مزدوجًا فوق الصورة
 
-### Index Images
+#### التحريك عند التكبير
 
-**NDVI, NDRE, GNDVI, etc. (\_NDVI.tif files):**
+عند التكبير إلى ما يتجاوز حجم الشاشة:
 
-* Single-band grayscale images
-* Pixel values represent index calculation results
-* Range typically -1 to +1 for normalized indices
-* Can apply color LUTs for visualization
+1. حرك مؤشر الماوس فوق الصورة
+2. انقر **واضغط باستمرار على زر الماوس الأيسر**
+3. **اسحب** لتحريك الصورة
+4. حرر الزر لإيقاف التحريك
 
-***
-
-## Index and LUT Application
-
-Apply multispectral indices and color Look-Up Tables:
-
-1. Locate **Index/LUT Sandbox** in **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sidebar
-2. Select vegetation index (NDVI, NDRE, etc.)
-3. Select multispectral formula, or create your own custom one (Chloros+ only)
-4. Apply color LUT gradient for visualization
-5. Adjust value ranges and thresholds
-
-See [Index/LUT Sandbox](index-lut-sandbox.md) for detailed instructions.
+**بديل**: استخدم مفاتيح الأسهم للتحريك بزيادات صغيرة
 
 ***
 
-## Keyboard Shortcuts
+## فحص قيمة البكسل
 
-### Navigation
+### عرض قيم البكسل عند المؤشر
 
-* **→** (Right Arrow): Next image
-* **←** (Left Arrow): Previous image
-* **Home**: First image in list
-* **End**: Last image in list
+عند تحريك مؤشر الماوس فوق الصورة، يتم عرض قيم البكسل في الوقت الفعلي:
 
-### Zoom
+**موقع عرض القيمة:**
 
-* **+** or **=**: Zoom in
-* **−**: Zoom out
-* **0** (Zero): Fit to screen
-* **Mouse Wheel**: Zoom in/out
-
-### View Controls
-
-* **P**: Toggle pixel percent mode
-* **L**: Toggle layers panel
-* **Esc**: Close full-screen or return to File Browser
-
-### Other
-
-* **Ctrl+S**: Save current image
-* **F**: Full-screen mode (if available)
+* **رقم عائم وخط أحمر في مؤشر LUT على الجانب الأيمن**
+* **عند التكبير أكثر، تظهر قيمة عائمة بالقرب من المؤشر وبكسل مظلل**
+* تعرض قيم البكسل **تحت المؤشر أو المظلل**
+* يتم التحديث أثناء تحريك الماوس
 
 ***
 
-### Verifying Index Calculations
+## أنواع الصور التي يمكنك عرضها
 
-Check that indices calculated correctly:
+### الصور الأصلية (قبل المعالجة)
 
-1. Open NDVI or other index image
-2. Check vegetation areas:
-   * **NDVI**: Should show 0.4-0.9 for healthy plants
-   * **NDRE**: Higher values for vigorous growth
-   * **GNDVI**: Similar to NDVI but chlorophyll-sensitive
-3. Check non-vegetation:
-   * **Soil**: Near 0 or slightly negative
-   * **Water**: Negative values (-0.5 to 0)
+**صور RAW + JPG من الكاميرا:**
 
-***
+* عرض بيانات RAW كما تمت معاينتها
+* عرض القيم الأصلية غير المصححة
+* مفيدة للتحقق من جودة الصورة قبل المعالجة
 
-## Troubleshooting Viewing Issues
+### صور الانعكاس المعايرة
 
-### Image Won't Open
+**بعد المعالجة:**
 
-**Possible causes:**
+* تصحيح التظليل
+* معايرة الانعكاس
+* TIFF متعدد النطاقات (Red، Green، NIR، إلخ)
+* البيانات العلمية جاهزة للتحليل
 
-* File corrupted during processing
-* Unsupported file format
-* Insufficient memory for large image
+### صور المؤشر
 
-**Solutions:**
+**NDVI، NDRE، GNDVI، إلخ. (ملفات \_NDVI.tif):**
 
-1. Try opening in external viewer to verify file integrity
-2. Check file format matches expected type
-3. Close other applications to free memory
-4. Try smaller/different image
-
-### Black or White Image Display
-
-**Possible causes:**
-
-* Value range outside display capability
-* 32-bit float image with unusual values
-* Index calculation error
-
-**Solutions:**
-
-1. Check pixel values - if all very low or very high, adjust display range
-2. Try opening in QGIS or similar with auto-range adjustment
-3. Check Debug Log from processing for errors
-
-### Pixel Values Seem Wrong
-
-**Possible causes:**
-
-* Viewing wrong image (original vs processed)
-* Calibration didn't apply correctly
-* Light sensor data wasn't included in input
-* Percent mode toggled incorrectly
-
-**Solutions:**
-
-1. Verify you're viewing processed output (check filename suffix)
-2. Check percent mode button state
-3. Compare with known-good images from same dataset
+* صور أحادية النطاق بتدرج الرمادي
+* تمثل قيم البكسل نتائج حساب المؤشر
+* النطاق عادةً ما يكون من -1 إلى +1 للمؤشرات المعيارية
+* يمكن تطبيق LUTs ملونة للتصور
 
 ***
 
-## Next Steps
+## تطبيق المؤشر و LUT
 
-Now that you can view images full-screen:
+تطبيق مؤشرات متعددة الأطياف وجداول البحث عن الألوان:
 
-* [**Image Layers**](image-layers.md) - Learn about multi-band visualization
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Apply custom indices and color mapping
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Understand available indices
+1. حدد موقع **Index/LUT Sandbox** في **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> الشريط الجانبي
+2. حدد مؤشر الغطاء النباتي (NDVI، NDRE، إلخ)
+3. حدد الصيغة متعددة الأطياف، أو أنشئ صيغة مخصصة خاصة بك (Chloros+ فقط)
+4. قم بتطبيق تدرج LUT للألوان من أجل التصور
+5. اضبط نطاقات القيم والحدود
 
-For processing workflow, see:
+انظر [مؤشر/LUT Sandbox](index-lut-sandbox.md) للحصول على إرشادات مفصلة.
 
-* [**Processing Images (GUI)**](../processing-images-gui/page-1.md) - Complete processing guide
+***
+
+## اختصارات لوحة المفاتيح
+
+### التنقل
+
+* **→** (السهم الأيمن): الصورة التالية
+* **←** (السهم الأيسر): الصورة السابقة
+* **Home**: الصورة الأولى في القائمة
+* **End**: الصورة الأخيرة في القائمة
+
+### التكبير/التصغير
+
+* **+** أو **=**: تكبير
+* **−**: تصغير
+* **0** (صفر): ملاءمة الشاشة
+* **عجلة الماوس**: تكبير/تصغير
+
+### عناصر التحكم في العرض
+
+* **P**: تبديل وضع النسبة المئوية للبكسل
+* **L**: تبديل لوحة الطبقات
+* **Esc**: إغلاق وضع ملء الشاشة أو العودة إلى مستعرض الملفات
+
+### أخرى
+
+* **Ctrl+S**: حفظ الصورة الحالية
+* **F**: وضع ملء الشاشة (إن كان متاحًا)
+
+***
+
+### التحقق من حسابات المؤشر
+
+تحقق من صحة حسابات المؤشر:
+
+1. افتح NDVI أو صورة مؤشر أخرى
+2. تحقق من مناطق الغطاء النباتي:
+   * **NDVI**: يجب أن تظهر 0.4-0.9 للنباتات السليمة
+   * **NDRE**: قيم أعلى للنمو القوي
+   * **GNDVI**: مشابه لـ NDVI ولكنه حساس للكلوروفيل
+3. تحقق من المناطق غير النباتية:
+   * **التربة**: قريبة من 0 أو سالبة قليلاً
+   * **الماء**: قيم سالبة (-0.5 إلى 0)
+
+***
+
+## استكشاف أخطاء العرض وإصلاحها
+
+### الصورة لا تفتح
+
+**الأسباب المحتملة:**
+
+* تلف الملف أثناء المعالجة
+* تنسيق الملف غير مدعوم
+* ذاكرة غير كافية لصورة كبيرة
+
+**الحلول:**
+
+1. حاول فتح الملف في عارض خارجي للتحقق من سلامة الملف
+2. تحقق من أن تنسيق الملف يتطابق مع النوع المتوقع
+3. أغلق التطبيقات الأخرى لتحرير الذاكرة
+4. جرب صورة أصغر/مختلفة
+
+### عرض الصورة باللون الأسود أو الأبيض
+
+**الأسباب المحتملة:**
+
+* نطاق القيم خارج قدرة العرض
+* صورة عائمة 32 بت بقيم غير عادية
+* خطأ في حساب المؤشر
+
+**الحلول:**
+
+1. تحقق من قيم البكسل - إذا كانت جميعها منخفضة جدًا أو عالية جدًا، فاضبط نطاق العرض
+2. حاول فتح الملف في QGIS أو ما شابهه مع ضبط النطاق تلقائيًا
+3. تحقق من سجل التصحيح من المعالجة بحثًا عن أخطاء
+
+### قيم البكسل تبدو خاطئة
+
+**الأسباب المحتملة:**
+
+* عرض صورة خاطئة (الأصلية مقابل المعالجة)
+* لم يتم تطبيق المعايرة بشكل صحيح
+* لم يتم تضمين بيانات مستشعر الضوء في الإدخال
+* تم تبديل وضع النسبة المئوية بشكل غير صحيح
+
+**الحلول:**
+
+1. تحقق من أنك تشاهد الناتج المعالج (تحقق من لاحقة اسم الملف)
+2. تحقق من حالة زر وضع النسبة المئوية
+3. قارن مع الصور الجيدة المعروفة من نفس مجموعة البيانات
+
+***
+
+## الخطوات التالية
+
+الآن بعد أن أصبح بإمكانك عرض الصور بملء الشاشة:
+
+* [**طبقات الصور**](image-layers.md) - تعرف على التصور متعدد النطاقات
+* [**مؤشر/LUT Sandbox**](index-lut-sandbox.md) - قم بتطبيق مؤشرات مخصصة وتعيين الألوان
+* [**صيغ المؤشر متعدد الأطياف**](../project-settings/multispectral-index-formulas.md) - فهم المؤشرات المتاحة
+
+للحصول على سير عمل المعالجة، انظر:
+
+* [**معالجة الصور (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - دليل المعالجة الكامل

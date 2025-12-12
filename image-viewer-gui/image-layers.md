@@ -1,352 +1,352 @@
-# Image Layers
+# طبقات الصورة
 
-The Image Layers dropdown in the Chloros Image Viewer allows you to quickly switch between different versions of the same image - from the original captures to processed reflectance outputs and calculated index images.
+تتيح لك القائمة المنسدلة &quot;طبقات الصورة&quot; في عارض الصور Chloros التبديل بسرعة بين الإصدارات المختلفة لنفس الصورة - من اللقطات الأصلية إلى مخرجات الانعكاس المعالجة والصور المؤشرية المحسوبة.
 
-## What are Image Layers?
+## ما هي طبقات الصور؟
 
-In Chloros, **layers** refer to the different image outputs available for a single source image. When you process images, Chloros creates multiple versions:
+في Chloros، تشير **الطبقات** إلى مخرجات الصور المختلفة المتاحة لصورة مصدر واحدة. عند معالجة الصور، يقوم Chloros بإنشاء إصدارات متعددة:
 
-* **Original images** (JPG and RAW files from your camera)
-* **Reflectance calibrated** outputs (if reflectance calibration was enabled)
-* **Target images** (if the image contains calibration targets)
-* **Index images** (NDVI, NDRE, GNDVI, etc. if indices were configured)
+* **الصور الأصلية** (ملفات JPG و RAW من الكاميرا)
+* مخرجات **معايرة الانعكاس** (إذا تم تمكين معايرة الانعكاس)
+* **الصور المستهدفة** (إذا كانت الصورة تحتوي على أهداف معايرة)
+* **صور الفهرس** (NDVI، NDRE، GNDVI، إلخ. إذا تم تكوين الفهارس)
 
-The **Layer Selector dropdown** in the top-right of the Image Viewer lets you instantly switch between these versions without leaving the viewer.
+يتيح لك **القائمة المنسدلة &quot;محدد الطبقة&quot;** في الجزء العلوي الأيمن من عارض الصور التبديل الفوري بين هذه الإصدارات دون مغادرة العارض.
 
 ***
 
-## Available Layer Types
+## أنواع الطبقات المتاحة
 
 ### JPG
 
-* The original JPG preview image from your camera
-* Always available for all images
-* Unprocessed, as captured by the camera
-* Fastest to load and display
+* صورة المعاينة الأصلية بتنسيق JPG من الكاميرا
+* متاحة دائمًا لجميع الصور
+* غير معالجة، كما تم التقاطها بواسطة الكاميرا
+* الأسرع في التحميل والعرض
 
-**When to view:**
+**متى يتم العرض:**
 
-* Quick preview of original capture
-* Checking image composition and framing
-* Verifying capture quality before processing
+* معاينة سريعة للالتقاط الأصلي
+* التحقق من تكوين الصورة وتأطيرها
+* التحقق من جودة الالتقاط قبل المعالجة
 
-### RAW (Original)
+### RAW (أصلي)
 
-* The original RAW sensor data from your camera
-* Debayered with no post processing applied
-* Higher bit depth than JPG (typically 12-bit or 14-bit sensor data)
+* بيانات المستشعر RAW الأصلية من الكاميرا
+* بدون معالجة لاحقة
+* عمق بت أعلى من JPG (عادةً بيانات مستشعر 12 بت أو 14 بت)
 
-**When to view:**
+**متى يتم العرض:**
 
-* Inspecting original sensor data quality
-* Checking for sensor issues or artifacts
-* Comparing before/after processing results
+* فحص جودة بيانات المستشعر الأصلية
+* التحقق من مشكلات المستشعر أو العيوب
+* مقارنة نتائج المعالجة قبل/بعد
 
-### RAW (Target)
+### RAW (الهدف)
 
-* Only appears for images identified as containing calibration targets
-* Shows the original RAW image with target detected
-* Used to verify target detection was successful
+* يظهر فقط للصور التي تم تحديدها على أنها تحتوي على أهداف معايرة
+* يعرض الصورة RAW الأصلية مع الهدف المكتشف
+* يستخدم للتحقق من نجاح اكتشاف الهدف
 
-**When to view:**
+**متى يتم العرض:**
 
-* Confirming calibration targets were detected correctly
-* Checking target image quality
-* Troubleshooting calibration issues
+* التأكد من اكتشاف أهداف المعايرة بشكل صحيح
+* التحقق من جودة صورة الهدف
+* استكشاف أخطاء المعايرة وإصلاحها
 
-{% hint style="info" %}
-**Target Layer**: This layer only appears in the dropdown for images that contain calibration targets. Regular capture images will not have this option.
+{% hint style=&quot;info&quot; %}
+**طبقة الهدف**: تظهر هذه الطبقة فقط في القائمة المنسدلة للصور التي تحتوي على أهداف معايرة. لن تتوفر هذه الخيار في الصور العادية الملتقطة.
 {% endhint %}
 
-### RAW (Reflectance)
+### RAW (الانعكاس)
 
-* The calibrated reflectance output image
-* Vignette corrected (if enabled in processing)
-* Reflectance calibrated using target data (if enabled)
-* Multi-band TIFF with all camera channels
-* Pixel values represent percent reflectance (when using percent mode)
-* Ready to manipulate with the [Index/LUT Sandbox](index-lut-sandbox.md)
+* صورة الإخراج المعايرة للانعكاس
+* تصحيح التظليل (إذا تم تمكينه في المعالجة)
+* معايرة الانعكاس باستخدام بيانات الهدف (إذا تم تمكينها)
+* TIFF متعدد النطاقات مع جميع قنوات الكاميرا
+* تمثل قيم البكسل نسبة الانعكاس (عند استخدام وضع النسبة المئوية)
+* جاهز للتعديل باستخدام [Index/LUT Sandbox](index-lut-sandbox.md)
 
-**When to view:**
+**متى يتم العرض:**
 
-* Inspecting calibrated results
-* Verifying calibration quality
-* Checking pixel values for scientific accuracy
-* Comparing with original to see calibration effects
+* فحص النتائج المعايرة
+* التحقق من جودة المعايرة
+* التحقق من قيم البكسل للتأكد من دقتها العلمية
+* المقارنة مع الأصل لمعرفة تأثيرات المعايرة
 
-{% hint style="success" %}
-**Recommended**: Use RAW (Reflectance) layer when checking pixel values for scientific measurements and analysis.
+{% hint style=&quot;success&quot; %}
+**موصى به**: استخدم طبقة RAW (الانعكاس) عند التحقق من قيم البكسل للقياسات والتحليلات العلمية.
 {% endhint %}
 
-### RAW (NDVI Index)... and similar
+### RAW (NDVI Index)... وما شابه
 
-* Calculated vegetation index image (NDVI in this example)
-* The index name changes based on which index was configured during processing
-* Examples: RAW (NDVI Index), RAW (NDRE Index), RAW (GNDVI Index), etc.
-* Single-band grayscale image showing index calculation results
-* One layer appears for each index configured in Project Settings
+* صورة مؤشر الغطاء النباتي المحسوبة (NDVI في هذا المثال)
+* يتغير اسم المؤشر بناءً على المؤشر الذي تم تكوينه أثناء المعالجة
+* أمثلة: RAW (NDVI Index)، RAW (NDRE Index)، RAW (GNDVI Index)، إلخ.
+* صورة أحادية النطاق باللون الرمادي تظهر نتائج حساب المؤشر
+* تظهر طبقة واحدة لكل مؤشر تم تكوينه في إعدادات المشروع
 
-**Possible index names:**
+**أسماء المؤشرات المحتملة:**
 
 * RAW (NDVI Index)
-* RAW (NDRE Index)
-* RAW (GNDVI Index)
-* RAW (OSAVI Index)
-* RAW (EVI Index)
-* RAW (SAVI Index)
-* And many more... (see [Multispectral Index Formulas](../project-settings/multispectral-index-formulas.md))
+* RAW (مؤشر NDRE)
+* RAW (مؤشر GNDVI)
+* RAW (مؤشر OSAVI)
+* RAW (مؤشر EVI)
+* RAW (مؤشر SAVI)
+* وغيرها الكثير... (انظر [صيغ المؤشر متعدد الأطياف](../project-settings/multispectral-index-formulas.md))
 
-**When to view:**
+**متى يتم العرض:**
 
-* Examining index calculation results
-* Checking index value ranges
-* Identifying areas of interest
-* Verifying index images before using in GIS or analysis
-
-***
-
-## Using the Layer Selector
-
-### Opening the Dropdown
-
-1. Open an image in fullscreen mode (click any thumbnail in the Image Viewer)
-2. Locate the **layer dropdown** in the top-right corner of the viewer
-3. The dropdown shows the currently selected layer (e.g., "JPG")
-4. Click the dropdown to see all available layers
-
-### Switching Layers
-
-1. Click the layer dropdown to open the list
-2. All available layers for the current image are shown
-3. Click any layer name to switch to that version
-4. The image updates immediately to show the selected layer
-
-**Quick switching:**
-
-* The dropdown remembers your last selection
-* When navigating to the next image, Chloros attempts to show the same layer type
-* If that layer doesn't exist on the next image, it defaults to JPG
-
-### Layer Availability
-
-Not all layers are available for every image:
-
-**Always available:**
-
-* ✅ JPG (every image has a JPG preview)
-
-**Conditionally available:**
-
-* ⚠️ RAW (Original) - Only if image was captured in RAW or RAW+JPG mode
-* ⚠️ RAW (Target) - Only if image contains detected calibration targets
-* ⚠️ RAW (Reflectance) - Only after processing with reflectance calibration enabled
-* ⚠️ RAW (\[Index] Index) - Only after processing with indices configured
+* فحص نتائج حساب المؤشر
+* التحقق من نطاقات قيم المؤشر
+* تحديد المناطق ذات الأهمية
+* التحقق من صور المؤشر قبل استخدامها في نظام المعلومات الجغرافية أو التحليل
 
 ***
 
-## Layer Persistence
+## استخدام محدد الطبقة
 
-### Navigating Between Images
+### فتح القائمة المنسدلة
 
-When you navigate to a different image (using arrow keys or clicking thumbnails):
+1. افتح صورة في وضع ملء الشاشة (انقر فوق أي صورة مصغرة في عارض الصور)
+2. حدد موقع **القائمة المنسدلة للطبقات** في الزاوية العلوية اليمنى من العارض
+3. تعرض القائمة المنسدلة الطبقة المحددة حاليًا (على سبيل المثال، &quot;JPG&quot;)
+4. انقر فوق القائمة المنسدلة لرؤية جميع الطبقات المتاحة
 
-**Layer preference is preserved:**
+### تبديل الطبقات
 
-* If viewing "RAW (Reflectance)", next image shows "RAW (Reflectance)" (if available)
-* If viewing "RAW (NDVI Index)", next image shows "RAW (NDVI Index)" (if available)
-* If the same layer doesn't exist, defaults to JPG
+1. انقر على القائمة المنسدلة للطبقات لفتح القائمة
+2. يتم عرض جميع الطبقات المتاحة للصورة الحالية
+3. انقر على أي اسم طبقة للتبديل إلى تلك النسخة
+4. يتم تحديث الصورة على الفور لعرض الطبقة المحددة
 
-**Example workflow:**
+**التبديل السريع:**
 
-1. Open Image 1, switch to RAW (NDVI Index)
-2. Press → to view Image 2
-3. Image 2 automatically displays RAW (NDVI Index) layer
-4. Continue navigating - all images show NDVI layer
-5. Very efficient for reviewing index results across many images
+* تتذكر القائمة المنسدلة آخر اختيار لك
+* عند الانتقال إلى الصورة التالية، يحاول Chloros عرض نفس نوع الطبقة
+* إذا لم تكن تلك الطبقة موجودة في الصورة التالية، فسيتم تعيين JPG بشكل افتراضي
 
-***
+### توفر الطبقات
 
-## Common Workflows
+ليست كل الطبقات متاحة لكل صورة:
 
-### Workflow 1: Before/After Comparison
+**متاحة دائمًا:**
 
-**Goal**: Compare original vs. calibrated image
+* ✅ JPG (كل صورة لها معاينة JPG)
 
-1. Open processed image in Image Viewer
-2. Select **RAW (Original)** from dropdown
-3. Note the vignetting and uncalibrated values
-4. Switch to **RAW (Reflectance)** from dropdown
-5. Compare - vignetting removed, values calibrated
+**متاحة بشروط:**
 
-### Workflow 2: Index Review
-
-**Goal**: Quickly review NDVI results across dataset
-
-1. Open first processed image
-2. Select **RAW (NDVI Index)** from dropdown
-3. Use → arrow key to navigate to next image
-4. NDVI layer persists automatically
-5. Continue through all images, checking NDVI patterns
-6. Switch to **RAW (NDRE Index)** to compare
-
-### Workflow 3: Target Verification
-
-**Goal**: Verify all target images were detected correctly
-
-1. Navigate to a target image
-2. Select **RAW (Target)** from dropdown
-3. Verify calibration targets are clearly visible and detected
-4. Navigate to next target image
-5. Repeat verification for all targets
-
-### Workflow 4: Pixel Value Inspection
-
-**Goal**: Check reflectance values for scientific accuracy
-
-1. Open processed image
-2. Select **RAW (Reflectance)** layer
-3. Enable **Pixel Percent** mode (button in top-right toolbar)
-4. Move cursor over vegetation areas
-5. Verify pixel values are in expected ranges (30-70% for NIR, 5-15% for Red)
-6. Check soil and water areas for appropriate values
+* ⚠️ RAW (أصلية) - فقط إذا تم التقاط الصورة في وضع RAW أو RAW+JPG
+* ⚠️ RAW (الهدف) - فقط إذا كانت الصورة تحتوي على أهداف معايرة مكتشفة
+* ⚠️ RAW (الانعكاس) - فقط بعد المعالجة مع تمكين معايرة الانعكاس
+* ⚠️ RAW (\[Index] الفهرس) - فقط بعد المعالجة مع تكوين الفهارس
 
 ***
 
-## Understanding Pixel Values by Layer
+## استمرارية الطبقة
 
-Different layers show different pixel value ranges:
+### التنقل بين الصور
 
-### JPG Layer
+عند التنقل إلى صورة مختلفة (باستخدام مفاتيح الأسهم أو النقر على الصور المصغرة):
 
-* **Range**: 0-255 (8-bit)
-* **Meaning**: Display values, gamma-corrected
-* **Use**: Visual inspection only, not for scientific measurement
+**يتم الحفاظ على تفضيل الطبقة:**
 
-### RAW (Original)
+* في حالة عرض &quot;RAW (الانعكاس)&quot;، تعرض الصورة التالية &quot;RAW (الانعكاس)&quot; (إن كانت متوفرة)
+* إذا كنت تشاهد &quot;RAW (NDVI مؤشر)&quot;، فإن الصورة التالية تعرض &quot;RAW (NDVI مؤشر)&quot; (إن كانت متوفرة)
+* إذا لم تكن الطبقة نفسها موجودة، فإن الإعداد الافتراضي هو JPG
 
-* **Range**: 0-65535 (16-bit)
-* **Meaning**: Raw sensor digital numbers
-* **Use**: Checking sensor performance, not calibrated
+**مثال على سير العمل:**
 
-### RAW (Reflectance)
-
-* **Range**: 0-65,535 (16-bit TIFF) or 0.0-1.0 (32-bit Percent)
-* **Meaning**: Calibrated percent reflectance
-* **Use**: Scientific measurements and analysis
-
-**For 16-bit TIFF:** Divide by 65,535 to get percent reflectance **For 32-bit Percent:** Values directly represent percent (0.5 = 50% reflectance)
-
-### RAW (Index Images)
-
-* **Range**: Varies by index (typically -1.0 to +1.0 for normalized indices)
-* **Meaning**: Index calculation result
-* **Examples**:
-  * NDVI: -1 to +1 (vegetation typically 0.4 to 0.9)
-  * NDRE: -1 to +1 (stress detection)
-  * EVI: 0 to 1 (enhanced vegetation)
+1. افتح الصورة 1، وانتقل إلى RAW (NDVI Index)
+2. اضغط على → لعرض الصورة 2
+3. تعرض الصورة 2 تلقائيًا طبقة RAW (NDVI Index)
+4. تابع التنقل - تعرض جميع الصور طبقة NDVI
+5. فعال جدًا لمراجعة نتائج الفهرس عبر العديد من الصور
 
 ***
 
-## Tips and Best Practices
+## سير العمل الشائع
 
-### Efficient Layer Switching
+### سير العمل 1: مقارنة قبل/بعد
 
-* **Keyboard shortcut awareness**: While there's no keyboard shortcut for layers, navigation arrows (←/→) work across all layers
-* **Consistent workflows**: Pick one layer (e.g., NDVI) and review entire dataset before switching to another
-* **Quick comparisons**: Toggle between Original and Reflectance to verify processing quality
+**الهدف**: مقارنة الصورة الأصلية بالصورة المعايرة
 
-### Performance Considerations
+1. افتح الصورة المعالجة في عارض الصور
+2. حدد **RAW (أصلي)** من القائمة المنسدلة
+3. لاحظ التظليل والقيم غير المعايرة
+4. قم بالتبديل إلى **RAW (الانعكاس)** من القائمة المنسدلة
+5. قارن - تمت إزالة التظليل، وتم معايرة القيم
 
-* **JPG loads fastest**: Use for quick navigation through many images
-* **RAW layers load slower**: Higher resolution and bit depth
-* **Index layers**: Similar speed to Reflectance layers
-* **First load is slowest**: Subsequent views of same layer are cached and faster
+### سير العمل 2: مراجعة الفهرس
 
-### Quality Verification
+**الهدف**: مراجعة سريعة لنتائج NDVI عبر مجموعة البيانات
 
-* **Always check RAW (Original)**: Verify source data quality before trusting processed outputs
-* **Compare layers**: Use layer switching to validate processing worked correctly
-* **Check index ranges**: Use Pixel Percent mode with index layers to verify values are reasonable
+1. افتح أول صورة معالجة
+2. حدد **RAW (فهرس NDVI)** من القائمة المنسدلة
+3. استخدم مفتاح السهم → للتنقل إلى الصورة التالية
+4. طبقة NDVI تستمر تلقائيًا
+5. تابع عبر جميع الصور، وتحقق من أنماط NDVI
+6. قم بالتبديل إلى **RAW (NDRE Index)** للمقارنة
 
-***
+### سير العمل 3: التحقق من الهدف
 
-## Troubleshooting
+**الهدف**: التحقق من أن جميع الصور المستهدفة تم اكتشافها بشكل صحيح
 
-### Layer Not Available
+1. انتقل إلى صورة مستهدفة
+2. حدد **RAW (الهدف)** من القائمة المنسدلة
+3. تحقق من أن أهداف المعايرة واضحة للعيان وتم اكتشافها
+4. انتقل إلى الصورة المستهدفة التالية
+5. كرر عملية التحقق لجميع الأهداف
 
-**Problem**: Expected layer doesn't appear in dropdown
+### سير العمل 4: فحص قيمة البكسل
 
-**Possible causes:**
+**الهدف**: التحقق من قيم الانعكاس للتأكد من دقتها العلمية
 
-* Image wasn't processed (only JPG and RAW (Original) available)
-* Reflectance calibration was disabled during processing
-* Specific index wasn't configured in Project Settings
-* Image is a target-only image (no indices generated for targets)
-
-**Solutions:**
-
-1. Verify image was processed (check output folder for processed files)
-2. Check Project Settings to confirm indices were configured
-3. Reprocess with desired indices enabled
-
-### Wrong Layer Shown
-
-**Problem**: Image opens in unexpected layer
-
-**Cause**: Layer preference from previous image carried forward, but that layer doesn't exist on current image
-
-**Solution**: Chloros automatically falls back to JPG when preferred layer unavailable - this is normal behavior
-
-### Can't See Calibration Targets
-
-**Problem**: RAW (Target) layer doesn't show target detection
-
-**Possible causes:**
-
-* Targets weren't detected during processing
-* Image doesn't actually contain targets
-* Target detection settings too strict
-
-**Solutions:**
-
-1. Check Debug Log for "Target found" messages
-2. Verify image actually contains visible calibration targets
-3. Adjust target detection settings in Project Settings
-4. See [Choosing Target Images](../processing-images-gui/choosing-target-images.md)
+1. افتح الصورة المعالجة
+2. حدد طبقة **RAW (الانعكاس)**
+3. قم بتمكين وضع **نسبة البكسل** (الزر الموجود في شريط الأدوات العلوي الأيمن)
+4. حرك المؤشر فوق مناطق النباتات
+5. تحقق من أن قيم البكسل في النطاقات المتوقعة (30-70٪ لـ NIR، 5-15٪ لـ Red)
+6. تحقق من أن قيم التربة والمياه مناسبة
 
 ***
 
-## Related Features
+## فهم قيم البكسل حسب الطبقة
 
-### Image Viewer Tools
+تُظهر الطبقات المختلفة نطاقات قيم بكسل مختلفة:
 
-When viewing any layer, you can use:
+### طبقة JPG
 
-* **Zoom controls**: Magnify to inspect details
-* **Pan**: Click and drag to move around zoomed image
-* **Pixel value inspection**: See values at cursor location
-* **Navigation arrows**: Move between images while maintaining layer
-* **Pixel Percent mode**: Toggle between DN and percent display
+* **النطاق**: 0-255 (8 بت)
+* **المعنى**: عرض القيم، مع تصحيح جاما
+* **الاستخدام**: الفحص البصري فقط، وليس للقياس العلمي
 
-See [Opening an Image Full Screen](page-3.md) for complete Image Viewer documentation.
+### RAW (الأصلي)
 
-### Index/LUT Sandbox
+* **النطاق**: 0-65535 (16 بت)
+* **المعنى**: أرقام رقمية خام للمستشعر
+* **الاستخدام**: فحص أداء المستشعر، غير معاير
 
-For interactive index testing and visualization:
+### RAW (الانعكاس)
 
-* **Real-time index calculation**: Test different index formulas
-* **LUT color mapping**: Apply color gradients to grayscale indices
-* **Export visualizations**: Save colored index images
+* **النطاق**: 0-65,535 (16 بت TIFF) أو 0.0-1.0 (32 بت بالمائة)
+* **المعنى**: نسبة الانعكاس المعايرة
+* **الاستخدام**: القياسات والتحليلات العلمية
 
-See [Index/LUT Sandbox](index-lut-sandbox.md) for details.
+**بالنسبة إلى 16 بت TIFF:** اقسم على 65,535 للحصول على نسبة الانعكاس **بالنسبة إلى 32 بت النسبة المئوية:** تمثل القيم النسبة المئوية مباشرة (0.5 = 50% انعكاس)
+
+### RAW (صور المؤشر)
+
+* **النطاق**: يختلف حسب المؤشر (عادةً من -1.0 إلى +1.0 للمؤشرات المعيارية)
+* **المعنى**: نتيجة حساب المؤشر
+* **أمثلة**:
+  * NDVI: من -1 إلى +1 (النباتات عادةً من 0.4 إلى 0.9)
+  * NDRE: من -1 إلى +1 (كشف الإجهاد)
+  * EVI: من 0 إلى 1 (نباتات محسّنة)
 
 ***
 
-## Next Steps
+## نصائح وأفضل الممارسات
 
-Now that you understand image layers:
+### التبديل الفعال بين الطبقات
 
-* [**Opening an Image Full Screen**](page-3.md) - Complete Image Viewer guide
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Interactive index visualization
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Available indices reference
-* [**Finishing the Processing**](../processing-images-gui/finishing-the-processing.md) - Understanding processed outputs
+* **معرفة اختصارات لوحة المفاتيح**: على الرغم من عدم وجود اختصارات لوحة مفاتيح للطبقات، فإن أسهم التنقل (←/→) تعمل عبر جميع الطبقات
+* **سير عمل متسق**: اختر طبقة واحدة (على سبيل المثال، NDVI) وراجع مجموعة البيانات بأكملها قبل التبديل إلى طبقة أخرى
+* **مقارنات سريعة**: قم بالتبديل بين الأصل والانعكاس للتحقق من جودة المعالجة
+
+### اعتبارات الأداء
+
+* **تحميل JPG أسرع**: استخدمه للتنقل السريع عبر العديد من الصور
+* **تحميل طبقات RAW أبطأ**: دقة أعلى وعمق بت أعلى
+* **طبقات الفهرس**: سرعة مماثلة لطبقات الانعكاس
+* **التحميل الأول هو الأبطأ**: يتم تخزين العروض اللاحقة لنفس الطبقة في ذاكرة التخزين المؤقت وتكون أسرع
+
+### التحقق من الجودة
+
+* **تحقق دائمًا من RAW (الأصلية)**: تحقق من جودة البيانات المصدرية قبل الوثوق بالنواتج المعالجة
+* **قارن الطبقات**: استخدم تبديل الطبقات للتحقق من صحة المعالجة
+* **تحقق من نطاقات الفهرس**: استخدم وضع النسبة المئوية للبكسل مع طبقات الفهرس للتحقق من معقولية القيم
+
+***
+
+## استكشاف الأخطاء وإصلاحها
+
+### الطبقة غير متاحة
+
+**المشكلة**: الطبقة المتوقعة لا تظهر في القائمة المنسدلة
+
+**الأسباب المحتملة:**
+
+* لم تتم معالجة الصورة (يتوفر فقط JPG و RAW (الأصلي))
+* تم تعطيل معايرة الانعكاس أثناء المعالجة
+* لم يتم تكوين فهرس معين في إعدادات المشروع
+* الصورة هي صورة هدف فقط (لم يتم إنشاء فهارس للأهداف)
+
+**الحلول:**
+
+1. تحقق من معالجة الصورة (تحقق من مجلد الإخراج بحثًا عن الملفات المعالجة)
+2. تحقق من إعدادات المشروع للتأكد من تكوين المؤشرات
+3. أعد المعالجة مع تمكين المؤشرات المطلوبة
+
+### عرض طبقة خاطئة
+
+**المشكلة**: تفتح الصورة في طبقة غير متوقعة
+
+**السبب**: تم نقل تفضيل الطبقة من الصورة السابقة، ولكن هذه الطبقة غير موجودة في الصورة الحالية
+
+**الحل**: يعود Chloros تلقائيًا إلى JPG عندما لا تكون الطبقة المفضلة متاحة - وهذا سلوك طبيعي
+
+### لا يمكن رؤية أهداف المعايرة
+
+**المشكلة**: لا تعرض طبقة RAW (الهدف) اكتشاف الهدف
+
+**الأسباب المحتملة:**
+
+* لم يتم اكتشاف الأهداف أثناء المعالجة
+* لا تحتوي الصورة فعليًا على أهداف
+* إعدادات اكتشاف الهدف صارمة للغاية
+
+**الحلول:**
+
+1. تحقق من سجل التصحيح بحثًا عن رسائل &quot;تم العثور على الهدف&quot;
+2. تحقق من أن الصورة تحتوي بالفعل على أهداف معايرة مرئية
+3. اضبط إعدادات اكتشاف الهدف في إعدادات المشروع
+4. انظر [اختيار الصور المستهدفة](../processing-images-gui/choosing-target-images.md)
+
+***
+
+## الميزات ذات الصلة
+
+### أدوات عارض الصور
+
+عند عرض أي طبقة، يمكنك استخدام:
+
+* **عناصر التحكم في التكبير/التصغير**: تكبير الصورة لفحص التفاصيل
+* **التحريك**: انقر واسحب للتحرك حول الصورة المكبرة
+* **فحص قيمة البكسل**: انظر القيم في موقع المؤشر
+* **أسهم التنقل**: التنقل بين الصور مع الحفاظ على الطبقة
+* **وضع النسبة المئوية للبكسل**: التبديل بين عرض DN والنسبة المئوية
+
+انظر [فتح صورة بملء الشاشة](opening-an-image-full-screen.md) للحصول على الوثائق الكاملة لعارض الصور.
+
+### صندوق الرمل للفهرس/LUT
+
+لاختبار الفهرس التفاعلي والتصور:
+
+* **حساب الفهرس في الوقت الفعلي**: اختبر صيغ فهرس مختلفة
+* **تعيين ألوان LUT**: قم بتطبيق تدرجات الألوان على مؤشرات التدرج الرمادي
+* **تصدير التصورات**: احفظ صور الفهرس الملونة
+
+انظر [مربع رمل الفهرس/LUT](index-lut-sandbox.md) للحصول على التفاصيل.
+
+***
+
+## الخطوات التالية
+
+الآن بعد أن فهمت طبقات الصور:
+
+* [**فتح صورة بملء الشاشة**](opening-an-image-full-screen.md) - دليل عارض الصور الكامل
+* [**مربع رمل الفهرس/LUT**](index-lut-sandbox.md) - تصور تفاعلي للفهرس
+* [**صيغ الفهرس متعدد الأطياف**](../project-settings/multispectral-index-formulas.md) - مرجع الفهارس المتاحة
+* [**إنهاء المعالجة**](../processing-images-gui/finishing-the-processing.md) - فهم المخرجات المعالجة
