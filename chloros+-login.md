@@ -6,7 +6,9 @@
 
 عند تسجيل الدخول، سيتم عرض تفاصيل حسابك:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## XPROTX000018 تسجيل الدخول إلى XPROTX
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
+
+## XPROTX000018 تسجيل الدخول إلى XPROTX
 
 سجّل الدخول باستخدام بيانات اعتماد Chloros+ لتمكين معالجة CLI.
 
@@ -28,7 +30,9 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 **الإخراج:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>### انتهاء صلاحية الخطة
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+
+### انتهاء صلاحية الخطة
 
 يُظهر انتهاء صلاحية الخطة في واجهة المستخدم الرسومية متى ستصبح ترخيصك غير صالح. بالنسبة للاشتراكات الشهرية المتكررة، يكون انتهاء الصلاحية في نهاية الشهر. بالنسبة للاشتراكات السنوية، يكون انتهاء الصلاحية بعد عام من بدء الاشتراك. يتطلب التحقق من الترخيص اتصالاً شهرياً بالإنترنت للتحقق، مع فترة سماح مدتها 30 يوماً.
 
