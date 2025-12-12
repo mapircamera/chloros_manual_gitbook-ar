@@ -37,7 +37,7 @@ pip install chloros-sdk
 ```
 
 {% hint style=&quot;info&quot; %}
-**الإعداد الأولي**: قبل استخدام SDK، قم بتنشيط ترخيص Chloros+ الخاص بك عن طريق فتح Chloros، Chloros (المتصفح) أو Chloros CLI وتسجيل الدخول باستخدام بيانات اعتمادك. لا يلزم القيام بذلك سوى مرة واحدة.
+**الإعداد لأول مرة**: قبل استخدام SDK، قم بتنشيط ترخيص Chloros+ الخاص بك عن طريق فتح Chloros، Chloros (المتصفح) أو Chloros CLI وتسجيل الدخول باستخدام بيانات اعتمادك. لا يلزم القيام بذلك سوى مرة واحدة.
 {% endhint %}
 
 ### الاستخدام الأساسي
@@ -132,7 +132,7 @@ print(f"Chloros SDK version: {chloros_sdk.__version__}")
 3. يتم تخزين الترخيص محليًا (يستمر عبر عمليات إعادة التشغيل)
 
 {% hint style=&quot;success&quot; %}
-**الإعداد لمرة واحدة**: بعد تسجيل الدخول عبر واجهة المستخدم الرسومية أو CLI، يستخدم SDK تلقائيًا الترخيص المخزن مؤقتًا. لا حاجة إلى مصادقة إضافية!
+**الإعداد لمرة واحدة**: بعد تسجيل الدخول عبر واجهة المستخدم الرسومية أو CLI، يستخدم SDK الترخيص المخزن مؤقتًا تلقائيًا. لا حاجة إلى مصادقة إضافية!
 {% endhint %}
 
 ### اختبار الاتصال
@@ -158,7 +158,7 @@ print(f"Backend running: {status['running']}")
 
 الفئة الرئيسية لمعالجة الصور المحلية Chloros.
 
-#### المنشئ
+#### المُنشئ
 
 ```python
 ChlorosLocal(
@@ -175,8 +175,8 @@ ChlorosLocal(
 | المعلمة                 | النوع | الافتراضي                   | الوصف                           |
 | ------------------------- | ---- | ------------------------- | ------------------------------------- |
 | `api_url`                 | str  | `"http://localhost:5000"` | URL للخلفية المحلية Chloros          |
-| `auto_start_backend`      | bool | `True`                    | بدء تشغيل الخلفية تلقائيًا عند الحاجة |
-| `backend_exe`             | str  | `None` (الكشف التلقائي)      | مسار إلى ملف الخلفية القابل للتنفيذ            |
+| `auto_start_backend`      | bool | `True`                    | بدء تشغيل الخلفية تلقائيًا إذا لزم الأمر |
+| `backend_exe`             | str  | `None` (الكشف التلقائي)      | مسار الملف التنفيذي للخلفية            |
 | `timeout`                 | int  | `30`                      | مهلة الطلب بالثواني            |
 | `backend_startup_timeout` | int  | `60`                      | مهلة بدء تشغيل الخلفية (بالثواني) |
 
@@ -261,7 +261,7 @@ chloros.import_images("C:\\DroneImages", recursive=True)
 | `debayer`                 | str  | &quot;جودة عالية (أسرع)&quot; | طريقة Debayer                  |
 | `vignette_correction`     | bool | `True`                  | تمكين تصحيح التظليل      |
 | `reflectance_calibration` | bool | `True`                  | تمكين معايرة الانعكاس  |
-| `indices`                 | قائمة | `None`                  | مؤشرات الغطاء النباتي المطلوب حسابها |
+| `indices`                 | list | `None`                  | مؤشرات الغطاء النباتي المطلوب حسابها |
 | `export_format`           | str  | &quot;TIFF (16 بت)&quot;         | تنسيق الإخراج                   |
 | `ppk`                     | bool | `False`                 | تمكين تصحيحات PPK          |
 | `custom_settings`         | dict | `None`                  | إعدادات مخصصة متقدمة        |
@@ -316,7 +316,7 @@ chloros.configure(
 **النتائج:** `dict` - نتائج المعالجة
 
 {% hint style=&quot;warning&quot; %}
-**الوضع المتوازي**: يتطلب ترخيص Chloros+. يتكيف تلقائيًا مع نوى وحدة المعالجة المركزية (حتى 16 عامل).
+**الوضع المتوازي**: يتطلب ترخيص Chloros+. يتكيف تلقائيًا مع نوى وحدة المعالجة المركزية (CPU) (حتى 16 عاملًا).
 {% endhint %}
 
 **مثال:**
@@ -470,9 +470,9 @@ print(f"Processing complete: {results}")
 
 ***
 
-### مثال 2: سير عمل مخصص
+### المثال 2: سير العمل المخصص
 
-تحكم كامل في خط أنابيب المعالجة:
+التحكم الكامل في خط أنابيب المعالجة:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -512,9 +512,9 @@ print("Processing complete!")
 
 ***
 
-### المثال 3: معالجة دفعية لمجلدات متعددة
+### المثال 3: المعالجة المجمعة لعدة مجلدات
 
-معالجة مجموعات بيانات رحلات متعددة:
+معالجة عدة مجموعات بيانات رحلات:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -566,7 +566,7 @@ print("All flights processed!")
 
 ### المثال 4: تكامل خط أنابيب البحث
 
-تكامل Chloros مع تحليل البيانات:
+دمج Chloros مع تحليل البيانات:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -712,7 +712,7 @@ else:
 
 ### المثال 7: أداة سطر الأوامر
 
-قم بإنشاء أداة CLI مخصصة باستخدام SDK:
+إنشاء أداة CLI مخصصة باستخدام SDK:
 
 ```python
 #!/usr/bin/env python
@@ -826,9 +826,9 @@ except ChlorosError as e:
 
 ## موضوعات متقدمة
 
-### تكوين الخلفية المخصصة
+### تكوين الخلفية المخصص
 
-استخدم موقع أو تكوين خادم خلفي مخصص:
+استخدم موقع أو تكوين خلفية مخصص:
 
 ```python
 chloros = ChlorosLocal(
@@ -839,7 +839,7 @@ chloros = ChlorosLocal(
 )
 ```
 
-### المعالجة غير المعطلة
+### المعالجة غير المعيقة
 
 ابدأ المعالجة واستمر في المهام الأخرى:
 
@@ -904,7 +904,7 @@ backend_path = r"C:\Program Files\MAPIR\Chloros\resources\backend\chloros-backen
 print(f"Backend exists: {os.path.exists(backend_path)}")
 ```
 
-2. تحقق من أن جدار الحماية Windows لا يقوم بالحظر
+2. تحقق من أن Windows Firewall لا يقوم بالحظر
 3. جرب مسار الخلفية اليدوي:
 
 ```python
@@ -993,7 +993,7 @@ Get-NetTCPConnection -LocalPort 5000
 
 ***
 
-## نصائح حول الأداء
+## نصائح لتحسين الأداء
 
 ### تحسين سرعة المعالجة
 
@@ -1123,7 +1123,7 @@ chloros.process(progress_callback=notebook_progress)
 
 ### س: هل يتطلب SDK اتصالاً بالإنترنت؟
 
-**ج:** فقط لتفعيل الترخيص الأولي. بعد تسجيل الدخول عبر Chloros، Chloros (المتصفح) أو Chloros CLI يتم تخزين الترخيص محليًا في ذاكرة التخزين المؤقت ويعمل دون اتصال بالإنترنت لمدة 30 يومًا.
+**ج:** فقط لتفعيل الترخيص الأولي. بعد تسجيل الدخول عبر Chloros أو Chloros (المتصفح) أو Chloros CLI، يتم تخزين الترخيص محليًا في ذاكرة التخزين المؤقت ويعمل دون اتصال بالإنترنت لمدة 30 يومًا.
 
 ***
 
@@ -1132,7 +1132,7 @@ chloros.process(progress_callback=notebook_progress)
 **ج:** نعم! المتطلبات:
 
 * Windows Server 2016 أو أحدث
-* Chloros مثبت (لمرة واحدة)
+* Chloros مثبت (مرة واحدة)
 * ترخيص مفعل على أي جهاز (ترخيص مخزن مؤقتًا منسوخ إلى الخادم)
 
 ***
@@ -1181,7 +1181,7 @@ Project_Path/
 
 ***
 
-### س: هل يمكنني معالجة الصور من البرامج النصية Python التي تعمل وفقًا للجدول الزمني؟
+### س: هل يمكنني معالجة الصور من نصوص Python التي تعمل وفقًا للجدول الزمني؟
 
 **ج:** نعم! استخدم Windows Task Scheduler مع البرامج النصية Python:
 
@@ -1193,7 +1193,7 @@ from chloros_sdk import process_folder
 results = process_folder("C:\\Flights\\Today")
 ```
 
-قم بجدولة التشغيل يوميًا عبر جدولة المهام.
+قم بجدولة التشغيل يوميًا عبر Task Scheduler.
 
 ***
 
@@ -1224,7 +1224,7 @@ thread.start()
 ### قنوات الدعم
 
 * **البريد الإلكتروني**: info@mapir.camera
-* **موقع الويب**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* **الموقع الإلكتروني**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * **الأسعار**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
 ### نموذج الكود

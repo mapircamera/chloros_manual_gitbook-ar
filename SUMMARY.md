@@ -10,7 +10,7 @@
 * [Chloros+ تسجيل الدخول](chloros+-login.md)
 * [أهداف المعايرة](calibration-targets.md)
 * [اللغات المدعومة](supported-languages.md)
-* [التنزيل](download.md)
+* [تنزيل](download.md)
 * [الأسئلة الشائعة](faq.md)
 
 ## معالجة الصور (GUI)
