@@ -17,7 +17,7 @@ metaLinks:
 
 <details>
 
-<summary>هل يمكنني معايرة صوري من حيث الانعكاسية بدون هدف معايرة؟</summary>
+<summary>هل يمكنني معايرة صوري من أجل الانعكاس بدون هدف معايرة؟</summary>
 
 لا. بدون صورة لهدف المعايرة تم التقاطها في نفس وقت التقاط الصور غير المستهدفة، لن تتمكن من ربط قيم بكسل الصورة بنسبة انعكاس معروفة. إذا لم تقم أيضًا بتضمين السجل من مستشعر الضوء MAPIR، فلن يتم قياس طيف الضوء المحيط، ولن تكون نتائج الانعكاس دقيقة.
 
@@ -59,7 +59,7 @@ metaLinks:
 
 <summary>إذا كنت سأقوم بتحميل صوري إلى <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud،</a> فهل يجب أن أقوم بمعالجتها في Chloros قبل التحميل؟</summary>
 
-إذا كنت تخطط للتحميل على منصة المعالجة عبر الإنترنت [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription)، فلا تقم بتحرير الصور قبل التحميل. ستقوم السحابة بإجراء جميع عمليات المعالجة نفسها وأكثر.
+إذا كنت تخطط للتحميل إلى منصة المعالجة عبر الإنترنت [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription)، فلا تقم بتحرير الصور قبل التحميل. ستقوم Cloud بإجراء جميع عمليات المعالجة نفسها وأكثر.
 
 </details>
 

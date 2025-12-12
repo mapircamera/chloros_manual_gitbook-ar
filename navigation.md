@@ -12,7 +12,7 @@
 
 ### <img src=".gitbook/assets/image (2).png" alt="" data-size="line"> زر التشغيل/البدء
 
-عند تمكينه، يبدأ زر بدء المعالجة في تشغيل مسار معالجة الصور.
+عند تمكينه، يبدأ زر بدء المعالجة في تشغيل خط أنابيب معالجة الصور.
 
 ### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> شريط التقدم <img src=".gitbook/assets/image (5).png" alt="" data-size="line">في الوضع المجاني Chloros، الذي يعالج جميع الملفات بالتسلسل، سيظهر شريط التقدم على مرحلتين: اكتشاف الهدف والمعالجة.
 
