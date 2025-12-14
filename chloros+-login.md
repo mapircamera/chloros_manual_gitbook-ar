@@ -38,6 +38,6 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 ### حد الأجهزة
 
-تقدم كل خطة Chloros+ عددًا مختلفًا من الأجهزة المسجلة. سيتم احتساب كل جهاز تقوم بتسجيل الدخول إليه باستخدام حساب Chloros+ ضمن عدد الأجهزة المسجلة لديك. يمكنك إعادة تسمية جهاز وإزالته من صفحة حساب MAPIR Cloud الخاص بك.
+تقدم كل خطة Chloros+ عددًا مختلفًا من الأجهزة المسجلة. سيتم احتساب كل جهاز تقوم بتسجيل الدخول إليه باستخدام حساب Chloros+ ضمن عدد الأجهزة المسجلة لديك. يمكنك إعادة تسمية جهاز وإزالته من صفحة حساب MAPIR Cloud.
 
 <table><thead><tr><th width="168.5999755859375" align="right">خطة Chloros</th><th align="center">COPPER</th><th align="center">برونز</th><th align="center">فضي</th><th align="center">ذهبي</th></tr></thead><tbody><tr><td align="right">الأجهزة المدعومة</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>

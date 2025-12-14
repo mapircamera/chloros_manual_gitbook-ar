@@ -1,5 +1,5 @@
 ---
-description: لوحات مقاسة في المختبر تستخدم لمعايرة البيانات الملتقطة في مرحلة ما بعد المعالجة
+description: Lab-measured panels used to calibrate captured data in post processing
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/calibration-targets

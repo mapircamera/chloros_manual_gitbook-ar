@@ -1,5 +1,5 @@
 ---
-description: الأسئلة المتكررة
+description: Frequently Asked Questions
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/faq
@@ -10,7 +10,7 @@ metaLinks:
 
 <summary>هل يمكنني معالجة الصور من الكاميرات التي ليست من ماركة MAPIR باستخدام Chloros؟</summary>
 
-لا، لا يدعم Chloros معالجة صور الكاميرات MAPIR فقط. يرجى الاطلاع على قائمة [طرازات الكاميرات المدعومة](supported-cameras.md) لمزيد من المعلومات. نحن نقدم معالجة الكاميرات الأخرى على MAPIR Cloud، انظر القائمة الكاملة [هنا](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
+لا، لا يدعم Chloros سوى معالجة صور الكاميرات MAPIR. يرجى الاطلاع على قائمة [طرازات الكاميرات المدعومة](supported-cameras.md) لمزيد من المعلومات. نحن نقدم معالجة الكاميرات الأخرى على MAPIR Cloud، انظر القائمة الكاملة [هنا](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
 
 </details>
 
@@ -58,7 +58,7 @@ metaLinks:
 
 <summary>إذا كنت سأقوم بتحميل صوري إلى <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud،</a> فهل يجب عليّ معالجتها في Chloros قبل التحميل؟</summary>
 
-إذا كنت تخطط للتحميل إلى منصة المعالجة عبر الإنترنت [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription)، فلا تقم بتحرير الصور قبل التحميل. ستقوم Cloud بإجراء جميع عمليات المعالجة نفسها وأكثر.
+إذا كنت تخطط للتحميل إلى منصة المعالجة عبر الإنترنت [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription)، فلا تقم بتحرير الصور قبل التحميل. ستقوم السحابة بإجراء جميع عمليات المعالجة نفسها وأكثر.
 
 </details>
 
@@ -66,6 +66,6 @@ metaLinks:
 
 <summary>هل ستدعم MAPIR ميزة X في أي وقت؟ أتمنى حقًا أن تقدم MAPIR ميزة X.</summary>
 
-نحن مهتمون دائمًا بتلقي التعليقات على منتجاتنا. إذا وجدت مشكلة في منتجاتنا، أو لديك اقتراح حول كيفية تحسين منتجاتنا، يرجى [الاتصال بنا](https://www.mapir.camera/community/contact) لمشاركة أفكارك. يسترشد معظم قسم البحث والتطوير لدينا بالاستماع إلى أكبر احتياجات عملائنا.
+نحن مهتمون دائمًا بتلقي التعليقات على منتجاتنا. إذا وجدت مشكلة في منتجاتنا، أو لديك اقتراح حول كيفية تحسين منتجاتنا، يرجى [الاتصال بنا](https://www.mapir.camera/community/contact) لمشاركة أفكارك. يتم توجيه معظم أنشطة البحث والتطوير لدينا من خلال الاستماع إلى أهم احتياجات عملائنا.
 
 </details>

@@ -3,7 +3,6 @@ metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/download
 ---
-
 # تنزيل
 
 قم بتنزيل أحدث إصدار من Chloros لـ Windows لبدء معالجة الصور متعددة الأطياف.
@@ -70,7 +69,7 @@ pip install chloros-sdk
 
 ***
 
-## ما الذي يتضمنه
+## ما هو مضمن
 
 يتضمن تثبيت Chloros ما يلي:
 
@@ -118,7 +117,7 @@ pip install chloros-sdk
 * تأكد من أن اتصال الإنترنت نشط
 * تحقق من بيانات الاعتماد في [https://cloud.mapir.camera](https://cloud.mapir.camera)
 * تحقق من أن جدار الحماية لا يحظر Chloros
-* راجع [Chloros+ تسجيل الدخول](chloros+-login.md) للحصول على إرشادات مفصلة
+* انظر [Chloros+ تسجيل الدخول](chloros+-login.md) للحصول على إرشادات مفصلة
 
 ### الحصول على الدعم
 
@@ -159,10 +158,12 @@ pip install chloros-sdk
 
 ## اتفاقية الترخيص
 
-**برنامج مملوك** - حقوق الطبع والنشر (c) 2025 MAPIR Inc.
+**برنامج مملوك** - حقوق النشر (c) 2025 MAPIR Inc.
 
 يحظر الاستخدام أو التوزيع أو التعديل غير المصرح به.
 
 **الإصدار المجاني**: متاح للاستخدام الشخصي والتجاري مع قيود على الميزات
 
-**Chloros+**: ترخيص قائم على الاشتراك للحصول على ميزات متقدمة وعمليات نشر تجارية
+**Chloros+**: ترخيص قائم على الاشتراك للحصول على ميزات متقدمة ونشر تجاري
+
+<figure><img src=".gitbook/assets/t3-125_2.jpg" alt=""><figcaption></figcaption></figure>
