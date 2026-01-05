@@ -1,8 +1,8 @@
 # جدول المحتويات
 
 * [البدء](README.md)
-* [واجهة المستخدم الرسومية: التنقل](navigation.md)
-* [واجهة المستخدم الرسومية: المشاريع](projects.md)
+* [GUI : التنقل](navigation.md)
+* [GUI : المشاريع](projects.md)
 * [CLI: سطر الأوامر](CLI.md)
 * [API: Python SDK](api-python-sdk.md)
 * [الكاميرات المدعومة](supported-cameras.md)
@@ -29,6 +29,8 @@
 
 ## عارض الصور (GUI)
 
+* [شبكة الصور](image-viewer-gui/image-grid.md)
 * [فتح صورة بملء الشاشة](image-viewer-gui/opening-an-image-full-screen.md)
 * [طبقات الصورة](image-viewer-gui/image-layers.md)
 * [مؤشر/LUT Sandbox](image-viewer-gui/index-lut-sandbox.md)
+* [علامات الخريطة](image-viewer-gui/map-markers.md)
