@@ -88,7 +88,7 @@
 
 يمكنك اختيار نوع طبقة الخريطة (من اليسار إلى اليمين):
 
- <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### التضاريس
+ <img src="../.gitbook/assets/image (23).png" alt="" data-size="line">### التضاريس
 
 تعرض ملامح الارتفاع ومربعات الخريطة مع التفاصيل (الطرق، إلخ)
 

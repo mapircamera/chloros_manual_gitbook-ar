@@ -6,7 +6,7 @@
 
 عند تسجيل الدخول، ستظهر تفاصيل حسابك:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## XPROTX000026 تسجيل الدخول إلى XPROTX
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" data-size="line"><figcaption></figcaption></figure>## XPROTX000026 تسجيل الدخول إلى XPROTX
 
 سجّل الدخول باستخدام بيانات اعتماد Chloros+ لتمكين معالجة CLI.
 
