@@ -3,9 +3,7 @@ metaLinks: {}
 ---
 # البدء
 
-<div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>
-
-Chloros هو تطبيق برمجي من [MAPIR](https://www.mapir.camera) لمعالجة الصور وبيانات المستشعرات الأخرى.
+<div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>Chloros هو تطبيق برمجي من [MAPIR](https://www.mapir.camera) لمعالجة الصور وبيانات المستشعرات الأخرى.
 
 ***
 
@@ -34,14 +32,22 @@ Chloros متاح في 4 أوضاع للتطبيق:
 على الرغم من أن Chloros مجاني للاستخدام في معظم المهام، فقد تجد أنك تريد المزيد. وهنا يمكن أن تفيدك ترخيص Chloros+ المدفوع. مع ترخيص Chloros+، يمكنك فتح ميزات جديدة مثل:
 
 * **المعالجة متعددة الخيوط**: تسريع معالجة الصور بشكل كبير للمشاريع الكبيرة من خلال معالجة الصور في وقت واحد عبر خط الأنابيب.
-* **تسريع GPU (CUDA)**: استفد من خيارات ذاكرة GPU الأعلى حاليًا لزيادة سرعة خط أنابيب معالجة الصور. نوصي باستخدام ذاكرة VRAM سعة 4 جيجابايت أو أكثر للحصول على أفضل النتائج.
+* **تسريع GPU (CUDA)**: استفد من خيارات ذاكرة GPU الأعلى حاليًا لزيادة سرعة خط أنابيب معالجة الصور. نوصي بذاكرة VRAM سعة 4 جيجابايت أو أكثر للحصول على أفضل النتائج.
 * **Chloros+** [**CLI**](CLI.md) **الوصول**: قم بتشغيل Chloros+ من سطر الأوامر لأتمتة ودمج البرنامج في برنامجك الخاص.
-* **Chloros+** [**API**](api-python-sdk.md) **الوصول:** قم بتشغيل Chloros+ من Python للتحكم البرمجي، مما يتيح التكامل السلس مع خطوط أنابيب البحث الخاصة بك، وسير عمل تحليل البيانات، والتطبيقات المخصصة.
+* **Chloros+** [**API**](api-python-sdk.md) **الوصول:** قم بتشغيل Chloros+ من Python للتحكم البرمجي، مما يتيح التكامل السلس مع خطوط أنابيب البحث وسير عمل تحليل البيانات والتطبيقات المخصصة.
 * **استخدام أجهزة متعددة**: تسمح كل ترخيص Chloros+ بتسجيل أكثر من جهازين. استخدم حساب MAPIR Cloud لإدارة الأجهزة المسجلة. أضف دعمًا لمزيد من الأجهزة عن طريق ترقية ترخيص Chloros+.
-* **صيغ مؤشرات متعددة الأطياف مخصصة:** أدخل مؤشرات متعددة الأطياف مخصصة في حاسبات Chloros النقطية، لكل من المعالجة وعرض الصور.
+* **صيغ مؤشرات متعددة الأطياف مخصصة:** أدخل مؤشرات متعددة الأطياف مخصصة في حاسبات Chloros النقطية، سواء للمعالجة أو لعرض الصور.
 
 <p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary" data-icon="envira">Chloros+ الأسعار والتسجيل</a></p>
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/chloros_grid_mode.gif" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/chloros_grid_meta.gif" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
 
 <figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>
