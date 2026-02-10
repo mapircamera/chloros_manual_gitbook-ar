@@ -4,7 +4,7 @@
 
 <figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
 
-## الوصول إلى علامة التبويب الخريطة
+## الوصول إلى علامة التبويب &quot;الخريطة&quot;
 
 1. افتح أو أنشئ مشروعًا في Chloros
 2. استورد الصور التي تحتوي على بيانات تعريف GPS
@@ -12,14 +12,14 @@
 4. ستعرض الخريطة علامات في موقع GPS لكل صورة
 
 {% hint style="info" %}
-**GPS مطلوب**: لن تظهر على الخريطة سوى الصور التي تحتوي على إحداثيات GPS مضمنة في بيانات EXIF. تأكد من تمكين GPS في الكاميرا أثناء الالتقاط.
+**GPS مطلوب**: لن تظهر على الخريطة سوى الصور التي تحتوي على إحداثيات GPS مضمنة في بيانات EXIF الخاصة بها. تأكد من تمكين GPS في الكاميرا أثناء الالتقاط.
 {% endhint %}
 
 ***
 
-## ضبط الصور من علامة التبويب &quot;الخريطة&quot;
+## ضبط الصور من علامة التبويب الخريطة
 
-تحتوي علامة التبويب **الخريطة** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> تحتوي على نفس خيارات الإضافة  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  وأزرار الإزالة  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  الملفات نفسها الموجودة في علامة التبويب [**متصفح الملفات**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . كما تعرض نفس قائمة جدول ملفات المشروع ولكن مع عناوين أعمدة مختلفة:
+تحتوي علامة التبويب **الخريطة**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> تحتوي على نفس خيارات الإضافة  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  وأزرار  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  الملفات نفسها الموجودة في علامة التبويب [**متصفح الملفات**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . كما تعرض نفس قائمة جدول ملفات المشروع ولكن مع عناوين أعمدة مختلفة:
 
 ### اسم الملف
 
@@ -72,7 +72,7 @@
 **الاختيار التلقائي**: يختار Chloros تلقائيًا خدمة المربعات التي توفر أفضل مستوى تكبير لموقع الخريطة الحالي. يمكنك التبديل يدويًا بين المزودين إذا رغبت في ذلك.
 {% endhint %}
 
-تدعم علامة التبويب &quot;الخريطة&quot; مزودي مربعات اثنين لصور الخريطة في الخلفية:
+تدعم علامة التبويب &quot;الخريطة&quot; مزودي مربعات اثنين لصور الخريطة الخلفية:
 
 ### خرائط Google
 
@@ -90,7 +90,7 @@
 
 يمكنك اختيار نوع طبقة الخريطة (من اليسار إلى اليمين):
 
- <img src="../.gitbook/assets/image (23).png" alt="" data-size="line">### التضاريس
+ <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### التضاريس
 
 تعرض ملامح الارتفاع ومربعات الخريطة مع التفاصيل (الطرق، إلخ)
 
@@ -117,9 +117,7 @@
 
 ### عناصر التحكم في التحريك
 
-* **التحريك**: انقر واسحب للتحرك في الخريطة
-
-***
+* **التحريك**: انقر واسحب للتحرك في الخريطة***
 
 ## حالات الاستخدام
 
