@@ -1,26 +1,26 @@
 # CLI : سطر الأوامر
 
-<figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>يوفر **Chloros CLI** وصولاً قويًا عبر سطر الأوامر إلى محرك معالجة الصور Chloros، مما يتيح الأتمتة والبرمجة النصية والتشغيل بدون شاشة لعمليات سير عمل التصوير لديك.
+<figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>يوفر **Chloros CLI** وصولاً قوياً عبر سطر الأوامر إلى محرك معالجة الصور Chloros، مما يتيح الأتمتة وكتابة البرامج النصية والتشغيل بدون واجهة مستخدم لسير عمل التصوير الخاص بك.
 
 ### الميزات الرئيسية
 
-* 🚀 **الأتمتة** - معالجة دفعية برمجية لعدة مجموعات بيانات
+* 🚀 **الأتمتة** - معالجة دفعية برمجية لمجموعات بيانات متعددة
 * 🔗 **التكامل** - دمج في سير العمل والخطوط الإنتاجية الحالية
 * 💻 **التشغيل بدون واجهة** - التشغيل بدون واجهة المستخدم الرسومية
 * 🌍 **متعدد اللغات** - دعم 38 لغة
-* ⚡ **المعالجة المتوازية** - يتكيف ديناميكيًا مع وحدة المعالجة المركزية (CPU) (حتى 16 عاملًا متوازيًا)
+* ⚡ **المعالجة المتوازية** - [التكيف الحسابي الديناميكي](processing-architecture/dynamic-compute-adaptation.md) يقوم بالتحسين تلقائيًا وفقًا لأجهزتك
 
 ### المتطلبات
 
-| المتطلبات          | التفاصيل                                                             |
+| المتطلب          | التفاصيل                                                             |
 | -------------------- | ------------------------------------------------------------------- |
-| **نظام التشغيل** | Windows 10/11 (64 بت)                                              |
-| **الترخيص**          | Chloros+ ([يتطلب خطة مدفوعة](https://cloud.mapir.camera/pricing)) |
+| **نظام التشغيل** | Windows 10/11 (64 بت)، Linux x86_64 (amd64)، Linux arm64 (NVIDIA Jetson JetPack 6) |
+| **الترخيص**          | Chloros+ ([يلزم اشتراك مدفوع](https://cloud.mapir.camera/pricing)) |
 | **الذاكرة**           | 8 جيجابايت من ذاكرة الوصول العشوائي (RAM) كحد أدنى (يوصى بـ 16 جيجابايت)                                  |
-| **الإنترنت**         | مطلوب لتفعيل الترخيص                                     |
+| **الإنترنت**         | مطلوب لتنشيط الترخيص                                     |
 | **مساحة القرص**       | تختلف حسب حجم المشروع                                              |
 
-{% hint style=&quot;warning&quot; %}
+{% hint style="warning" %}
 **متطلبات الترخيص**: يتطلب CLI اشتراكًا مدفوعًا في Chloros+. لا تتضمن الخطط القياسية (المجانية) إمكانية الوصول إلى CLI. تفضل بزيارة [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) للترقية.
 {% endhint %}
 
@@ -28,22 +28,40 @@
 
 ### التثبيت
 
-يتم تضمين CLI تلقائيًا مع مثبت Chloros:
+#### Windows
+
+يتم تضمين CLI تلقائيًا مع أداة تثبيت Chloros:
 
 1. قم بتنزيل وتشغيل **Chloros Installer.exe**
 
 2. أكمل معالج التثبيت
 3. تم تثبيت CLI في: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
-{% hint style=&quot;success&quot; %}
-يضيف المثبت تلقائيًا `chloros-cli` إلى مسار PATH في نظامك. أعد تشغيل جهازك بعد التثبيت.
+{% hint style="success" %}
+يقوم المثبت تلقائيًا بإضافة `chloros-cli` إلى مسار PATH في نظامك. أعد تشغيل جهازك بعد التثبيت.
 {% endhint %}
+
+#### Linux
+
+قم بتثبيت حزمة `.deb` الخاصة بهيكلية نظامك:
+
+```bash
+# Linux amd64
+sudo dpkg -i chloros-amd64.deb
+
+# Linux arm64 (NVIDIA Jetson, JetPack 6)
+sudo dpkg -i chloros-arm64-jp6.deb
+```
+
+للحصول على إعدادات Linux التفصيلية، انظر [تثبيت Linux](linux/linux-installation.md).
 
 ### الإعداد الأولي
 
 قبل استخدام CLI، قم بتنشيط ترخيص Chloros+ الخاص بك:
 
-```bash
+**Windows:**
+
+```powershell
 # Login with your Chloros+ account
 chloros-cli login user@example.com 'your_password'
 
@@ -54,12 +72,33 @@ chloros-cli status
 chloros-cli process "C:\Images\Dataset001"
 ```
 
+**Linux:**
+
+```bash
+# Login with your Chloros+ account
+chloros-cli login user@example.com 'your_password'
+
+# Check license status
+chloros-cli status
+
+# Process your first project
+chloros-cli process ~/images/dataset001
+```
+
 ### الاستخدام الأساسي
 
 معالجة مجلد بالإعدادات الافتراضية:
 
+**Windows:**
+
 ```powershell
 chloros-cli process "C:\Images\Dataset001"
+```
+
+**Linux:**
+
+```bash
+chloros-cli process ~/images/dataset001
 ```
 
 ***
@@ -86,19 +125,23 @@ chloros-cli [global-options] <command> [command-options]
 chloros-cli process <input-folder> [options]
 ```
 
-**مثال:**
+**أمثلة:**
 
-```powershell
+```bash
+# Windows
 chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
+
+# Linux
+chloros-cli process ~/datasets/survey_001 --vignette --reflectance
 ```
 
 #### خيارات أمر المعالجة
 
 | الخيار                | النوع    | الافتراضي        | الوصف                                                                            |
 | --------------------- | ------- | -------------- | -------------------------------------------------------------------------------------- |
-| `<input-folder>`      | المسار    | _مطلوب_     | المجلد الذي يحتوي على صور متعددة الأطياف بتنسيق RAW/JPG                                         |
-| `-o, --output`        | المسار    | نفس المدخلات  | مجلد الإخراج للصور المعالجة                                                     |
-| `-n, --project-name`  | سلسلة  | يتم إنشاؤها تلقائيًا | اسم مشروع مخصص                                                                    |
+| `<input-folder>`      | المسار    | _مطلوب_     | المجلد الذي يحتوي على صور متعددة الأطياف بتنسيقات RAW/JPG                                         |
+| `-o, --output`        | المسار    | نفس الإدخال  | مجلد الإخراج للصور المعالجة                                                     |
+| `-n, --project-name`  | سلسلة  | يتم إنشاؤها تلقائيًا | اسم المشروع المخصص                                                                    |
 | `--vignette`          | علامة    | ممكّن        | تمكين تصحيح التظليل                                                             |
 | `--no-vignette`       | علامة    | -              | تعطيل تصحيح التظليل                                                            |
 | `--reflectance`       | علامة    | ممكّن        | تمكين معايرة الانعكاس                                                         |
@@ -106,11 +149,14 @@ chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 | `--ppk`               | علامة    | معطل       | تطبيق تصحيحات PPK من بيانات مستشعر الضوء .daq                                      |
 | `--format`            | اختيار  | TIFF (16 بت)  | تنسيق الإخراج: `TIFF (16-bit)`، `TIFF (32-bit, Percent)`، `PNG (8-bit)`، `JPG (8-bit)` |
 | `--min-target-size`   | عدد صحيح | تلقائي           | الحد الأدنى لحجم الهدف بالبكسل لاكتشاف لوحة المعايرة                          |
-| `--target-clustering` | عدد صحيح | تلقائي           | عتبة تجميع الهدف (0-100)                                                    |
+| `--target-clustering` | عدد صحيح | تلقائي           | عتبة تجميع الأهداف (0-100)                                                    |
+| `--debayer`           | اختيار  | `standard`     | طريقة إزالة التباين: `standard` أو `texture-aware` (Chloros+ فقط)                          |
+| `--target`، `--targets` | علامة  | معطل       | البحث فقط عن أهداف المعايرة في مجلد فرعي &quot;target&quot; أو &quot;targets&quot; (يسرع المعالجة) |
+| `--indices`           | قائمة    | لا شيء           | مؤشرات الغطاء النباتي المطلوب حسابها (على سبيل المثال، `--indices NDVI NDRE GNDVI`)                    |
 | `--exposure-pin-1`    | سلسلة  | لا شيء           | قفل التعرض لطراز الكاميرا (السن 1)                                                 |
 | `--exposure-pin-2`    | سلسلة  | لا شيء           | قفل التعرض لطراز الكاميرا (السن 2)                                                 |
 | `--recal-interval`    | عدد صحيح | تلقائي           | فاصل إعادة المعايرة بالثواني                                                      |
-| `--timezone-offset`   | عدد صحيح | 0              | فارق المنطقة الزمنية بالساعات                                                               |
+| `--timezone-offset`   | عدد صحيح | 0              | فارق التوقيت بالساعات                                                               |
 
 ***
 
@@ -126,15 +172,15 @@ chloros-cli login <email> <password>
 
 **مثال:**
 
-```powershell
+```bash
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{% hint style=&quot;warning&quot; %}
-**الأحرف الخاصة**: استخدم علامات اقتباس مفردة حول كلمات المرور التي تحتوي على أحرف مثل `$` أو `!` أو مسافات.
+{% hint style="warning" %}
+**الأحرف الخاصة**: استخدم علامات الاقتباس المفردة حول كلمات المرور التي تحتوي على أحرف مثل `$` أو `!` أو مسافات.
 {% endhint %}
 
-**الإخراج:**<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
+**الناتج:**<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
 
 ### `logout` - مسح بيانات الاعتماد
 
@@ -148,19 +194,19 @@ chloros-cli logout
 
 **مثال:**
 
-```powershell
+```bash
 chloros-cli logout
 ```
 
-**الإخراج:**
+**الناتج:**
 
 ```
 ✓ Logout successful
 ℹ Credentials cleared from cache
 ```
 
-{% hint style=&quot;info&quot; %}
-**مستخدمو SDK**: يوفر Python SDK أيضًا طريقة برمجية `logout()` لمسح بيانات الاعتماد داخل نصوص Python. انظر [وثائق Python SDK](api-python-sdk.md#logout) للحصول على التفاصيل.
+{% hint style="info" %}
+**مستخدمو SDK**: يوفر Python SDK أيضًا طريقة برمجية `logout()` لمسح بيانات الاعتماد داخل نصوص Python البرمجية. انظر [وثائق Python SDK](api-python-sdk.md#logout) للحصول على التفاصيل.
 {% endhint %}
 
 ***
@@ -177,11 +223,11 @@ chloros-cli status
 
 **مثال:**
 
-```powershell
+```bash
 chloros-cli status
 ```
 
-**الإخراج:**
+**الناتج:**
 
 ```
 ╔══════════════════════════════════════╗
@@ -208,7 +254,7 @@ chloros-cli export-status
 
 **مثال:**
 
-```powershell
+```bash
 chloros-cli export-status
 ```
 
@@ -218,7 +264,7 @@ chloros-cli export-status
 
 عرض أو تغيير لغة واجهة CLI.
 
-**صيغة:**
+**الصيغة:**
 
 ```bash
 # Show current language
@@ -233,7 +279,7 @@ chloros-cli language <language-code>
 
 **أمثلة:**
 
-```powershell
+```bash
 # View current language
 chloros-cli language
 
@@ -262,16 +308,16 @@ chloros-cli language ja
 | `zh`    | الصينية (المبسطة)  | 简体中文             |
 | `zh-TW` | الصينية (التقليدية) | 繁體中文             |
 | `ru`    | الروسية               | Русский          |
-| `nl`    | الهولندية                 | Nederlands       |
+| `nl`    | الهولندية                | Nederlands       |
 | `ar`    | العربية                | العربية          |
 | `pl`    | البولندية                | Polski           |
 | `tr`    | التركية               | Türkçe           |
 | `hi`    | الهندية                 | हिंदी            |
 | `id`    | الإندونيسية            | Bahasa Indonesia |
-| `vi`    | فيتنامية            | Tiếng Việt       |
-| `th`    | تايلاندية                  | ไทย              |
-| `sv`    | سويدية               | Svenska          |
-| `da`    | دنماركية                | Dansk            |
+| `vi`    | الفيتنامية            | Tiếng Việt       |
+| `th`    | التايلاندية                  | ไทย              |
+| `sv`    | السويدية               | Svenska          |
+| `da`    | الدنماركية                | Dansk            |
 | `no`    | النرويجية             | Norsk            |
 | `fi`    | الفنلندية               | Suomi            |
 | `el`    | اليونانية                 | Ελληνικά         |
@@ -290,15 +336,15 @@ chloros-cli language ja
 | `et`    | الإستونية              | Eesti            |
 | `sl`    | السلوفينية             | Slovenščina      |
 
-{% hint style=&quot;success&quot; %}
-**الاستمرارية التلقائية**: يتم حفظ تفضيلات اللغة الخاصة بك في `~/.chloros/cli_language.json` وتستمر عبر جميع الجلسات.
+{% hint style="success" %}
+**الاستمرار التلقائي**: يتم حفظ تفضيلات اللغة الخاصة بك في `~/.chloros/cli_language.json` وتستمر عبر جميع الجلسات.
 {% endhint %}
 
 ***
 
 ### `set-project-folder` - تعيين مجلد المشروع الافتراضي
 
-تغيير موقع مجلد المشروع الافتراضي (المشترك مع واجهة المستخدم الرسومية).
+تغيير موقع مجلد المشروع الافتراضي (مشترك مع واجهة المستخدم الرسومية في Windows).
 
 **الصيغة:**
 
@@ -306,10 +352,14 @@ chloros-cli language ja
 chloros-cli set-project-folder <folder-path>
 ```
 
-**مثال:**
+**أمثلة:**
 
-```powershell
+```bash
+# Windows
 chloros-cli set-project-folder "C:\Projects\2025"
+
+# Linux
+chloros-cli set-project-folder ~/projects/2025
 ```
 
 ***
@@ -326,14 +376,19 @@ chloros-cli get-project-folder
 
 **مثال:**
 
-```powershell
+```bash
 chloros-cli get-project-folder
 ```
 
 **الناتج:**
 
 ```
+
+# Windows
 ℹ Current project folder: C:\Projects\2025
+
+# Linux
+ℹ Current project folder: /home/user/.local/share/chloros/projects
 ```
 
 ***
@@ -350,94 +405,163 @@ chloros-cli reset-project-folder
 
 ***
 
+### `selftest` - تشغيل تشخيصات النظام
+
+تشغيل 7 فحوصات تشخيصية للتحقق من تكوين النظام.
+
+**الصيغة:**
+
+```bash
+chloros-cli selftest
+```
+
+**التشخيصات التي يتم إجراؤها:**
+
+1. فحص الإصدار
+2. توفر المنفذ (5000)
+3. بدء تشغيل الخلفية
+4. اختبار الاتصال API
+5. معلومات النظام واكتشاف وحدة معالجة الرسومات (GPU)
+6. التحقق من نماذج مزيل الضوضاء
+7. فحص توفر CUDA
+
+{% hint style="info" %}
+**مفيد في استكشاف الأخطاء وإصلاحها**: قم بتشغيل `selftest` بعد التثبيت للتحقق من تكوين نظامك بشكل صحيح، خاصةً على Linux/Jetson حيث قد يحتاج إعداد وحدة معالجة الرسومات (GPU) و CUDA إلى التحقق.
+{% endhint %}
+
+***
+
+### `update` - البحث عن التحديثات (Linux فقط)
+
+ابحث عن تحديثات CLI وقم بتثبيتها على أنظمة Linux.
+
+**الصيغة:**
+
+```bash
+# Check for updates without installing
+chloros-cli update --check
+
+# Check for and install updates
+chloros-cli update
+```
+
+| الخيار    | الوصف                        |
+| --------- | ---------------------------------- |
+| `--check` | البحث عن التحديثات فقط، دون تثبيتها |
+
+{% hint style="info" %}
+هذا الأمر متاح على Linux فقط. في Windows، يتم توفير التحديثات من خلال المثبت.
+{% endhint %}
+
+***
+
 ## الخيارات العامة
 
 تنطبق هذه الخيارات على جميع الأوامر:
 
-| الخيار          | النوع    | الافتراضي       | الوصف                                      |
-| --------------- | ------- | ------------- | ------------------------------------------------ |
-| `--backend-exe` | المسار    | يتم الكشف عنه تلقائيًا | المسار إلى الملف التنفيذي للخلفية                       |
-| `--port`        | عدد صحيح | 5000          | رقم منفذ API للخلفية                          |
-| `--restart`     | علامة    | -             | إجبار الخلفية على إعادة التشغيل (إنهاء العمليات الحالية) |
-| `--version`     | علامة    | -             | عرض معلومات الإصدار والخروج                |
-| `--help`        | علامة    | -             | عرض معلومات المساعدة والخروج                   |
+| الخيار            | النوع    | الافتراضي       | الوصف                                      |
+| ----------------- | ------- | ------------- | ------------------------------------------------ |
+| `--backend-exe`   | المسار    | يتم الكشف عنه تلقائيًا | مسار الملف القابل للتنفيذ للخلفية                       |
+| `--port`          | عدد صحيح | 5000          | رقم منفذ الخلفية API                          |
+| `--restart`       | علامة    | -             | فرض إعادة تشغيل الخلفية (إنهاء العمليات الحالية) |
+| `--version`       | علامة    | -             | عرض معلومات الإصدار والخروج                |
+| `--help`          | علامة    | -             | عرض معلومات المساعدة والخروج                   |
+
+{% hint style="info" %}
+**الكشف التلقائي عن الخلفية**: يتم الكشف التلقائي عن مسار `--backend-exe` حسب النظام الأساسي:
+* **Windows**: `C:\Program Files\MAPIR\Chloros\resources\backend\chloros-backend.exe`
+* **Linux (.deb)**: `/usr/lib/chloros/chloros-backend`
+* **Linux (يدوي)**: `/opt/mapir/chloros/backend/chloros-backend`
+{% endhint %}
 
 **مثال مع الخيارات العامة:**
 
+**Windows:**
+
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Survey_001"
+```
+
+**Linux:**
+
+```bash
+chloros-cli --port 5001 process ~/datasets/survey_001
 ```
 
 ***
 
 ## دليل إعدادات المعالجة
 
-### المعالجة المتوازية
+### المعالجة المتوازية والتكيف الحسابي الديناميكي
 
-Chloros+ CLI **يقوم تلقائيًا بتحجيم**المعالجة المتوازية لتتناسب مع قدرات جهاز الكمبيوتر الخاص بك:**كيفية العمل:**
+يتضمن Chloros 1.1.0 [التكيف الحسابي الديناميكي](processing-architecture/dynamic-compute-adaptation.md) — حيث **يكتشف محرك المعالجة أجهزتك تلقائيًا** ويختار الإستراتيجية المثلى:
 
-* يكتشف نوى وحدة المعالجة المركزية (CPU) وذاكرة الوصول العشوائي (RAM)
-* يخصص العمال: **2× نوى وحدة المعالجة المركزية (CPU)** (يستخدم تقنية hyperthreading)
-* **الحد الأقصى: 16 عاملًا متوازيًا** (لضمان الاستقرار)**مستويات النظام:**
+| النظام الأساسي | الإستراتيجية | العمال | خط الأنابيب | ملاحظات |
+| --- | --- | --- | --- | --- |
+| **Jetson Nano 8GB** | `GPU_SINGLE` | 1 | `tiled_gpu` | فعالة في استخدام الذاكرة، متسلسلة |
+| **Jetson Orin NX 16GB** | `GPU_PARALLEL` | 3 | `fused_gpu` | معالجة GPU متزامنة |
+| **كمبيوتر مكتبي مزود بوحدة معالجة رسومات (GPU) سعة 8 جيجابايت** | `GPU_SINGLE` | 3 | `tiled_gpu` | أداء جيد للكمبيوتر المكتبي |
+| **كمبيوتر مكتبي مزود بوحدة معالجة رسومات (GPU) بسعة 12 جيجابايت أو أكثر** | `GPU_PARALLEL` | 3-4 | `fused_gpu` | أداء مثالي للكمبيوتر المكتبي |
+| **نظام يعمل بمعالج فقط** | `CPU_PARALLEL` | النوى - 1 | `cpu_fallback` | لا حاجة لوحدة معالجة رسومات |
 
-| نوع النظام   | وحدة المعالجة المركزية (CPU)        | ذاكرة الوصول العشوائي (RAM)      | العمال  | الأداء     |
-| ------------- | ---------- | -------- | -------- | --------------- |
-| **متطور**  | 16+ نواة  | 32+ جيجابايت   | حتى 16 | سرعة قصوى   |
-| **متوسط** | 8-15 نواة | 16-31 جيجابايت | 8-16     | سرعة ممتازة |
-| **منخفض**   | 4-7 نواة  | 8-15 جيجابايت  | 4-8      | سرعة جيدة      |
-
-{% hint style=&quot;success&quot; %}
-**التحسين التلقائي**: يقوم CLI تلقائيًا باكتشاف مواصفات نظامك وتكوين المعالجة المتوازية المثلى. لا حاجة إلى التكوين اليدوي!
+{% hint style="success" %}
+**لا حاجة للتكوين اليدوي!** يقوم Chloros بالكشف التلقائي عن وحدة المعالجة المركزية (CPU) ووحدة معالجة الرسومات (GPU) وذاكرة الوصول العشوائي (RAM) وأجهزة استشعار الحرارة (في Jetson)، ثم يقوم تلقائيًا بتكوين مسار المعالجة الأمثل.
 {% endhint %}
 
 ### طرق إزالة التباين
 
-يستخدم CLI **جودة عالية (أسرع)** كخوارزمية إزالة التباين الافتراضية والموصى بها:
+| الطريقة | علامة CLI | الجودة | السرعة | الترخيص |
+| --- | --- | --- | --- | --- |
+| **قياسي (سريع، جودة متوسطة)** | `--debayer standard` | جيد | سريع | مجاني / Chloros+ |
+| **مع مراعاة النسيج (بطيئة، جودة عالية)** | `--debayer texture-aware` | عالية | بطيئة | Chloros+ فقط |
 
-| الطريقة                      | الجودة | السرعة | الوصف                                 |
-| --------------------------- | ------- | ----- | ------------------------------------------- |
-| **جودة عالية (أسرع)** ⭐ | ⭐⭐⭐⭐    | ⚡⚡⚡   | خوارزمية حساسة للحواف (افتراضية، موصى بها) |
+طريقة إزالة التباين الافتراضية هي **قياسي**. تستخدم طريقة**مراعاة النسيج** نموذج إزالة الضوضاء بالذكاء الاصطناعي/التعلم الآلي للحصول على مخرجات بأعلى جودة، ولكنها تتطلب ترخيص Chloros+ ووحدة معالجة رسومات NVIDIA.
+
+```bash
+# Use Texture Aware debayer (Chloros+ only)
+chloros-cli process ~/datasets/field_a --debayer texture-aware
+```
 
 ### تصحيح التظليل
 
-**وظيفته:** تصحيح انخفاض الإضاءة عند حواف الصورة (الزوايا الداكنة الشائعة في صور الكاميرا).
+**وظيفته:** يصحح انخفاض الإضاءة عند حواف الصورة (الزوايا الداكنة الشائعة في صور الكاميرا).
 
 * **ممكّن افتراضيًا** - يجب على معظم المستخدمين إبقاء هذه الميزة ممكّنة
 * استخدم `--no-vignette` لتعطيلها
 
-{% hint style=&quot;success&quot; %}
+{% hint style="success" %}
 **التوصية**: قم دائمًا بتمكين تصحيح التظليل لضمان سطوع موحد عبر الإطار.
 {% endhint %}
 
 ### معايرة الانعكاس
 
-تحول قيم المستشعر الأولية إلى نسب انعكاس قياسية باستخدام لوحات المعايرة.
+يحول قيم المستشعر الأولية إلى نسب انعكاس موحدة باستخدام لوحات المعايرة.
 
-* **ممكّن بشكل افتراضي** - ضروري لتحليل الغطاء النباتي
+* **ممكّن افتراضيًا** - ضروري لتحليل الغطاء النباتي
 * يتطلب لوحات هدف المعايرة في الصور
-* استخدم `--no-reflectance` للتعطيل
+* استخدم `--no-reflectance` لتعطيل
 
-{% hint style=&quot;info&quot; %}
-**المتطلبات**: تأكد من أن لوحات المعايرة معرضة بشكل صحيح ومرئية في صورك من أجل تحويل انعكاس دقيق.
+{% hint style="info" %}
+**المتطلبات**: تأكد من أن لوحات المعايرة معرضة بشكل صحيح ومرئية في صورك لتحويل الانعكاس بدقة.
 {% endhint %}
 
 ### تصحيحات PPK
 
-**ماذا يفعل:** يطبق تصحيحات حركية معالجة لاحقًا باستخدام بيانات سجل DAQ-A-SD لتحسين دقة GPS.
+**وظيفتها:** يطبق تصحيحات حركية معالجة لاحقًا باستخدام بيانات سجل DAQ-A-SD لتحسين دقة GPS.
 
 * **معطل افتراضيًا**
 * استخدم `--ppk` للتفعيل
-* يتطلب ملفات .daq في مجلد المشروع من مستشعر الضوء MAPIR DAQ-A-SD.
+* يتطلب ملفات .daq في مجلد المشروع من مستشعر الضوء DAQ-A-SD MAPIR.
 
 ### تنسيقات الإخراج
 
-<table><thead><tr><th width="197">التنسيق</th><th width="130.20001220703125">عمق البت</th><th width="116.5999755859375">حجم الملف</th><th>الأفضل لـ</th></tr></thead><tbody><tr><td><strong>TIFF (16 بت)</strong> ⭐</td><td>عدد صحيح 16 بت</td><td>كبير</td><td>تحليل GIS، التصوير المساحي (موصى به)</td></tr><tr><td><strong>TIFF (32 بت، نسبة مئوية)</strong></td><td>32 بت عائم</td><td>كبير جدًا</td><td>تحليل علمي، بحث</td></tr><tr><td><strong>PNG (8 بت)</strong></td><td>عدد صحيح 8 بت</td><td>متوسط</td><td>الفحص البصري، مشاركة الويب</td></tr><tr><td><strong>JPG (8 بت)</strong></td><td>عدد صحيح 8 بت</td><td>صغير</td><td>معاينة سريعة، إخراج مضغوط</td></tr></tbody></table>***
+<table><thead><tr><th width="197">التنسيق</th><th width="130.20001220703125">عمق البت</th><th width="116.5999755859375">حجم الملف</th><th>الأفضل لـ</th></tr></thead><tbody><tr><td><strong>TIFF (16 بت)</strong> ⭐</td><td>عدد صحيح 16 بت</td><td>كبير</td><td>تحليل نظم المعلومات الجغرافية، التصوير المساحي (موصى به)</td></tr><tr><td><strong>TIFF (32 بت، نسبة مئوية)</strong></td><td>عدد عائم 32 بت</td><td>كبير جدًا</td><td>التحليل العلمي، البحث</td></tr><tr><td><strong>PNG (8 بت)</strong></td><td>عدد صحيح 8 بت</td><td>متوسط</td><td>الفحص البصري، المشاركة عبر الويب</td></tr><tr><td><strong>JPG (8 بت)</strong></td><td>عدد صحيح 8 بت</td><td>صغير</td><td>معاينة سريعة، إخراج مضغوط</td></tr></tbody></table>***
 
 ## الأتمتة والبرمجة النصية
 
-### معالجة دفعية PowerShell
+### المعالجة الدفعية في PowerShell (Windows)
 
-معالجة عدة مجلدات من مجموعات البيانات تلقائيًا:
+معالجة مجلدات مجموعات البيانات المتعددة تلقائيًا على Windows:
 
 ```powershell
 # process_all_datasets.ps1
@@ -461,9 +585,9 @@ foreach ($dataset in $datasets) {
 Write-Host "All datasets processed!" -ForegroundColor Green
 ```
 
-### Windows البرنامج النصي الدفعي
+### نص برمجي دفعي لـ Windows (Windows)
 
-حلقة بسيطة للمعالجة الدفعية:
+حلقة بسيطة للمعالجة الدفعية على Windows:
 
 ```batch
 @echo off
@@ -488,9 +612,35 @@ echo All datasets processed!
 pause
 ```
 
-### Python برنامج نصي للأتمتة
+### معالجة الدُفعات باستخدام Bash (Linux)
 
-أتمتة متقدمة مع معالجة الأخطاء:
+معالجة مجلدات مجموعات البيانات المتعددة على Linux:
+
+```bash
+#!/bin/bash
+# process_all_datasets.sh
+
+for dataset in ~/datasets/2026/*/; do
+    name=$(basename "$dataset")
+    echo "Processing $name..."
+
+    chloros-cli process "$dataset" \
+        --vignette \
+        --reflectance
+
+    if [ $? -eq 0 ]; then
+        echo "✓ $name complete"
+    else
+        echo "✗ $name failed"
+    fi
+done
+
+echo "All datasets processed!"
+```
+
+### نص برمجي أتمتة Python (متعدد المنصات)
+
+أتمتة متقدمة مع معالجة الأخطاء (تعمل على Windows و Linux):
 
 ```python
 import subprocess
@@ -515,6 +665,9 @@ def process_dataset(input_folder):
 
 def main():
     """Process all datasets in a directory"""
+    # Adjust path for your platform
+    # Windows: Path('C:/Datasets/2025')
+    # Linux:   Path.home() / 'datasets' / '2025'
     datasets_dir = Path('C:/Datasets/2025')
     log_file = Path('processing_log.txt')
     
@@ -573,12 +726,12 @@ if __name__ == '__main__':
 
 ### سير العمل القياسي
 
-1. **الإدخال**: مجلد يحتوي على أزواج صور RAW/JPG
-2. **الاكتشاف**: يقوم CLI بالمسح التلقائي للملفات الصورية المدعومة
-3. **المعالجة**: يتكيف الوضع المتوازي مع نوى وحدة المعالجة المركزية (Chloros+)
-4. **الإخراج**: ينشئ مجلدات فرعية لطراز الكاميرا مع الصور المعالجة
+1. **الإدخال**: مجلد يحتوي على أزواج من الصور بتنسيقات RAW/JPG
+2. **الاكتشاف**: يقوم CLI بالمسح التلقائي للبحث عن ملفات الصور المدعومة
+3. **المعالجة**: يتكيف الوضع المتوازي مع نوى وحدة المعالجة المركزية (CPU) لديك (Chloros+)
+4. **الإخراج**: ينشئ مجلدات فرعية لطرازات الكاميرات تحتوي على الصور المعالجة
 
-### مثال على هيكل الإخراج
+### مثال على بنية الإخراج
 
 ```
 
@@ -596,28 +749,31 @@ MyProject/
 
 أوقات المعالجة النموذجية لـ 100 صورة (12 ميجابكسل لكل منها):
 
-| الوضع              | الوقت      | الأجهزة                                     |
-| ----------------- | --------- | -------------------------------------------- |
-| **الوضع المتوازي** | 5-10 دقائق  | i7/Ryzen 7، ذاكرة وصول عشوائي (RAM) سعة 16 جيجابايت، SSD (حتى 16 عامل) |
-| **الوضع المتوازي** | 10-15 دقيقة | i5/Ryzen 5، ذاكرة وصول عشوائي (RAM) سعة 8 جيجابايت، محرك أقراص ثابتة (HDD) (حتى 8 عمال)   |
+| النظام الأساسي | الوضع | الوقت المقدر | ملاحظات |
+| --- | --- | --- | --- |
+| **كمبيوتر مكتبي مزود بوحدة معالجة رسومات (GPU) بسعة 12 جيجابايت أو أكثر** | `GPU_PARALLEL` | 5-10 دقائق | الخيار الأسرع |
+| **كمبيوتر مكتبي مزود بوحدة معالجة رسومات (GPU) سعة 8 جيجابايت** | `GPU_SINGLE` | 10-15 دقيقة | أداء جيد |
+| **Jetson Orin NX سعة 16 جيجابايت** | `GPU_PARALLEL` | 15-25 دقيقة | حوسبة طرفية |
+| **Jetson Nano 8GB** | `GPU_SINGLE` | 30-60 دقيقة | محدودة الذاكرة |
+| **CPU فقط** | `CPU_PARALLEL` | 20-40 دقيقة | لا تتطلب GPU |
 
-{% hint style=&quot;info&quot; %}
-**نصيحة لتحسين الأداء**: يختلف وقت المعالجة بناءً على عدد الصور ودقتها ومواصفات الكمبيوتر.
+{% hint style="info" %}
+**نصيحة حول الأداء**: يختلف وقت المعالجة بناءً على عدد الصور والدقة وطريقة إزالة التباين والأجهزة. تستغرق طريقة إزالة التباين التي تراعي النسيج وقتًا أطول بكثير من الطريقة القياسية. انظر [التكيف الديناميكي للحوسبة](processing-architecture/dynamic-compute-adaptation.md) للحصول على التفاصيل.
 {% endhint %}
 
 ***
 
 ## استكشاف الأخطاء وإصلاحها
 
-### CLI غير موجود
+### لم يتم العثور على CLI
 
-**الخطأ:**
+**خطأ Windows:**
 
 ```
 'chloros-cli' is not recognized as an internal or external command
 ```
 
-**الحلول:**
+**حلول Windows:**
 
 1. تحقق من موقع التثبيت:
 
@@ -637,9 +793,36 @@ dir "C:\Program Files\Chloros\resources\cli\chloros-cli.exe"
    * أضف: `C:\Program Files\Chloros\resources\cli`
    * أعد تشغيل المحطة الطرفية
 
+**Linux خطأ:**
+
+```
+chloros-cli: command not found
+```
+
+**Linux الحلول:**
+
+1. تحقق من التثبيت:
+
+```bash
+which chloros-cli
+dpkg -L chloros-amd64  # or chloros-arm64-jp6
+```
+
+2. أعد تحميل شل:
+
+```bash
+source ~/.bashrc
+```
+
+3. تحقق من الأذونات:
+
+```bash
+sudo chmod +x /usr/bin/chloros-cli
+```
+
 ***
 
-### فشل بدء تشغيل الخلفية**الخطأ:**
+### فشل بدء تشغيل الخلفية**خطأ:**
 
 ```
 
@@ -648,23 +831,37 @@ Backend failed to start within 30 seconds
 
 **الحلول:**
 
-1. تحقق مما إذا كانت الخلفية قيد التشغيل بالفعل (أغلقها أولاً)
-2. تحقق من أن جدار الحماية Windows لا يقوم بحظر
+1. تحقق مما إذا كان الخادم الخلفي قيد التشغيل بالفعل (أغلقه أولاً)
+2. تحقق من أن جدار الحماية لا يحجب الاتصال (Windows) أو تحقق من توفر المنفذ (Linux: `lsof -i :5000`)
 3. جرب منفذًا مختلفًا:
 
-```powershell
+```bash
+# Windows
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
+
+# Linux
+chloros-cli --port 5001 process ~/datasets/field_a
 ```
 
 4. فرض إعادة تشغيل الخلفية:
 
-```powershell
+```bash
+# Windows
 chloros-cli --restart process "C:\Datasets\Field_A"
+
+# Linux
+chloros-cli --restart process ~/datasets/field_a
+```
+
+5. في Linux، تحقق من وجود الملف القابل للتنفيذ للخلفية:
+
+```bash
+ls -la /usr/lib/chloros/chloros-backend
 ```
 
 ***
 
-### مشكلات الترخيص/المصادقة**الخطأ:**
+### مشكلات الترخيص / المصادقة**خطأ:**
 
 ```
 
@@ -673,24 +870,24 @@ Chloros+ license required for CLI access
 
 **الحلول:**
 
-1. تحقق من أن لديك اشتراك Chloros+ نشط
+1. تحقق من أن لديك اشتراكًا نشطًا في Chloros+
 2. قم بتسجيل الدخول باستخدام بيانات اعتمادك:
 
-```powershell
+```bash
 chloros-cli login user@example.com 'password'
 ```
 
 3. تحقق من حالة الترخيص:
 
-```powershell
+```bash
 chloros-cli status
 ```
 
-4. اتصل بالدعم: info@mapir.camera
+4. اتصل بالدعم الفني: info@mapir.camera
 
 ***
 
-### لم يتم العثور على صور**الخطأ:**
+### لم يتم العثور على صور**خطأ:**
 
 ```
 
@@ -721,12 +918,22 @@ No images found in the specified folder
 Port 5000 is already in use
 ```
 
-**الحل:**
+**الحلول:**
 
-حدد منفذًا مختلفًا:
+**Windows:**
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
+```
+
+**Linux:**
+
+```bash
+# Find what's using port 5000
+lsof -i :5000
+
+# Use a different port
+chloros-cli --port 5001 process ~/datasets/field_a
 ```
 
 ***
@@ -735,35 +942,44 @@ chloros-cli --port 5001 process "C:\Datasets\Field_A"
 
 ### س: هل أحتاج إلى ترخيص لـ CLI؟
 
-**ج:**نعم! يتطلب CLI**ترخيص Chloros+** مدفوع الثمن.
+**ج:**نعم! يتطلب CLI**ترخيص Chloros+** مدفوعًا.
 
 * ❌ الخطة القياسية (المجانية): CLI معطل
-* ✅ خطط Chloros+ (مدفوعة): CLI ممكّن بالكامل
+* ✅ خطط Chloros+ (المدفوعة): CLI ممكّن بالكامل
 
 اشترك في: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
 ***
 
-### س: هل يمكنني استخدام CLI على خادم بدون واجهة مستخدم رسومية (GUI)؟**ج:** نعم! يعمل CLI بدون واجهة مستخدم رسومية تمامًا. المتطلبات:
+### س: هل يمكنني استخدام CLI على خادم بدون واجهة مستخدم رسومية (GUI)؟**ج:** نعم! يعمل CLI بدون واجهة مستخدم تمامًا. هذه هي حالة الاستخدام الأساسية في Linux.**خادم Windows:**
+* خادم Windows 2016 أو أحدث
+* Visual C++ Redistributable مثبت
 
-* Windows Server 2016 أو أحدث
-* تثبيت Visual C++ Redistributable
-* ذاكرة وصول عشوائي (RAM) كافية (8 جيجابايت كحد أدنى، 16 جيجابايت موصى بها)
-* تنشيط ترخيص واجهة المستخدم الرسومية (GUI) لمرة واحدة على أي جهاز
+**خادم Linux:**
+* Ubuntu 20.04+ / Debian 11+ (amd64) أو JetPack 6 (arm64)
+* التثبيت عبر حزمة `.deb`
+
+**كلا النظامين:**
+* ذاكرة وصول عشوائي (RAM) بسعة 8 جيجابايت كحد أدنى (يوصى بـ 16 جيجابايت)
+* تنشيط الترخيص لمرة واحدة: `chloros-cli login user@example.com 'password'`
 
 ***
 
-### س: أين يتم حفظ الصور المعالجة؟**ج:**بشكل افتراضي، يتم حفظ الصور المعالجة في**نفس المجلد الذي تم إدخالها فيه** في مجلدات فرعية لطراز الكاميرا (على سبيل المثال، `Survey3N_RGN/`).
+### س: أين يتم حفظ الصور المعالجة؟**ج:**بشكل افتراضي، يتم حفظ الصور المعالجة في**نفس المجلد الذي تم إدخالها منه** في مجلدات فرعية لطراز الكاميرا (على سبيل المثال، `Survey3N_RGN/`).
 
 استخدم خيار `-o` لتحديد مجلد إخراج مختلف:
 
-```powershell
+```bash
+# Windows
 chloros-cli process "C:\Input" -o "D:\Output"
+
+# Linux
+chloros-cli process ~/input -o ~/output
 ```
 
 ***
 
-### س: هل يمكنني معالجة عدة مجلدات في وقت واحد؟**ج:** ليس مباشرة في أمر واحد، ولكن يمكنك استخدام البرمجة النصية لمعالجة المجلدات بالتسلسل. راجع قسم [الأتمتة والبرمجة النصية](CLI.md#automation--scripting).***
+### س: هل يمكنني معالجة عدة مجلدات في وقت واحد؟**ج:** ليس مباشرةً في أمر واحد، ولكن يمكنك استخدام البرمجة النصية لمعالجة المجلدات بالتسلسل. راجع قسم [الأتمتة والبرمجة النصية](CLI.md#automation--scripting).***
 
 ### س: كيف أحفظ مخرجات CLI في ملف سجل؟**PowerShell:**
 
@@ -771,10 +987,16 @@ chloros-cli process "C:\Input" -o "D:\Output"
 chloros-cli process "C:\Datasets\Field_A" | Tee-Object -FilePath "processing.log"
 ```
 
-**الدُفعة:**
+**الدُفعات:**
 
 ```batch
 chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
+```
+
+**Linux Bash:**
+
+```bash
+chloros-cli process ~/datasets/field_a 2>&1 | tee processing.log
 ```
 
 ***
@@ -785,23 +1007,23 @@ chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
 2. إيقاف تشغيل الخلفية
 3. الخروج برمز 130
 
-قد تظل الصور المعالجة جزئيًا في مجلد الإخراج.
+قد تبقى الصور التي تمت معالجتها جزئيًا في مجلد الإخراج.
 
 ***
 
-### س: هل يمكنني أتمتة معالجة CLI؟**ج:** بالطبع! تم تصميم CLI للأتمتة. انظر [الأتمتة والبرمجة النصية](CLI.md#automation--scripting) للحصول على أمثلة PowerShell و Batch و Python.***
+### س: هل يمكنني أتمتة معالجة CLI؟**ج:** بالطبع! تم تصميم CLI للأتمتة. انظر [الأتمتة والبرمجة النصية](CLI.md#automation--scripting) لأمثلة PowerShell (Windows) و Batch (Windows) Bash (Linux)، وPython (متعدد المنصات).***
 
 ### س: كيف يمكنني التحقق من إصدار CLI؟**ج:**
 
-```powershell
+```bash
 chloros-cli --version
 ```
 
-**الإخراج:**
+**الناتج:**
 
 ```
 
-Chloros CLI 1.0.2
+Chloros CLI 1.1.0
 ```
 
 ***
@@ -810,9 +1032,9 @@ Chloros CLI 1.0.2
 
 ### مساعدة سطر الأوامر
 
-اعرض معلومات المساعدة مباشرة في CLI:
+اعرض معلومات المساعدة مباشرةً في CLI:
 
-```powershell
+```bash
 # General help
 chloros-cli --help
 
@@ -825,17 +1047,25 @@ chloros-cli language --help
 ### قنوات الدعم
 
 * **البريد الإلكتروني**: info@mapir.camera
-* **موقع الويب**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* **الموقع الإلكتروني**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * **الأسعار**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)***
 
 ## أمثلة كاملة
 
 ### المثال 1: المعالجة الأساسية
 
-المعالجة باستخدام الإعدادات الافتراضية (التظليل، الانعكاس):
+المعالجة بالإعدادات الافتراضية (التدرج اللوني، الانعكاس):
+
+**Windows:**
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A_2025_01_15"
+```
+
+**Linux:**
+
+```bash
+chloros-cli process ~/datasets/field_a_2025_01_15
 ```
 
 ***
@@ -844,6 +1074,8 @@ chloros-cli process "C:\Datasets\Field_A_2025_01_15"
 
 32 بت عائم TIFF:
 
+**Windows:**
+
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
   --format "TIFF (32-bit, Percent)" ^
@@ -851,11 +1083,22 @@ chloros-cli process "C:\Datasets\Field_A" ^
   --reflectance
 ```
 
+**Linux:**
+
+```bash
+chloros-cli process ~/datasets/field_a \
+  --format "TIFF (32-bit, Percent)" \
+  --vignette \
+  --reflectance
+```
+
 ***
 
-### المثال 3: معالجة المعاينة السريعة
+### المثال 3: معالجة سريعة للمعاينة
 
 8 بت PNG بدون معايرة للمراجعة السريعة:
+
+**Windows:**
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -864,11 +1107,22 @@ chloros-cli process "C:\Datasets\Field_A" ^
   --no-reflectance
 ```
 
+**Linux:**
+
+```bash
+chloros-cli process ~/datasets/field_a \
+  --format "PNG (8-bit)" \
+  --no-vignette \
+  --no-reflectance
+```
+
 ***
 
-### المثال 4: معالجة مصححة بواسطة PPK
+### المثال 4: المعالجة المصححة بواسطة PPK
 
 تطبيق تصحيحات PPK مع الانعكاس:
+
+**Windows:**
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -876,11 +1130,21 @@ chloros-cli process "C:\Datasets\Field_A" ^
   --reflectance
 ```
 
+**Linux:**
+
+```bash
+chloros-cli process ~/datasets/field_a \
+  --ppk \
+  --reflectance
+```
+
 ***
 
 ### المثال 5: موقع إخراج مخصص
 
-معالجة إلى محرك أقراص مختلف بتنسيق محدد:
+المعالجة إلى موقع مختلف بتنسيق محدد:
+
+**Windows:**
 
 ```powershell
 chloros-cli process "C:\Input\Raw_Images" ^
@@ -888,13 +1152,21 @@ chloros-cli process "C:\Input\Raw_Images" ^
   --format "TIFF (16-bit)"
 ```
 
+**Linux:**
+
+```bash
+chloros-cli process ~/input/raw_images \
+  -o ~/output/processed \
+  --format "TIFF (16-bit)"
+```
+
 ***
 
 ### المثال 6: سير عمل المصادقة
 
-إكمال سير عمل المصادقة:
+سير عمل المصادقة الكامل (نفسه على جميع المنصات):
 
-```powershell
+```bash
 # Step 1: Login
 chloros-cli login user@example.com 'MyP@ssw0rd'
 
@@ -902,7 +1174,9 @@ chloros-cli login user@example.com 'MyP@ssw0rd'
 chloros-cli status
 
 # Step 3: Process images
-chloros-cli process "C:\Datasets\Field_A"
+# Windows: chloros-cli process "C:\Datasets\Field_A"
+# Linux:   chloros-cli process ~/datasets/field_a
+chloros-cli process ~/datasets/field_a
 
 # Step 4: Logout (optional, when switching accounts)
 chloros-cli logout
@@ -910,11 +1184,11 @@ chloros-cli logout
 
 ***
 
-### المثال 7: الاستخدام متعدد اللغات
+### المثال 7: استخدام متعدد اللغات
 
-تغيير لغة الواجهة:
+تغيير لغة الواجهة (نفسه على جميع المنصات):
 
-```powershell
+```bash
 # List available languages
 chloros-cli language --list
 
@@ -922,7 +1196,9 @@ chloros-cli language --list
 chloros-cli language es
 
 # Process with Spanish interface
-chloros-cli process "C:\Vuelos\Campo_A"
+# Windows: chloros-cli process "C:\Vuelos\Campo_A"
+# Linux:   chloros-cli process ~/vuelos/campo_a
+chloros-cli process ~/vuelos/campo_a
 
 # Change back to English
 chloros-cli language en
