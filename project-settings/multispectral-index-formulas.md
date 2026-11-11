@@ -12,7 +12,7 @@ metaLinks:
 
 <table><thead><tr><th align="center">لون مرشح Survey3</th><th width="196.199951171875" align="center">اسم مرشح Survey3</th><th width="159.800048828125" align="center">نطاق النفاذية (FWHM)</th><th align="center">متوسط النفاذية</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483 نانومتر</td><td align="center">475 نانومتر</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- Cyan</td><td align="center">476-512 نانومتر</td><td align="center">494 نانومتر</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558 نانومتر</td><td align="center">547 نانومتر</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598-640 نانومتر</td><td align="center">619 نانومتر</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653-668 نانومتر</td><td align="center">661 نانومتر</td></tr><tr><td align="center">RedEdge</td><td align="center">Re-RedEdge</td><td align="center">712-735 نانومتر</td><td align="center">724 نانومتر</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798-848 نانومتر</td><td align="center">823 نانومتر</td></tr><tr><td align="center">NIR2</td><td align="center">RGN | NGB | NIR - NIR2</td><td align="center">835-865 نانومتر</td><td align="center">850 نانومتر</td></tr></tbody></table>
 
-عند استخدام هذه الصيغ، قد ينتهي الاسم بـ &quot;\_1&quot; أو &quot;\_2&quot;، وهو ما يتوافق مع مرشح NIR المستخدم، سواء كان NIR1 أو NIR2.
+عند استخدام هذه الصيغ، قد ينتهي الاسم بـ "\_1" أو "\_2"، وهو ما يتوافق مع مرشح NIR المستخدم، سواء كان NIR1 أو NIR2.
 
 بالنسبة لكاميرات LATTICE M3C (مرشح باير ثلاثي النطاق)، يستخدم محرك الفهرسة نفسه نطاقات مرشح M3C:
 
@@ -38,7 +38,7 @@ metaLinks:
 | `chloros-cli process --indices NDVI,NDRE` | السطح 2 | 22 |
 | SDK `process_folder(indices=[...])` | السطح 2 | 22 |
 | `chloros-cli lattice index --preset` | السطح 3 | 22 (رقم 22 مختلف) |
-| علامة التبويب &quot;الكاميرات&quot; - حاسبة الفهرس المباشرة | السطح 3 | 22 (رقم 22 مختلف) |
+| علامة التبويب "الكاميرات" - حاسبة الفهرس المباشرة | السطح 3 | 22 (رقم 22 مختلف) |
 
 يعمل Surface 1 و 2 على **صورة واحدة في كل مرة من كاميرا واحدة**، باستخدام فتحات الرموز `x`/`y`/`z`(/`a`) المرتبطة بقنوات مرشحات تلك الكاميرا. أما السطح 3 فيعمل على**مجموعة متعددة النطاقات مُحاذاة** — عدة كاميرات LATTICE مُسجلة بشكل متزامن في مكعب واحد — ويشير إلى القنوات بأسمائها بالخط الصغير.
 
@@ -165,7 +165,7 @@ $$
 
 في واجهة المستخدم الرسومية (GUI) وقائمة الإعدادات المسبقة لـ CLI/SDK، تكون صيغة الرمز هي `(z/y)*(x/y)` حيث x=Red، y=Green، z=NIR (نطاقات كاميرا RGN)؛ أما الإعداد المسبق لمحرك مؤشر LATTICE فهو `nir * red / green**2`. ويحسب كل سطح نفس المؤشر.
 
-_المصدر: Vincini, M., E. Frazzi, and P. D&#x27;Alessio. &quot;مؤشر نباتي واسع النطاق للكلوروفيل في الأوراق على نطاق الغطاء النباتي.&quot; Precision Agriculture 9 (2008): 303-319._
+_المصدر: Vincini, M., E. Frazzi, and P. D'Alessio. "مؤشر نباتي واسع النطاق للكلوروفيل في الأوراق على نطاق الغطاء النباتي." Precision Agriculture 9 (2008): 303-319._
 
 ***
 
@@ -191,7 +191,7 @@ $$
 
 يجب أن تتراوح قيم EVI بين 0 و1 بالنسبة لوحدات البكسل الخاصة بالغطاء النباتي. قد تؤدي العناصر الساطعة مثل السحب والمباني البيضاء، إلى جانب العناصر الداكنة مثل المياه، إلى ظهور قيم بكسل شاذة في صورة EVI. قبل إنشاء صورة EVI، يجب إخفاء السحب والسمات الساطعة من صورة الانعكاس، واختياريًا تحديد عتبة لقيم وحدات البكسل من 0 إلى 1.
 
-_المصدر: Huete, A., et al. &quot;نظرة عامة على الأداء الإشعاعي والفيزيائي الحيوي لمؤشرات الغطاء النباتي في نظام MODIS.&quot; Remote Sensing of Environment 83 (2002):195–213._
+_المصدر: Huete, A., et al. "نظرة عامة على الأداء الإشعاعي والفيزيائي الحيوي لمؤشرات الغطاء النباتي في نظام MODIS." Remote Sensing of Environment 83 (2002):195–213._
 
 ***
 
@@ -207,7 +207,7 @@ $$
 
 ستكون قيم FCI1 للمناطق الحرجية أقل بسبب انخفاض انعكاسية الأشجار ووجود الظلال داخل الغطاء الحرجي.
 
-_المصدر: Becker, Sarah J., Craig S.T. Daughtry, and Andrew L. Russ. &quot;مؤشرات قوية للغطاء الحرجي للصور متعددة الأطياف.&quot; Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_المصدر: Becker, Sarah J., Craig S.T. Daughtry, and Andrew L. Russ. "مؤشرات قوية للغطاء الحرجي للصور متعددة الأطياف." Photogrammetric Engineering & Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
@@ -223,7 +223,7 @@ $$
 
 ستكون قيم مؤشر FCI2 للمناطق الحرجية أقل بسبب انخفاض انعكاسية الأشجار ووجود الظلال داخل الغطاء الحرجي.
 
-_المصدر: Becker, Sarah J., Craig S.T. Daughtry, and Andrew L. Russ. &quot;مؤشرات قوية للغطاء الحرجي للصور متعددة الأطياف.&quot; Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_المصدر: Becker, Sarah J., Craig S.T. Daughtry, and Andrew L. Russ. "مؤشرات قوية للغطاء الحرجي للصور متعددة الأطياف." Photogrammetric Engineering & Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
@@ -259,7 +259,7 @@ $$
 
 ثابت غاما هو دالة ترجيح تعتمد على ظروف الهباء الجوي في الغلاف الجوي. يستخدم ENVI القيمة 1.7، وهي القيمة الموصى بها من قبل جيتلسون وكوفمان وميرزيلاك (1996، صفحة 296).
 
-_المصدر: Gitelson, A., Y. Kaufman, and M. Merzylak. &quot;Use of a Green Channel in Remote Sensing of Global Vegetation from EOS-MODIS.&quot; Remote Sensing of Environment 58 (1996): 289-298._
+_المصدر: Gitelson, A., Y. Kaufman, and M. Merzylak. "Use of a Green Channel in Remote Sensing of Global Vegetation from EOS-MODIS." Remote Sensing of Environment 58 (1996): 289-298._
 
 ***
 
@@ -273,7 +273,7 @@ $$
 
 يوفر وجود أطوال موجية واسعة في نطاق الأشعة تحت الحمراء القريبة (NIR) والأخضر تنبؤًا أفضل بمحتوى الكلوروفيل، مع توفير حساسية أكبر ونسبة إشارة إلى ضوضاء أعلى.
 
-_المصدر: Gitelson, A., Y. Gritz, و M. Merzlyak. &quot;العلاقات بين محتوى الكلوروفيل في الأوراق والانعكاس الطيفي والخوارزميات لتقييم الكلوروفيل بطريقة غير مدمرة في أوراق النباتات العليا.&quot; مجلة فسيولوجيا النبات 160 (2003): 271-282._
+_المصدر: Gitelson, A., Y. Gritz, و M. Merzlyak. "العلاقات بين محتوى الكلوروفيل في الأوراق والانعكاس الطيفي والخوارزميات لتقييم الكلوروفيل بطريقة غير مدمرة في أوراق النباتات العليا." مجلة فسيولوجيا النبات 160 (2003): 271-282._
 
 ***
 
@@ -287,7 +287,7 @@ $$
 
 تتراوح قيم GLI بين -1 و+1. تمثل القيم السالبة التربة والخصائص غير الحية، بينما تمثل القيم الموجبة الأوراق والسيقان الخضراء.
 
-_المصدر: Louhaichi, M., M. Borman, and D. Johnson. &quot;منصة محددة الموقع والتصوير الجوي لتوثيق آثار الرعي على القمح.&quot; Geocarto International 16، العدد 1 (2001): 65-70._
+_المصدر: Louhaichi, M., M. Borman, and D. Johnson. "منصة محددة الموقع والتصوير الجوي لتوثيق آثار الرعي على القمح." Geocarto International 16، العدد 1 (2001): 65-70._
 
 ***
 
@@ -311,7 +311,7 @@ $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
 $$
 
-_المصدر: Sripada, R., et al. &quot;تحديد احتياجات الذرة من النيتروجين خلال الموسم باستخدام التصوير الجوي بالأشعة تحت الحمراء الملونة.&quot; أطروحة دكتوراه، جامعة ولاية كارولينا الشمالية، 2005._
+_المصدر: Sripada, R., et al. "تحديد احتياجات الذرة من النيتروجين خلال الموسم باستخدام التصوير الجوي بالأشعة تحت الحمراء الملونة." أطروحة دكتوراه، جامعة ولاية كارولينا الشمالية، 2005._
 
 ***
 
@@ -323,7 +323,7 @@ $$
 GRVI = {NIR \over Green }
 $$
 
-_المصدر: Sripada, R., et al. &quot;التصوير الجوي بالأشعة تحت الحمراء الملونة لتحديد احتياجات الذرة من النيتروجين في أوائل الموسم.&quot; مجلة Agronomy Journal 98 (2006): 968-977._
+_المصدر: Sripada, R., et al. "التصوير الجوي بالأشعة تحت الحمراء الملونة لتحديد احتياجات الذرة من النيتروجين في أوائل الموسم." مجلة Agronomy Journal 98 (2006): 968-977._
 
 ***
 
@@ -335,7 +335,7 @@ $$
 GSAVI = 1.5 * {(NIR - Green) \over (NIR + Green + 0.5)  }
 $$
 
-_المصدر: Sripada, R., et al. &quot;تحديد احتياجات الذرة من النيتروجين خلال الموسم باستخدام التصوير الجوي بالأشعة تحت الحمراء الملونة.&quot; أطروحة دكتوراه، جامعة ولاية كارولينا الشمالية، 2005._
+_المصدر: Sripada, R., et al. "تحديد احتياجات الذرة من النيتروجين خلال الموسم باستخدام التصوير الجوي بالأشعة تحت الحمراء الملونة." أطروحة دكتوراه، جامعة ولاية كارولينا الشمالية، 2005._
 
 ***
 
@@ -355,7 +355,7 @@ $$
 
 تتراوح قيم LAI العالية عادةً بين 0 و3.5 تقريبًا. ومع ذلك، عندما يحتوي المشهد على غيوم وعناصر ساطعة أخرى تنتج وحدات بكسل مشبعة، يمكن أن تتجاوز قيم LAI 3.5. من الأفضل إخفاء الغيوم والعناصر الساطعة من المشهد قبل إنشاء صورة LAI.
 
-_المصدر: Boegh, E., H. Soegaard, N. Broge, C. Hasager, N. Jensen, K. Schelde, و A. Thomsen. &quot;البيانات متعددة الأطياف الملتقطة جواً لتقدير مؤشر مساحة الأوراق، وتركيز النيتروجين، وكفاءة التمثيل الضوئي في الزراعة.&quot; Remote Sensing of Environment 81، العدد 2-3 (2002): 179-193._
+_المصدر: Boegh, E., H. Soegaard, N. Broge, C. Hasager, N. Jensen, K. Schelde, و A. Thomsen. "البيانات متعددة الأطياف الملتقطة جواً لتقدير مؤشر مساحة الأوراق، وتركيز النيتروجين، وكفاءة التمثيل الضوئي في الزراعة." Remote Sensing of Environment 81، العدد 2-3 (2002): 179-193._
 
 ***
 
@@ -369,7 +369,7 @@ $$
 LCI = {NIR2 - RedEdge \over NIR2 + Red}
 $$
 
-_المصدر: Datt, B. &quot;الاستشعار عن بُعد لمحتوى الماء في أوراق شجر الأوكالبتوس.&quot; مجلة فسيولوجيا النبات 154، العدد 1 (1999): 30-36._
+_المصدر: Datt, B. "الاستشعار عن بُعد لمحتوى الماء في أوراق شجر الأوكالبتوس." مجلة فسيولوجيا النبات 154، العدد 1 (1999): 30-36._
 
 ***
 
@@ -381,7 +381,7 @@ $$
 MNLI = {(NIR^{2} - Red) * (1 + L) \over (NIR^{2} + Red + L)  }
 $$
 
-_المصدر: Yang, Z., P. Willis, and R. Mueller. &quot;تأثير صورة AWIFS المحسّنة بنسبة النطاقات على دقة تصنيف المحاصيل.&quot; وقائع ندوة Pecora 17 للاستشعار عن بُعد (2008)، دنفر، كولورادو._
+_المصدر: Yang, Z., P. Willis, and R. Mueller. "تأثير صورة AWIFS المحسّنة بنسبة النطاقات على دقة تصنيف المحاصيل." وقائع ندوة Pecora 17 للاستشعار عن بُعد (2008)، دنفر، كولورادو._
 
 ***
 
@@ -393,7 +393,7 @@ $$
 MSAVI2 = {2 * NIR + 1 - \sqrt{(2 * NIR + 1)^{2} - 8(NIR - Red)} \over 2}
 $$
 
-_المصدر: Qi, J., A. Chehbouni, A. Huete, Y. Kerr, و S. Sorooshian. &quot;مؤشر الغطاء النباتي المعدل حسب التربة.&quot; Remote Sensing of Environment 48 (1994): 119-126._
+_المصدر: Qi, J., A. Chehbouni, A. Huete, Y. Kerr, و S. Sorooshian. "مؤشر الغطاء النباتي المعدل حسب التربة." Remote Sensing of Environment 48 (1994): 119-126._
 
 ***
 
@@ -441,7 +441,7 @@ $$
 NLI = {NIR^{2} - Red \over NIR^{2} + Red  }
 $$
 
-_المصدر: Goel, N., و W. Qin. &quot;تأثيرات بنية الغطاء النباتي على العلاقات بين مختلف مؤشرات الغطاء النباتي ومؤشر الكثافة الورقية (LAI) ومعدل التمثيل الضوئي (Fpar): محاكاة حاسوبية.&quot; Remote Sensing Reviews 10 (1994): 309-347._
+_المصدر: Goel, N., و W. Qin. "تأثيرات بنية الغطاء النباتي على العلاقات بين مختلف مؤشرات الغطاء النباتي ومؤشر الكثافة الورقية (LAI) ومعدل التمثيل الضوئي (Fpar): محاكاة حاسوبية." Remote Sensing Reviews 10 (1994): 309-347._
 
 ***
 
@@ -453,7 +453,7 @@ $$
 OSAVI = {(NIR - Red) \over (NIR + Red + 0.16)  }
 $$
 
-_المصدر: Rondeaux, G., M. Steven, and F. Baret. &quot;Optimization of Soil-Adjusted Vegetation Indices.&quot; Remote Sensing of Environment 55 (1996): 95-107._
+_المصدر: Rondeaux, G., M. Steven, and F. Baret. "Optimization of Soil-Adjusted Vegetation Indices." Remote Sensing of Environment 55 (1996): 95-107._
 
 ***
 
@@ -465,7 +465,7 @@ $$
 RDVI = {(NIR- Red) \over \sqrt{(NIR + Red)}  }
 $$
 
-_المصدر: Roujean, J., و F. Breon. &quot;تقدير الإشعاع النشط ضوئيًا (PAR) الذي تمتصه النباتات من قياسات الانعكاس ثنائي الاتجاه.&quot; Remote Sensing of Environment 51 (1995): 375-384._
+_المصدر: Roujean, J., و F. Breon. "تقدير الإشعاع النشط ضوئيًا (PAR) الذي تمتصه النباتات من قياسات الانعكاس ثنائي الاتجاه." Remote Sensing of Environment 51 (1995): 375-384._
 
 ***
 
@@ -477,7 +477,7 @@ $$
 SAVI = {1.5 * (NIR- Red) \over (NIR + Red + 0.5)  }
 $$
 
-_المصدر: Huete, A. &quot;مؤشر الغطاء النباتي المعدل حسب التربة (SAVI).&quot; Remote Sensing of Environment 25 (1988): 295-309._
+_المصدر: Huete, A. "مؤشر الغطاء النباتي المعدل حسب التربة (SAVI)." Remote Sensing of Environment 25 (1988): 295-309._
 
 ***
 
@@ -489,7 +489,7 @@ $$
 TDVI = 1.5 * {(NIR- Red) \over \sqrt{NIR^{2} + Red + 0.5}  }
 $$
 
-_المصدر: Bannari, A., H. Asalhi، و P. Teillet. «مؤشر الفرق المحوّل للغطاء النباتي (TDVI) لرسم خرائط الغطاء النباتي» في وقائع ندوة علوم الأرض والاستشعار عن بُعد، IGARSS &#x27;02، IEEE International، المجلد 5 (2002)._
+_المصدر: Bannari, A., H. Asalhi، و P. Teillet. «مؤشر الفرق المحوّل للغطاء النباتي (TDVI) لرسم خرائط الغطاء النباتي» في وقائع ندوة علوم الأرض والاستشعار عن بُعد، IGARSS '02، IEEE International، المجلد 5 (2002)._
 
 ***
 
