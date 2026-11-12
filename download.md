@@ -194,7 +194,9 @@ pip install chloros-sdk
 * **🐻 طريقة متقدمة لإزالة التباين مع مراعاة النسيج** - طريقة عالية الجودة لإزالة التباين مع مراعاة الحواف، مقترنة بنموذج إزالة الضوضاء باستخدام الذكاء الاصطناعي/التعلم الآلي، والذي يزيل تقريبًا كل ضوضاء عملية إزالة التباين.
 * 🧮 **صيغ مخصصة** - إنشاء مؤشرات متعددة الأطياف مخصصة
 
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">عرض خطط وأسعار Chloros+</a></p>***
+<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">عرض خطط وأسعار Chloros+</a></p>
+
+***
 
 ## مساعدة في التثبيت
 
@@ -235,7 +237,9 @@ pip install chloros-sdk
 * 📧 **البريد الإلكتروني**: info@mapir.camera
 * 🌐 **الموقع الإلكتروني**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **الوثائق**: [البدء](./)
-* ❓ **الأسئلة الشائعة**: [الأسئلة الشائعة](faq.md)***
+* ❓ **الأسئلة الشائعة**: [الأسئلة الشائعة](faq.md)
+
+***
 
 ## تحديثات البرامج: يقوم برنامج
 
