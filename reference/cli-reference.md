@@ -575,7 +575,7 @@ ndvi = lo + raw.astype(np.float64) / np.iinfo(raw.dtype).max * (hi - lo)
 فشل مجلد التسجيلات الذي **لا** يصدر أيًا منها: انظر
 [فشل عملية التشغيل التي لا تكتب أي صور](#a-run-that-writes-no-images-fails).
 
-التسجيل الذي ينتهي اسمه بـ `_calibrated` أو `_raw` (`field_raw.daq`) **لا****: فهذه هي الأسماء التي يطلقها `process` على منتجاته الخاصة، وأي منتج يتم قراءته
+التسجيل الذي ينتهي اسمه بـ `_calibrated` أو `_raw` (`field_raw.daq`) **لا**: فهذه هي الأسماء التي يطلقها `process` على منتجاته الخاصة، وأي منتج يتم قراءته
 كتسجيل سيتم احتسابه مرتين. توضح واجهة CLI ذلك وتسمي الملف —
 `Not imported as a light-sensor recording: field_raw.daq … Rename the file to import it.`
 — بدلاً من الإبلاغ عن مجلد فارغ. قم بإعادة تسمية مثل هذا التسجيل قبل معالجته.
